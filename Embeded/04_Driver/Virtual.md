@@ -1,0 +1,1 @@
+[再见了 VMware，一款更轻量级的虚拟机！ (qq.com)](https://mp.weixin.qq.com/s/ra_IlqZkvjnEZd5L8ZlDwg)

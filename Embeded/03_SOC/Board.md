@@ -1,0 +1,11 @@
+#### 开发板
+[我花1000元自制“树莓派”，却没人说我浪费钱](https://zhuanlan.zhihu.com/p/635432344)
+[可拍照、可图传，这是我目前见过最强的开发板！](https://www.bilibili.com/video/BV1J94y1z71x/)
+[复刻稚晖君Planck-Pi的步骤及心得体会（并跑下Go代码）](https://www.bilibili.com/video/BV1FG4y1c7Xr/?spm_id_from=333.999.0.0)  
+[【开源】YOLOv5 + WiFi 图传的迷你 AIoT 开发板](https://www.bilibili.com/video/BV1rG4y1R7di/?spm_id_from=333.999.0.0)  
+[开源zynq开发板，全网开源中最全外设（貌似是哈），兼容正点原子](https://www.bilibili.com/video/BV1DW4y1G7WM/?spm_id_from=333.999.0.0)  
+[[Harmony OS 2.0]这可能是目前最小的鸿蒙开发板了|Hi3861LV100](https://www.bilibili.com/video/BV1tp4y1a74e/)
+[【自 制】这 可 能 是 最 精 致 的 Pi 了【Linux 小主机 | 开 源 | 硬 核】](https://www.bilibili.com/video/BV1RV411W7eH/)
+[自制mini lvgl开发板，简单测了一下。ps：rgb屏幕，精致，纵享丝](https://www.bilibili.com/video/BV1KK411U7Jn/)
+[【ALOP开源】10元不到！X86方案klipper没有树莓派怎](https://www.bilibili.com/video/BV1ou411z7Yv)
+[参透汽车毫米波雷达的玄机：你需要这样一块开发板！](https://www.bilibili.com/video/BV1rY4y1e7cR)

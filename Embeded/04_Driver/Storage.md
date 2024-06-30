@@ -1,0 +1,76 @@
+[嵌入式基础知识-存储管理](https://zhuanlan.zhihu.com/p/648599447)
+
+[ROM、RAM、IROM、IRAM、DRAM、SRAM、Flash介绍](https://blog.csdn.net/wordwarwordwar/article/details/84932107)
+这是我见过最好的Flash科普文了！
+
+**一、Flash Memory简介**
+
+Flash Memory 是一种非易失性的存储器。在嵌入式系统中通常用于存放系统、应用和数据等。在 PC 系统中，则主要用在固态硬盘以及主板 BIOS 中。
+
+另外，绝大部分的 U 盘、SDCard 等移动存储设备也都是使用 Flash Memory 作为存储介质。
+
+**二、Flash Memory的主要特性**
+
+与传统的硬盘存储器相比，Flash Memory 具有质量轻、能耗低、体积小、抗震能力强等的优点，但也有不少局限性，主要如下：
+
+1. **需要先擦除再写入**Flash Memory 写入数据时有一定的限制。它只能将当前为 1 的比特改写为 0，而无法将已经为 0 的比特改写为 1，只有在擦除的操作中，才能把整块的比特改写为 1。
+2. **块擦除次数有限**Flash Memory 的每个数据块都有擦除次数的限制（十万到百万次不等），擦写超过一定次数后，该数据块将无法可靠存储数据，成为坏块。为了最大化的延长 Flash Memory 的寿命，在软件上需要做擦写均衡（Wear Leveling），通过分散写入、动态映射等手段均衡使用各个数据块。同时，软件还需要进行坏块管理（Bad Block Management，BBM），标识坏块，不让坏块参与数据存储。（注：除了擦写导致的坏块外，Flash Memory 在生产过程也会产生坏块，即固有坏块。）
+3. **读写干扰**由于硬件实现上的物理特性，Flash Memory 在进行读写操作时，有可能会导致邻近的其他比特发生位翻转，导致数据异常。这种异常可以通过重新擦除来恢复。Flash Memory 应用中通常会使用 ECC 等算法进行错误检测和数据修正。
+4. **电荷泄漏**存储在 Flash Memory 存储单元的电荷，如果长期没有使用，会发生电荷泄漏，导致数据错误。不过这个时间比较长，一般十年左右。此种异常是非永久性的，重新擦除可以恢复。
+
+**三、NOR Flash 和 NAND Flash**
+
+根据硬件上存储原理的不同，Flash Memory 主要可以分为 NOR Flash 和 NAND Flash 两类。主要的差异如下所示：
+
+- NAND Flash 读取速度与 NOR Flash 相近，根据接口的不同有所差异；
+- NAND Flash 的写入速度比 NOR Flash 快很多；
+- NAND Flash 的擦除速度比 NOR Flash 快很多；
+- NAND Flash 最大擦次数比 NOR Flash 多；
+- NOR Flash 支持片上执行，可以在上面直接运行代码；
+- NOR Flash 软件驱动比 NAND Flash 简单；
+- NOR Flash 可以随机按字节读取数据，NAND Flash 需要按块进行读取。
+- 大容量下 NAND Flash 比 NOR Flash 成本要低很多，体积也更小；
+
+（注：NOR Flash 和 NAND Flash 的擦除都是按块块进行的，执行一个擦除或者写入操作时，NOR Flash 大约需要 5s，而 NAND Flash 通常不超过 4ms。）
+
+**1、NOR Flash**
+
+NOR Flash 根据与 CPU 端接口的不同，可以分为 Parallel NOR Flash 和 Serial NOR Flash 两类。
+
+Parallel NOR Flash 可以接入到 Host 的 SRAM/DRAM Controller 上，所存储的内容可以直接映射到 CPU 地址空间，不需要拷贝到 RAM 中即可被 CPU 访问，因而支持片上执行。Serial NOR Flash 的成本比 Parallel NOR Flash 低，主要通过 SPI 接口与 Host 连接。
+
+[![](https://mmbiz.qpic.cn/mmbiz_png/IJjjSUcTn04iaicAIibe0j0NVohtGaDJXp2FTToKlabSPUvMJ31TMic8oibTYQozGx5R9up6qGItgrjQ8mL6FxjI95g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_png/IJjjSUcTn04iaicAIibe0j0NVohtGaDJXp2FTToKlabSPUvMJ31TMic8oibTYQozGx5R9up6qGItgrjQ8mL6FxjI95g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+
+鉴于 NOR Flash 擦写速度慢，成本高等特性，NOR Flash 主要应用于小容量、内容更新少的场景，例如 PC 主板 BIOS、路由器系统存储等。
+
+**2、NAND Flash**
+
+NAND Flash 需要通过专门的 NFI（NAND Flash Interface）与 Host 端进行通信，如下图所示：
+
+NAND Flash 根据每个存储单元内存储比特个数的不同，可以分为 SLC（Single-Level Cell）、MLC（Multi-Level Cell） 和 TLC（Triple-Level Cell） 三类。其中，在一个存储单元中，SLC 可以存储 1 个比特，MLC 可以存储 2 个比特，TLC 则可以存储 3 个比特。
+
+NAND Flash 的一个存储单元内部，是通过不同的电压等级，来表示其所存储的信息的。在 SLC 中，存储单元的电压被分为两个等级，分别表示 0 和 1 两个状态，即 1 个比特。在 MLC 中，存储单元的电压则被分为 4 个等级，分别表示 00 01 10 11 四个状态，即 2 个比特位。同理，在 TLC 中，存储单元的电压被分为 8 个等级，存储 3 个比特信息。
+
+[![](https://mmbiz.qpic.cn/mmbiz_png/IJjjSUcTn04iaicAIibe0j0NVohtGaDJXp2iclTCrKI7KkRUL0RTI5Uq0OJDocmsclFH4GYkicFfficqwOnichUlH9Lvw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_png/IJjjSUcTn04iaicAIibe0j0NVohtGaDJXp2iclTCrKI7KkRUL0RTI5Uq0OJDocmsclFH4GYkicFfficqwOnichUlH9Lvw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+
+NAND Flash 的单个存储单元存储的比特位越多，读写性能会越差，寿命也越短，但是成本会更低。Table 1 中，给出了特定工艺和技术水平下的成本和寿命数据。
+
+[![](https://mmbiz.qpic.cn/mmbiz_png/IJjjSUcTn04iaicAIibe0j0NVohtGaDJXp2BKWVibvHx81wCMQlhia2vibv2ia2oZWO9V1NwmhRsUImAukFcPNplLLoOA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_png/IJjjSUcTn04iaicAIibe0j0NVohtGaDJXp2BKWVibvHx81wCMQlhia2vibv2ia2oZWO9V1NwmhRsUImAukFcPNplLLoOA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+
+相比于 NOR Flash，NAND Flash 写入性能好，大容量下成本低。目前，绝大部分手机和平板等移动设备中所使用的 eMMC 内部的 Flash Memory 都属于 NAND Flash。PC 中的固态硬盘中也是使用 NAND Flash。
+
+**四、ROW flash 和 managed flash**
+
+由于 Flash Memory 存在按块擦写、擦写次数的限制、读写干扰、电荷泄露等的局限，为了最大程度的发挥 Flash Memory 的价值，通常需要有一个特殊的软件层次，实现坏块管理、擦写均衡、ECC、垃圾回收等的功能，这一个软件层次称为 FTL（Flash Translation Layer）。
+
+在具体实现中，根据 FTL 所在的位置的不同，可以把 Flash Memory 分为 Raw Flash 和 Managed Flash 两类。
+
+**1、Raw Flash**
+
+在此类应用中，在 Host 端通常有专门的 FTL 或者 Flash 文件系统来实现坏块管理、擦写均衡等的功能。Host 端的软件复杂度较高，但是整体方案的成本较低，常用于价格敏感的嵌入式产品中。
+
+通常我们所说的 NOR Flash 和 NAND Flash 都属于这类型。
+
+**2、Managed Flash**
+
+Managed Flash 在其内部集成了 Flash Controller，用于完成擦写均衡、坏块管理、ECC校验等功能。相比于直接将 Flash 接入到 Host 端，Managed Flash 屏蔽了 Flash 的物理特性，对 Host 提供标准化的接口，可以减少 Host 端软件的复杂度，让 Host 端专注于上层业务，省去对 Flash 进行特殊的处理。
