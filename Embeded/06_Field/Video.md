@@ -20,6 +20,50 @@ DisplayPort（DP）：一种数字显示接口标准。
 ##### CTA 重要视频标准
 CTA EDID 扩展： 在 CEA-861 中引入，最流行的版本为 CEA-861-D（2006年），目前最新版本为 CTA-861-I（2023年）
 
+## 视频接口介绍
+### VGA
+VGA(Video Graphics Array)即视频图形阵列，具有分辨率高、显示速率快、颜色丰富等优点。VGA接口不但是CRT显示设备的标准接口，同样也是LCD液晶显示设备的标准接口，虽然是一种模拟信号接口，但是由于VGA将视频信号分解为R、G、B三原色和HV行场信号进行传输，所以在传输中的损耗相当小。  
+![alt text](./assets/image-4.png)
+#### 硬件接口
+##### 引脚说明
+![alt text](./assets/image-9.png)
+![alt text](./assets/image-10.png)
+##### 时序说明
+VGA显示图像使用扫描的方式，从第一行的第一个像素开始，逐渐填充，第一行第一个、第一行第二个、、、、第二行第一个、第二行第二个、、、、第n行最后一个。  
+通过这种方式构成一帧完整的图像，当扫描速度足够快，加之人眼的视觉暂留特性，我们会看到一幅完整的图片，而不是一个个闪烁的像素点。这就是VGA 显示的原理。
+![alt text](./assets/image-11.png)
+![alt text](./assets/image-12.png)
+![alt text](./assets/image-13.png)
+### DVI
+DVI（Digital Visual Interface）是一种数字视频接口，有DVI－Analog（DVI-A）、DVI-Digital（DVI-D）和DVI-Integrated（DVI-I）三种类型，其中DVI-A接口只传输模拟信号，实质就是VGA模拟传输接口规格，常用于转接显卡的DVI-I输出到VGA显示器接口，DVI-D（接口是纯数字接口，不兼容模拟信号，DVI-I接口，兼容DVI-I和DVI-D两种插头，兼容数字和模拟信号。它们的接口形状不同，如果接口不匹配就无法插入使用。    
+DVI接口又分为Single Link（SL） DVI和Dual Link（DL）DVI，SL DVI传输速率只有DL DVI的一半，为165MHz/s，最大的分辨率只能支持到1920x1200@60，DL DVI可支持到2560x1600@60Hz，也可支持1920x1080@120Hz。     
+SL DVI（单通道）最大带载能力为3.7 Gbit/s,DL DVI（双通道）在最大带载能力为
+![alt text](./assets/image-1.png)
+![alt text](./assets/image-2.png)
+
+### HDMI
+#### 简介
+HDMI（High Definition Multimedia Interface，高清多媒体接口）是一种全数字化视频和音频发送接口，可以发送未压缩的音频及视频信号，其物理接口主要有标准HDMI接口、mini HDMI接口和Micro HDMI接口，如图所示：
+![alt text](./assets/image.png)
+
+HDMI可搭配宽带数字内容保护（HDCP），以防止具有著作权的影音内容遭到未经授权的复制。HDMI所具备的额外空间可应用在日后升级的音视频格式中。而因为一个1080p的视频和一个8声道的音频信号需求少于0.5GB/s，因此HDMI还有很大余量。这允许它可以用一个电缆分别连接DVD播放器，接收器和PRR。
+#### 硬件接口
+[HDMI接口电路设计 哔哩哔哩](https://www.bilibili.com/video/BV1B34y157jG/?spm_id_from=333.1296.top_right_bar_window_history.content.click&vd_source=8628b70b8921792574747e076af0f11a)
+
+##### 引脚说明
+![alt text](./assets/image-5.png)
+##### HDMI识别过程
+![alt text](./assets/image-6.png)
+
+### DP
+DP（DisplayPort）是一个由PC及芯片制造商联盟开发，视频电子标准协会（VESA）标准化的数字式视频接口标准。该接口免认证、免授权金，主要用于视频源与显示器等设备的连接，并也支持携带音频、USB和其他形式的数据。DP接口定义了两种接头，全尺寸（Full Size）和迷你DP（Mini），两种接头皆是20针，但迷你接头的宽度大约是全尺寸的一半。  
+![alt text](./assets/image-3.png)
+#### 硬件接口
+[DP硬件接口说明](https://blog.csdn.net/she666666/article/details/138341055?spm=1001.2101.3001.6650.5&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EYuanLiJiHua%7EPosition-5-138341055-blog-123871957.235%5Ev43%5Epc_blog_bottom_relevance_base8&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EYuanLiJiHua%7EPosition-5-138341055-blog-123871957.235%5Ev43%5Epc_blog_bottom_relevance_base8&utm_relevant_index=8)
+##### 引脚说明
+![alt text](./assets/image-7.png)
+![alt text](./assets/image-8.png)
+
 ## 专业名词介绍
 
 #### Timing（时序）
@@ -38,3 +82,6 @@ Video timing 包含两个信号：水平同步Hs（horizontal sync）和垂直�
 #### 位深&色深
 
 #### 色域
+
+## 眼图
+[鼎阳科技 一期带你弄懂示波器眼图逻辑 哔哩哔哩](https://www.bilibili.com/video/BV1Cr4y1f7sm/?spm_id_from=333.1296.top_right_bar_window_history.content.click)
