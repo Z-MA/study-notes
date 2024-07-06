@@ -55,6 +55,12 @@ HDMI可搭配宽带数字内容保护（HDCP），以防止具有著作权的影
 ##### HDMI识别过程
 ![alt text](./assets/image-6.png)
 
+#### 关键技术
+TMDS（Transition Minimized Differential Signaling）差分传输技术
+TMDS（Time Minimized Differential Signal） 最小化传输差分信号
+
+LVDS（Low-Voltage Differential Signaling）低电压差分信号
+
 ### DP
 DP（DisplayPort）是一个由PC及芯片制造商联盟开发，视频电子标准协会（VESA）标准化的数字式视频接口标准。该接口免认证、免授权金，主要用于视频源与显示器等设备的连接，并也支持携带音频、USB和其他形式的数据。DP接口定义了两种接头，全尺寸（Full Size）和迷你DP（Mini），两种接头皆是20针，但迷你接头的宽度大约是全尺寸的一半。  
 ![alt text](./assets/image-3.png)
