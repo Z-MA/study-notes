@@ -204,17 +204,17 @@ ok基础知识铺垫完毕，终于要进入正题啦~
 
 稍微解释一下，这幅图是以[电流闭环控制](https://zhida.zhihu.com/search?content_id=120946183&content_type=Article&match_order=1&q=%E7%94%B5%E6%B5%81%E9%97%AD%E7%8E%AF%E6%8E%A7%E5%88%B6&zhida_source=entity)为例的，也就是让电机始终产生一个恒定的力矩（也就是恒定的电流，因为力矩和电流成正比）。
 
-可以看到控制器的输入是最左边的$I_{q-ref}$和 $I_{d-ref}$，两个变量经过PID控制器进行反馈调节，其中还涉及到几个变换模块，有`Park变换`和`Clark变换`；最后通过前面提到的SVPWM模块作用到[三相逆变器](https://zhida.zhihu.com/search?content_id=120946183&content_type=Article&match_order=1&q=%E4%B8%89%E7%9B%B8%E9%80%86%E5%8F%98%E5%99%A8&zhida_source=entity)上进而控制电机；而PID控制器的反馈量，是对电机输出电流的采样值。
+可以看到控制器的输入是最左边的 $I_{q\_ref}$ 和 $I_{d\_ref}$ ，两个变量经过PID控制器进行反馈调节，其中还涉及到几个变换模块，有`Park变换`和`Clark变换`；最后通过前面提到的SVPWM模块作用到[三相逆变器](https://zhida.zhihu.com/search?content_id=120946183&content_type=Article&match_order=1&q=%E4%B8%89%E7%9B%B8%E9%80%86%E5%8F%98%E5%99%A8&zhida_source=entity)上进而控制电机；而PID控制器的反馈量，是对电机输出电流的采样值。
 
 **上面的过程不好理解没关系，先概括一下，FOC控制的整个过程是这样的：**
 
-1. 对电机三[相电流](https://zhida.zhihu.com/search?content_id=120946183&content_type=Article&match_order=1&q=%E7%9B%B8%E7%94%B5%E6%B5%81&zhida_source=entity)进行采样得到$I _a$ ,$I _b$ ,$I _c$
-2. 将 $I_a$ ,$I_b$ ,$I_c$ 经过`Clark变换`得到 $I_\alpha$ ,$I_\beta$
-3. 将  $I_\alpha$ ,$I_\beta$ 经过`Park变换`得到 $I_q$ ,$I_d$
-4. 计算  $I_q$ ,$I_d$ 和其设定值 $I_{q-ref}$和 $I_{d-ref}$ 的误差
+1. 对电机三[相电流](https://zhida.zhihu.com/search?content_id=120946183&content_type=Article&match_order=1&q=%E7%9B%B8%E7%94%B5%E6%B5%81&zhida_source=entity)进行采样得到$I _a$ , $I _b$ , $I _c$
+2. 将 $I_a$ , $I_b$ , $I_c$ 经过`Clark变换`得到 $I_\alpha$ , $I_\beta$
+3. 将  $I_\alpha$ , $I_\beta$ 经过`Park变换`得到 $I_q$ , $I_d$
+4. 计算  $I_q$ , $I_d$ 和其设定值 $I_{q-ref}$ 和 $I_{d-ref}$ 的误差
 5. 将上述误差输入两个PID（只用到PI）控制器，得到输出的控制电压 $U_q$ ,$U_d$
-6. 将  $U_q$ ,$U_d$ 进行`反Park变换`得到 $U_{\alpha}$ ,$U_{\beta}$
-7. 用  $U_{\alpha}$ ,$U_{\beta}$ 合成电压空间矢量，输入`SVPWM模块`进行调制，输出该时刻三个半桥的状态编码值（前文有提到）
+6. 将  $U_q$ , $U_d$ 进行`反Park变换`得到 $U_{\alpha}$ , $U_{\beta}$
+7. 用  $U_{\alpha}$ , $U_{\beta}$ 合成电压空间矢量，输入`SVPWM模块`进行调制，输出该时刻三个半桥的状态编码值（前文有提到）
 8. 按照前面输出的编码值控制三相逆变器的MOS管开关，驱动电机
 9. 循环上述步骤
 
