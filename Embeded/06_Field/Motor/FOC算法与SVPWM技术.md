@@ -264,11 +264,11 @@ $$I_a+I_b+I_c=0$$
 
 而且很明显$(I_a,I_b,I_c) $这三个基向量是非正交的，学过线性代数的同学可能会想到，我们可以做一个很简单的[基变换](https://zhida.zhihu.com/search?content_id=120946183&content_type=Article&match_order=1&q=%E5%9F%BA%E5%8F%98%E6%8D%A2&zhida_source=entity)将其正交化为一个直角坐标系，我们把新的直角坐标系命名为$\alpha-\beta$**坐标系**，变换公式如下：
 
-$$\begin{cases}I_{\alpha}=I_a+cos(\frac{2\pi}3)I_b+cos(\frac{2\pi}3)I_c\\I_{\beta}=sin(\frac{2\pi}3)I_b-sin(\frac{2\pi}3)I_c\end{cases}$$
+$$\begin{cases}I_{\alpha}=I_a+cos(\frac{2\pi}3)I_b+cos(\frac{2\pi}3)I_c\\\ I_{\beta}=sin(\frac{2\pi}3)I_b-sin(\frac{2\pi}3)I_c\end{cases}$$
 
 **其实就是个很简单的坐标轴投影计算**，写成矩阵形式如下：
 
-$$\begin{bmatrix}I_{\alpha}\\I_{\beta} \end{bmatrix}=\begin{bmatrix}1 & -\frac12 & -\frac12 &\\ 0 & \frac{\sqrt3}2 & -\frac{\sqrt3}2 \end{bmatrix} \begin{bmatrix}I_a\\I_b\\I_c \end{bmatrix}$$
+$$\begin{bmatrix}I_{\alpha}\\\ I_{\beta} \end{bmatrix}=\begin{bmatrix}1 & -\frac12 & -\frac12 &\\ 0 & \frac{\sqrt3}2 & -\frac{\sqrt3}2 \end{bmatrix} \begin{bmatrix}I_a\\\ I_b\\\ I_c \end{bmatrix}$$
 
 于是我们就回到直角坐标系啦，是不是很开心，变换前后的波形如下：
 
