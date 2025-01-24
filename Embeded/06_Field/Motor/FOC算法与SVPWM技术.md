@@ -417,7 +417,7 @@ $$\begin{cases} U_A(t)=U_{dc}cos(2\pi ft)\\\ U_B(t)=U_{dc}cos(2\pi ft-\frac23\pi
 
 为了研究各相上下桥臂不同开关组合时逆变器输出的**空间电压矢量**，我们定义开关函数 $S_x (x\in a,b,c)$ 为：
 
-$$S_x= \begin{cases} 1,\ 上桥臂导通\\ 0,\ 下桥臂导通 \end{cases}$$
+$$S_x= \begin{cases} 1,\ 上桥臂导通\\\ 0,\ 下桥臂导通 \end{cases}$$
 
 上桥臂导通下桥臂导通
 
