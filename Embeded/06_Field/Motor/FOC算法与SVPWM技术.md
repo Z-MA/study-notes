@@ -208,11 +208,11 @@ ok基础知识铺垫完毕，终于要进入正题啦~
 
 **上面的过程不好理解没关系，先概括一下，FOC控制的整个过程是这样的：**
 
-1. 对电机三[相电流](https://zhida.zhihu.com/search?content_id=120946183&content_type=Article&match_order=1&q=%E7%9B%B8%E7%94%B5%E6%B5%81&zhida_source=entity)进行采样得到$I _a$ , $I _b$ , $I _c$
+1. 对电机三相电流进行采样得到 $I _a$ , $I _b$ , $I _c$
 2. 将 $I_a$ , $I_b$ , $I_c$ 经过`Clark变换`得到 $I_\alpha$ , $I_\beta$
 3. 将  $I_\alpha$ , $I_\beta$ 经过`Park变换`得到 $I_q$ , $I_d$
-4. 计算  $I_q$ , $I_d$ 和其设定值 $I_{q-ref}$ 和 $I_{d-ref}$ 的误差
-5. 将上述误差输入两个PID（只用到PI）控制器，得到输出的控制电压 $U_q$ ,$U_d$
+4. 计算  $I_q$ , $I_d$ 和其设定值 $I_{q\_ref}$ 和 $I_{d\_ref}$ 的误差
+5. 将上述误差输入两个PID（只用到PI）控制器，得到输出的控制电压 $U_q$ , $U_d$
 6. 将  $U_q$ , $U_d$ 进行`反Park变换`得到 $U_{\alpha}$ , $U_{\beta}$
 7. 用  $U_{\alpha}$ , $U_{\beta}$ 合成电压空间矢量，输入`SVPWM模块`进行调制，输出该时刻三个半桥的状态编码值（前文有提到）
 8. 按照前面输出的编码值控制三相逆变器的MOS管开关，驱动电机
