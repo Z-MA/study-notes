@@ -204,7 +204,7 @@ ok基础知识铺垫完毕，终于要进入正题啦~
 
 稍微解释一下，这幅图是以[电流闭环控制](https://zhida.zhihu.com/search?content_id=120946183&content_type=Article&match_order=1&q=%E7%94%B5%E6%B5%81%E9%97%AD%E7%8E%AF%E6%8E%A7%E5%88%B6&zhida_source=entity)为例的，也就是让电机始终产生一个恒定的力矩（也就是恒定的电流，因为力矩和电流成正比）。
 
-可以看到控制器的输入是最左边的 $I_{q\_ref}$ 和 $I_{d\_ref}$ ，两个变量经过PID控制器进行反馈调节，其中还涉及到几个变换模块，有`Park变换`和`Clark变换`；最后通过前面提到的SVPWM模块作用到[三相逆变器](https://zhida.zhihu.com/search?content_id=120946183&content_type=Article&match_order=1&q=%E4%B8%89%E7%9B%B8%E9%80%86%E5%8F%98%E5%99%A8&zhida_source=entity)上进而控制电机；而PID控制器的反馈量，是对电机输出电流的采样值。
+可以看到控制器的输入是最左边的 $I_{q\\\_ref}$ 和 $I_{d\\\_ref}$ ，两个变量经过PID控制器进行反馈调节，其中还涉及到几个变换模块，有`Park变换`和`Clark变换`；最后通过前面提到的SVPWM模块作用到[三相逆变器](https://zhida.zhihu.com/search?content_id=120946183&content_type=Article&match_order=1&q=%E4%B8%89%E7%9B%B8%E9%80%86%E5%8F%98%E5%99%A8&zhida_source=entity)上进而控制电机；而PID控制器的反馈量，是对电机输出电流的采样值。
 
 **上面的过程不好理解没关系，先概括一下，FOC控制的整个过程是这样的：**
 
