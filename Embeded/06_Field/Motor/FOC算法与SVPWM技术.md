@@ -274,7 +274,7 @@ $$\begin{bmatrix}I_{\alpha}\\\ I_{\beta} \end{bmatrix}=\begin{bmatrix}1 & -\frac
 
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/10388797/1737463347568-be0761dc-34ad-4aeb-9fea-f83bde2ce7b7.jpeg)
 
-可以看到变换后其实还是正弦波...只不过我们少了一个需要控制的变量了，现在只需要控制 Iα,IβI_{\alpha},I_{\beta} 这两个变量，让其满足上图的下面的波形变化规律就可以控制电机旋转 了，频率还是不变的。
+可以看到变换后其实还是正弦波...只不过我们少了一个需要控制的变量了，现在只需要控制 $I_{\alpha},I_{\beta}$ 这两个变量，让其满足上图的下面的波形变化规律就可以控制电机旋转 了，频率还是不变的。
 
 > 注意这里的 $I_{\alpha},I_{\beta}$ 是我们虚拟出来的变量，所以在计算出一组 $I_{\alpha},I_{\beta}$ 后，我们通过上述公式的反向变换公式变换回去再应用到电机的三相上。
 >
@@ -292,11 +292,11 @@ $$\begin{bmatrix}I_{\alpha}\\\ I_{\beta} \end{bmatrix}=\begin{bmatrix}1 & -\frac
 
 变换公式如下：
 
-$$\begin{cases}I_d=I_{\alpha}cos(\theta)+I_{\beta}sin(\theta)\\I_q=-I_{\alpha}sin(\theta)+I_{\beta}cos(\theta)\end{cases}$$
+$$\begin{cases}I_d=I_{\alpha}cos(\theta)+I_{\beta}sin(\theta)\\\ I_q=-I_{\alpha}sin(\theta)+I_{\beta}cos(\theta)\end{cases}$$
 
 也很简单，就是作用了一个[旋转矩阵](https://zhida.zhihu.com/search?content_id=120946183&content_type=Article&match_order=1&q=%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5&zhida_source=entity)，写成矩阵形式：
 
-$$\begin{bmatrix}I_d\\I_q \end{bmatrix}=\begin{bmatrix}cos{\theta} & sin{\theta} &\\ -sin{\theta} & cos{\theta}\end{bmatrix} \begin{bmatrix}I_{\alpha}\\I_{\beta} \end{bmatrix}$$
+$$\begin{bmatrix}I_d\\\ I_q \end{bmatrix}=\begin{bmatrix}cos{\theta} & sin{\theta} &\\\ -sin{\theta} & cos{\theta}\end{bmatrix} \begin{bmatrix}I_{\alpha}\\\ I_{\beta} \end{bmatrix}$$
 
 也就是说，这个d−qd-q**坐标系**是始终跟着转子旋转的！
 
