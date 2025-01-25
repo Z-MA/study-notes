@@ -268,7 +268,7 @@ $$\begin{cases}I_{\alpha}=I_a+cos(\frac{2\pi}3)I_b+cos(\frac{2\pi}3)I_c\\\ I_{\b
 
 **其实就是个很简单的坐标轴投影计算**，写成矩阵形式如下：
 
-$$\begin{bmatrix}I_{\alpha}\\\ I_{\beta} \end{bmatrix}=\begin{bmatrix}1 & -\frac12 & -\frac12 &\\ 0 & \frac{\sqrt3}2 & -\frac{\sqrt3}2 \end{bmatrix} \begin{bmatrix}I_a\\\ I_b\\\ I_c \end{bmatrix}$$
+$$\begin{bmatrix}I_{\alpha}\\\ I_{\beta} \end{bmatrix}=\begin{bmatrix}1 & -\frac12 & -\frac12 &\\\ 0 & \frac{\sqrt3}2 & -\frac{\sqrt3}2 \end{bmatrix} \begin{bmatrix}I_a\\\ I_b\\\ I_c \end{bmatrix}$$
 
 于是我们就回到直角坐标系啦，是不是很开心，变换前后的波形如下：
 
@@ -276,7 +276,7 @@ $$\begin{bmatrix}I_{\alpha}\\\ I_{\beta} \end{bmatrix}=\begin{bmatrix}1 & -\frac
 
 可以看到变换后其实还是正弦波...只不过我们少了一个需要控制的变量了，现在只需要控制 Iα,IβI_{\alpha},I_{\beta} 这两个变量，让其满足上图的下面的波形变化规律就可以控制电机旋转 了，频率还是不变的。
 
-> 注意这里的 $I_{\alpha},I_{\beta} $是我们虚拟出来的变量，所以在计算出一组 $I_{\alpha},I_{\beta}$ 后，我们通过上述公式的反向变换公式变换回去再应用到电机的三相上。
+> 注意这里的 $I_{\alpha},I_{\beta}$ 是我们虚拟出来的变量，所以在计算出一组 $I_{\alpha},I_{\beta}$ 后，我们通过上述公式的反向变换公式变换回去再应用到电机的三相上。
 >
 
 **就这？**
