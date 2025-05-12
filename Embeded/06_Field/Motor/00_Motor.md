@@ -8,6 +8,14 @@
 
 [资料下载 | 广州大硬石科技有限责任公司 - Powered by DouPHP](http://www.ing10bbs.com/page.php?id=2)
 
+#### 其他学习资料
+
+[FOC?看这篇文章就够了 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/364247816)
+
+[【自制FOC驱动器】深入浅出讲解FOC算法与SVPWM技术 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/147659820)
+
+[如何从零开始学习电机控制 - YouTube](https://www.youtube.com/watch?v=cQY4S9r86Rg&list=PLX9pXgLRG1A8Qt8bdvsia8S_cK4MKL_ZU)
+
 #### 视频课程
 
 课程链接：[基于STM32的电机驱动与控制](https://www.bilibili.com/video/BV1Fs411p7Zc/?spm_id_from=333.999.0.0&vd_source=8628b70b8921792574747e076af0f11a)
@@ -16,8 +24,6 @@
 
 1. 专题01 直流有刷电机(第1节)_电机概述&硬石电机实验箱
 2. 专题01 直流有刷电机(第2节)_有刷电机原理和减速电机
-   - 左手定则：磁场中的载流导体会受到力的作用，作用力的方向使用左手定则判断，力的大小用$F = FILsin\theta$来计算
-   - 右手定则：磁场中运动的导体因切割磁感线会感生出电动势E，电动势方向使用右手定则判断，感生电动势大小用 $E=vBLsin\theta$ 来计算
 3. 专题01 直流有刷电机(第3节)_电机参数和电机控制基础
 4. 专题01 直流有刷电机(第4节)_H桥驱动的不同模式分析
 5. 专题01 直流有刷电机(第5节)_MOS管驱动原理分析(含自举电路)
@@ -152,40 +158,53 @@
 [【自制】超迷你 Foc控制器，机器人心脏。](https://www.bilibili.com/video/BV1BY4y1j7U6/)
 
 ##### 六步换向
+
 [(BLDC)无感直流无刷电机驱动原理](https://www.bilibili.com/video/BV1SQ4y117mq/?spm_id_from=333.999.0.0)  
 [开源闭环电机驱动器](https://mp.weixin.qq.com/s/DbYpJ7IsQRpgqTc7Uy6VOw)
+
 ##### 直流马达控制
+
 [【DIY】10分钟用自动控制原理带你走进直流电机PID速度环调速](https://www.bilibili.com/video/BV1iv4y1R74Y/?spm_id_from=333.999.0.0)  
+
 ##### 驱动器硬件
+
 [这是什么神仙芯片，电机所有控制功能全集成？](https://www.bilibili.com/video/BV1rN41117he/)
 [开源STM32G431CBU6大疆无人机官方电调PCB，开源PAC5223电调，德州仪器TMS320F28027](https://www.bilibili.com/video/BV1Ex4y1T7eJ/)
 [大疆无人机电调电路分析2,德州仪器TMS320F28027F+DRV8301 DRV8313 PAC5223 ESC1000 ESC2000 ESC3000](https://www.bilibili.com/video/BV1mY4y1y7TD/)
 [电机震动大怎么办？自己做个动平衡仪吧](https://www.bilibili.com/video/BV1DG411o7mH/)
 [智能车TC264主驱一体国一硬件方案开源（TC264裸片方案 功率控制全隔离 2020双车组）](https://www.bilibili.com/video/BV1d84y1s77A/?spm_id_from=333.999.0.0) 
+
 ##### 电机本体
+
 [工程师必知，DD马达和伺服电机的区别在哪！](https://www.bilibili.com/video/BV1EG4y1h7bU/)
 [600克57牛米关节电机](https://www.bilibili.com/video/BV1Pu411G7M2/)
 [国内第一台六自由度磁悬浮平面电机样机和六自由度驱动完整展示](https://www.bilibili.com/video/BV1JZ4y1o7FM)
+
 ##### 减速器
+
 [【开源】自制迷你摆线减速器基于2204无刷电机全3D打印](https://www.bilibili.com/video/BV11d4y1L7zm/?spm_id_from=333.999.0.0)  
+
 ##### 带屏旋钮
+
 [我们开发了一个实用的SmartKnob智能旋钮](https://www.bilibili.com/video/BV1wg411n7Bm/?spm_id_from=333.999.0.0) 
 [虽然程序写的一坨答辩，但还是开源了   旋转按钮](https://www.bilibili.com/video/BV1po4y1t7Jr/)
 [开源 X-Knob：Smart konb 的 X-TRACK UI (lvgl) 实现智能旋钮，支持Surface Dial](https://www.bilibili.com/video/BV1N3411Z764/?spm_id_from=333.999.0.0)  
 [【开源】力控旋钮 十分钟教你如何成就优秀毕设](https://www.bilibili.com/video/BV1bf4y1f7p3/?spm_id_from=333.999.0.0)  
 [【全球优秀机器人开源项目系列】DIY触觉输入旋钮：](https://www.bilibili.com/video/BV1d44y1V7j1)
+
 ##### 作品演示
+
 [新能源汽车电机控制器简介](https://www.bilibili.com/video/BV1nv4y1x79J/)
 [价值1400元的电动车控制器设计的怎么样？给大家详细拆解一下](https://www.bilibili.com/video/BV1yq4y1u7bQ/?spm_id_from=333.880.my_history.page.click&vd_source=8628b70b8921792574747e076af0f11a)
 [挑战全网性价比最强57步进闭环驱动，超大力矩、中低速超静音超低震动、高速急停急启，支持无限位回零](https://www.bilibili.com/video/BV1Wh4y1f7a3/)
 [小米暴打友商！CyberGear机器人关节测试+保姆级驱动教程](https://www.bilibili.com/video/BV1ym4y1N74J/)
 [【全网最详细】暴拆分析小米 CyberGear 机器人关节电机](https://www.bilibili.com/video/BV1qN4y197cr/)
 [机器人+持续发力 伺服轮模组硬件接线示意](https://www.bilibili.com/video/BV1gh41177nu/)
+
 ##### 其他
+
 [中科大RM电控合集](https://www.bilibili.com/video/BV1z14y1G77V/?spm_id_from=333.788&vd_source=8628b70b8921792574747e076af0f11a)
 [一不小心搞了个万用型电机驱动板，无刷无感驱动，无刷有](https://www.bilibili.com/video/BV15v411s7jQ)
-
-
 
 [你知道现在的两轮车控制器有多卷吗？ (qq.com)](https://mp.weixin.qq.com/s/haHH4A47wJG-8PELkoiqSA)
 [直流无刷电机的控制方式，了解一下~ (qq.com)](https://mp.weixin.qq.com/s/QmeUL3xKQPTivyRI5E5CGg)
@@ -213,7 +232,9 @@
 [从零开始自己编写FOC 算法篇3：快速正弦算法](https://www.bilibili.com/video/BV19M4y1Q7qa/?spm_id_from=333.999.0.0)  
 [BLDC有感启动](https://blog.csdn.net/weixin_43626341/article/details/112599175)
 [步进电机权威平台_中国步进电机网](http://www.zgbjdj.com/)
+
 ##### 步进电机调速算法
+
 ###### 梯形调速算法
 
 为啥需要设计一个调速算法呢？步进电机不是给多少脉冲就动多少步吗？但是带上负载了就可能失步，所谓失步，简单理解就是实际电机轴转过的度数，没有输入脉冲对应度数多。为什么会这样呢？电机的扭矩有可能无法驱动负载。一般会做一个启动加速控制过程，停止的时候做一个减速控制，中间做一个匀速控制。这就是比较常见的梯形调速控制算法。
@@ -295,33 +316,52 @@
 电机速度控制，一般尽量做到柔性调速，本文分享的步进电机的S-曲线调速数学算法模型，是一个非常棒的算法模型。速度一开始缓慢增加到快速增加，再回到缓慢增加直到速度达到设定期望速度。从设计上，兼顾了快速启停，又能尽最大程度降低加速度突变这一对矛盾。希望对有兴趣的朋友有所帮助。
 
 ##### 步进电机控制
+
 ###### arduino控制步进电机
+
 > [!info] arduino控制步进电机的库（带有驱动器）  
 > Arduino的最吸引人的地方之一就是有丰富的例子，丰富的库函数。 对于控制步进电机，虽然是一正一负给出脉冲即可，但是自己从头编写也不容易。根据最近的搜索，把了解到的步进电机库做一个简单罗列。 1，Stepper库。 ( http:// arduino.cc/en/Reference /Stepper ...  
 > [https://zhuanlan.zhihu.com/p/149573299](https://zhuanlan.zhihu.com/p/149573299)  
 
 ##### FOC
+
 ###### STM32 PMSM FOC SDK V3 2讲座
+
 - [P1STM32 PMSM FOC SDK V3 2 讲座1](https://www.bilibili.com/video/BV1EW411D7ZF?p=1)[44:08](https://www.bilibili.com/video/BV1EW411D7ZF?p=1)
+
 - [P2STM32 PMSM FOC SDK V3 2 讲座2](https://www.bilibili.com/video/BV1EW411D7ZF?p=2)[31:36](https://www.bilibili.com/video/BV1EW411D7ZF?p=2)
+
 - [P3STM32 PMSM FOC SDK V3 2 讲座3](https://www.bilibili.com/video/BV1EW411D7ZF?p=3)[36:29](https://www.bilibili.com/video/BV1EW411D7ZF?p=3)
+
 - [P4STM32 PMSM FOC SDK V3 2 讲座4](https://www.bilibili.com/video/BV1EW411D7ZF?p=4)[32:55](https://www.bilibili.com/video/BV1EW411D7ZF?p=4)
+
 - [P5STM32 PMSM FOC SDK V3 2 讲座5](https://www.bilibili.com/video/BV1EW411D7ZF?p=5)[38:46](https://www.bilibili.com/video/BV1EW411D7ZF?p=5)
+
 - [P6STM32 PMSM FOC SDK V3 2 讲座6](https://www.bilibili.com/video/BV1EW411D7ZF?p=6)[11:33](https://www.bilibili.com/video/BV1EW411D7ZF?p=6)
+
 - [P7STM32 PMSM FOC SDK V3 2 讲座7](https://www.bilibili.com/video/BV1EW411D7ZF?p=7)[28:38](https://www.bilibili.com/video/BV1EW411D7ZF?p=7)
+
 - [P8STM32 PMSM FOC SDK V3 2 讲座8](https://www.bilibili.com/video/BV1EW411D7ZF?p=8)[37:36](https://www.bilibili.com/video/BV1EW411D7ZF?p=8)
+
 - [P9STM32 PMSM FOC SDK V3 2 讲座9](https://www.bilibili.com/video/BV1EW411D7ZF?p=9)[18:10](https://www.bilibili.com/video/BV1EW411D7ZF?p=9)
+
 - [P10STM32 PMSM FOC SDK V3 2 讲座10](https://www.bilibili.com/video/BV1EW411D7ZF?p=10)[34:53](https://www.bilibili.com/video/BV1EW411D7ZF?p=10)
+
 - [P11STM32 PMSM FOC SDK V3 2 讲座11](https://www.bilibili.com/video/BV1EW411D7ZF?p=11)[33:13](https://www.bilibili.com/video/BV1EW411D7ZF?p=11)
-###### FOC基本概念
-[外行人怎么去理解foc电机控制](https://www.bilibili.com/video/BV19E411g7jj)
-[漫谈伺服电机](https://www.bilibili.com/medialist/play/watchlater/BV1r94y1Z7sD)
-[无刷电机学习日志第4期：需要哪些基础知识？](https://www.bilibili.com/video/BV1x8411x7RM/)
-[开环FOC跟我一起撸代码](https://www.bilibili.com/medialist/play/watchlater/BV1FY4y1i7Pm)
-###### FOC硬件
-[第三期 03直流电机驱动原理及元器件选型](https://www.bilibili.com/video/BV1Nt4y1y7xj)
-[基于ir2103的全N Mos驱动板开放资料啦，满足大功率的](https://www.bilibili.com/video/BV1kh411U7pj)
-[能实现调速的电机驱动功率器件IRF3205还不够好用？维库](https://www.bilibili.com/video/BV1qZ4y1k75v)
-[低压直流无刷电机驱动芯片TMC6300](https://www.bilibili.com/video/BV1pA4y1D7BS)
-[业界体积最小的直流伺服TMCM-1617](https://www.bilibili.com/video/BV1iF411u7ag)
-###### FOC开源项目
+  
+  ###### FOC基本概念
+  
+  [外行人怎么去理解foc电机控制](https://www.bilibili.com/video/BV19E411g7jj)
+  [漫谈伺服电机](https://www.bilibili.com/medialist/play/watchlater/BV1r94y1Z7sD)
+  [无刷电机学习日志第4期：需要哪些基础知识？](https://www.bilibili.com/video/BV1x8411x7RM/)
+  [开环FOC跟我一起撸代码](https://www.bilibili.com/medialist/play/watchlater/BV1FY4y1i7Pm)
+  
+  ###### FOC硬件
+  
+  [第三期 03直流电机驱动原理及元器件选型](https://www.bilibili.com/video/BV1Nt4y1y7xj)
+  [基于ir2103的全N Mos驱动板开放资料啦，满足大功率的](https://www.bilibili.com/video/BV1kh411U7pj)
+  [能实现调速的电机驱动功率器件IRF3205还不够好用？维库](https://www.bilibili.com/video/BV1qZ4y1k75v)
+  [低压直流无刷电机驱动芯片TMC6300](https://www.bilibili.com/video/BV1pA4y1D7BS)
+  [业界体积最小的直流伺服TMCM-1617](https://www.bilibili.com/video/BV1iF411u7ag)
+  
+  ###### FOC开源项目

@@ -129,6 +129,77 @@ $$
 输入/输出电能=磁场储存在增量+转换为热能的能量损耗+输出的机械能
 $$
 
+<img src="assets_01%20电机基础/2025-05-12-15-14-57-image.png" title="" alt="" width="301"> 
+
+**磁动势**
+
+$$
+f_A=N_Ai_A 
+=H_ml_m+H_{\delta}\delta 
+= \frac{B_m}{{\mu}_{Fe}}l_m+\frac{B_{\delta}}{\mu_0}\delta 
+=B_mS\frac{l_m}{{\mu}_{Fe}S}+B_{\delta}\frac{\delta}{\mu_0S} \\
+=\phi_{mA}R_m+\phi_\delta R_\delta
+=\frac{\phi_{mA}}{\Lambda_m}+\frac{\phi_{\delta}}{\Lambda_\delta}
+=\phi_{\delta}(\frac{1}{\Lambda_m}+\frac{1}{\Lambda_\delta})
+=\phi_{\delta}(\frac{\Lambda_m \Lambda_\delta}{\Lambda_m +\Lambda_\delta})
+=\phi_{\delta} \Lambda_{m\delta}\\
+=\phi_{mA}R_{m\delta}
+$$
+
+**磁链**
+
+$$
+\psi_{AA}=\psi_{\sigma A}+\psi_{mA}
+=\psi_{\sigma A}+\phi_{mA}N_A
+=\psi_{\sigma A}+\frac{N^2_A}{R_{m\delta}}i_A
+=\psi_{\sigma A}+N_A^2\Lambda_{m\delta}i_A\\
+=L_{\sigma A}i_A+L_{mA}i_A
+=L_Ai_A
+$$
+
+**电磁**
+
+$$
+u_A=R_Ai_A-e_{AA}=R_Ai_A+\frac{d\psi_{AA}}{dt}
+$$
+
+$$
+dW_{eAA}=dW_m=u_Ai_Adt-R_Ai_A^2dt=-e_{AA}i_Adt=i_Ad\psi_{AA}=i_Ad\psi_{mA}\
+(忽略漏磁)
+$$
+
+**磁能**
+
+$$
+W_m=\omega_mV_\delta=\frac{1}{2}BHV_\delta=\frac{1}{2}\frac{B^2}{\mu}V_\delta\
+(忽略铁心储能)
+$$
+
+$$
+W_m=\int_0^{mA(\psi)}i_Ad\psi
+=\int_0^{ma(\psi)}i_Ad(\frac{N_A^2}{R_{m\delta}})
+=\int_0^{ma(\psi)}i_Ad(\frac{N_A^2}{R_{\delta}})(忽略铁心磁阻)
+$$
+
+**磁共能**
+
+$$
+W'_m=\int_0^{A(i)}=\psi_{mA}di
+$$
+
+$$
+W_m+W'_m=i_A\psi_{mA}
+$$
+
+若忽略铁心磁阻，磁场能量全部储存在气隙中
+
+$$
+W_m=W'_m=\frac{1}{2}i_A\psi_{mA}=\frac{1}{2}L_{mA}i_A^2=\frac{1}{2}f_AB_\delta S
+=\frac{1}{2}H_\delta B_\delta V_\delta=\frac{1}{2}\frac{B_\delta^2}{\mu_0}V_\delta
+$$
+
+<img src="assets_01%20电机基础/2025-05-12-16-18-08-image.png" title="" alt="" width="357">
+
 ### 变压器
 
 **一次绕组电压方程**
