@@ -81,6 +81,8 @@ SVPWM(Space Vector Pulse Width Modulation)，将逆变系统和异步电机看�
 
 <img title="" src="https://picx.zhimg.com/v2-3205aeb27909d78fbd284d57a36ad219_b.webp" alt="动图" data-align="center">
 
+![](assets_02_FOC/2025-05-15-13-35-11-7段式SVPWM开关顺序_增强后.png)
+
 ### 参考资料
 
 [彻底吃透SVPWM如此简单 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/414721065)
