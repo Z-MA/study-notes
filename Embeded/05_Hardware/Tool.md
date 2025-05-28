@@ -1,46 +1,72 @@
-
 #### 工具
 
 ##### 万用表
+
 [年轻人的，第二个电流表（完整开源）](https://www.bilibili.com/video/BV1LV4y1J7Kd/)
 [开源ESP32彩屏WIFI智能万用表制作过程：成品外观、功能](https://www.bilibili.com/video/BV1Zr4y1s7A1?spm_id_from=333.999.0.0)
 
 ##### 示波器
+
 [【已开源】STM32G431示波器笔](https://www.bilibili.com/video/BV1CG4y1L7An/?spm_id_from=333.999.0.0)  
 
+
+
+##### 功率分析仪
+
+
+
 ##### 逻辑分析仪
+
 [项目分享| 开源逻辑分析仪nanoDLA，一起动手做一个吧！ (qq.com)](https://mp.weixin.qq.com/s/6rNvOR3p6aASlrd9CygLSw)
+
 ##### 烙铁
+
 [部分已开源&抽奖】都2023年了，还不给你的烙铁升级一下？](https://www.bilibili.com/video/BV1k84y187Vf/?spm_id_from=333.999.0.0)  
 [真·智能？万众期待的智能烙铁来了，看看它到底好在哪](https
 [DIY自制Arduino开源高性能T12焊台(电烙铁)](https://www.bilibili.com/video/BV1hU4y1h7u2)
 [开源 ESP32 T12烙铁 新UI 预告](https://www.bilibili.com/video/BV1s64y1v7mY)www.bilibili.com/video/BV1j14y127fr/)
 [又又又一款Mini T12 Arduino便携条形烙铁 欢迎白嫖](https://www.bilibili.com/video/BV1vf4y1B7Xa/)
+
 ##### 加热台
+
 [【开源】加热台量产计划](https://www.bilibili.com/video/BV1cD4y177ec/?spm_id_from=333.999.0.0)  
 [（真的可以白嫖）制作一个免费的高温焊台](https://www.bilibili.com/video/BV14L4y1e7eN/)
 [【开源】加热台量产计划](https://www.bilibili.com/video/BV1Wg41167od/)
 [便携加热台V2.0 开源迷你数显加热台](https://www.bilibili.com/video/BV1AT4y1a7Hz)
+
 ##### 回流焊
+
 [开源回流焊](https://www.bilibili.com/video/BV1wU4y1S7AF)
 [只花80元，更是一件美事！[知识] [回流焊炉]](https://www.bilibili.com/video/BV1Wu411U79s/)
+
 ##### 点焊机
+
 [ESP32便携点焊机/开源自制/超级电容](https://www.bilibili.com/video/BV1d84y177io/)
+
 ##### 贴片机
+
 [贴片机-进度99％](https://www.bilibili.com/video/BV1As4y1B72z/)
 [【硬核】爆肝一个月，手搓贴片机，效果怎么样？](https://www.bilibili.com/video/BV1Cm4y1g7Qi/)
+
 ##### UPS
+
 [开源准UPS迷你交换机 嵌入式必备神器](https://www.bilibili.com/video/BV1rx4y1j7mi/?spm_id_from=333.999.0.0)  
+
 ##### 过滤风扇
+
  [[开源]焊接烟雾过滤小风扇](https://www.bilibili.com/video/BV1Eo4y1w7dJ/)
+
 ##### 电子显微镜
+
 [自制扫描隧道显微镜（二）：压电陶瓷扫描头 Scanning Tunneling Microscope (STM )](https://www.bilibili.com/video/BV11e4y1w7JF/)
 [【硬核】我用3D打印的STM看到了碳原子 自制扫描隧道显微镜【终】](https://www.bilibili.com/video/BV1p94y1z7jX/)
 
 ##### 红外成像
+
 [[开源]红外热成像仪 Nahida_Eyes_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1mM4y1Z7rE/?spm_id_from=333.999.0.0&vd_source=8628b70b8921792574747e076af0f11a)
 
 ##### 激光雕刻机
+
 [开源机器人，激光雕刻，SCARA ROBOT DIY，100%开源](https://www.bilibili.com/video/BV1dM41187CH/?spm_id_from=333.999.0.0)  
 [自制迷你雕刻机 第三集 伺服电机](https://www.bilibili.com/video/BV1MB4y1U7xE)
 [diy数控车铣床，第四篇，主轴箱体](https://www.bilibili.com/video/BV12k4y127Fh/)
@@ -51,9 +77,11 @@
 [2300元拥有一套小型雕刻机，包括电子箱回家插电脑就可以使用，并](https://www.bilibili.com/video/BV1oY411E7cR)
 
 ##### 线切割
+
 [【全球优秀机器人开源项目系列】基于Arduino DIY 线切割机](https://www.bilibili.com/video/BV1Lg411s7wC/?spm_id_from=333.999.0.0)  
 
 ##### 其他
+
 [会焊电路板 如何低价的获得一个自制的机械键盘？](https://www.zhihu.com/question/383361725/answer/3137462230)
 [一种调试工具](https://www.bilibili.com/video/BV1AM4y1v7Du/)
 [DIY 力反馈踏板 国外网友开源](https://www.bilibili.com/video/BV1f14y1o7TK/)
@@ -155,9 +183,3 @@ https://www.bilibili.com/video/BV1W84y1J7tE/
 [![](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUNRtD68jbBQu8wp33Z5zbNo1pVHbic7kmKMStolVk3XN7PF0cgKy43iaQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUNRtD68jbBQu8wp33Z5zbNo1pVHbic7kmKMStolVk3XN7PF0cgKy43iaQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
 
 [![](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibU2j1fBNQXjQjpAxBX4z1t384mwuAL4ebHrYnWmTAxooFK3CicNRIexGg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibU2j1fBNQXjQjpAxBX4z1t384mwuAL4ebHrYnWmTAxooFK3CicNRIexGg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
-
-**来源：小麦大叔**
-
----
-
-**版权归原作者所有，如有侵权，请联系删除。**
