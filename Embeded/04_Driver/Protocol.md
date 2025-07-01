@@ -31,12 +31,19 @@ OSI是Open System Interconnect的缩写，意为开放式系统互联。其各�
 # 上层协议
 ## AT
 [GSM/GPRS模块 AT指令集C语言编程——基于有方M660+和MSP430单片机](https://blog.csdn.net/liming0931/article/details/102966539)
+
 [stm32f4WiFi模块代码调试过程](https://blog.csdn.net/m0_64445185/article/details/126794216)
+
 [基于C语言的AT指令代码实现](https://download.csdn.net/download/hnxyxiaomeng/10815656)
+
 [AT指令代码与实现方法（基于C语言）](https://blog.csdn.net/hnxyxiaomeng/article/details/84613712)
+
 [at指令代码 stm32f030_AT命令简介](https://blog.csdn.net/weixin_39949413/article/details/112127788)
+
 [AT指令的一种解析想法](https://blog.csdn.net/wuhenyouyuyouyu/article/details/83010935)
+
 [STM32--ESP8266--AT指令使用例程](https://liefyuan.blog.csdn.net/article/details/80428059)
+
 [(128条消息) c语言-自用的通用AT框架（修改了一些错误）_at命令框架,at框架-嵌入式文档类资源-CSDN文库](https://download.csdn.net/download/ylc0919/13606978?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-download-2%7Edefault%7ECTRLIST%7EPaid-1-13606978-blog-111478925.pc_relevant_aa&depth_1-utm_source=distribute.pc_relevant_t0.none-task-download-2%7Edefault%7ECTRLIST%7EPaid-1-13606978-blog-111478925.pc_relevant_aa&utm_relevant_index=1)
 
 ## Modbus
@@ -202,6 +209,54 @@ freemodbus：一个开源的Modbus协议栈，支持Modbus RTU、ASCII和TCP协�
 
 
 # 物理层协议
+
+## 通讯分类
+
+| 通信方式   | 工作方式/定义                                                                 | 优点                                                         | 缺点                                                         | 典型应用/例子                        |
+|------------|-------------------------------------------------------------------------------|--------------------------------------------------------------|--------------------------------------------------------------|--------------------------------------|
+| 串行通信   | 数据位按顺序依次传输，每一位数据依次发送或接收                                 | 结构简单，布线简单，不易数据冲突                              | 速度较慢，不适合大量数据快速传输                              | USB，UART，光纤通信                  |
+| 并行通信   | 多个数据位同时传输，每个位有独立通道                                          | 速度快，适合大量数据快速传输                                  | 复杂度高，占用引脚多，易同步问题                              | 短距离传输，长距离成本高             |
+| 同步通信   | 发送和接收依赖共享时钟信号，时钟同步                                          | 时序清晰，易管理，适合实时和精确同步                          | 高频时钟衰减快，易信号畸变，相位偏移，距离受限                | I2C，HDMI，CPU与内存接口             |
+| 异步通信   | 不依赖共享时钟，靠起始位和停止位标识数据块                                    | 灵活，无需精确时钟，媒介简单，距离长                          | 高速/长距离时易失真，解码复杂，可靠性降低                      | UART，USB1.1/2.0，光纤通信           |
+| 单工通信   | 单向通信，一个设备发送，另一个接收                                            | 结构简单                                                      | 只能单向传输                                                 | 无线电广播、电视广播                 |
+| 半双工通信 | 双向但不能同时传输，需切换方向                                                | 双向传输                                                      | 不能同时收发，需切换                                         | 对讲机、传统无线电通信               |
+| 全双工通信 | 双向且可同时传输，双方可同时发送和接收                                        | 可同时收发，实现真正双向通信                                  | 结构相对复杂                                                 | 电话通话、互联网语音、计算机网络通
+
+## UART
+
+### 简介
+UART是通用异步收发传输器（Universal Asynchronous Receiver/Transmitter）的缩写，是一种串行通信协议。它用于在计算机和外部设备之间进行数据传输。UART协议的特点是简单、易于实现，广泛应用于嵌入式系统、单片机和其他电子设备中。
+
+### 物理特性
+UART通信通常使用两根信号线：TX（发送）和RX（接收）。数据以串行方式传输，通常为8位数据位，1位起始位和1位停止位。波特率（Baud Rate）是UART通信的一个重要参数，表示每秒传输的比特数。
+
+| 电平标准 | 信号类型 | 逻辑0 | 逻辑1 | 传输距离 | 传输速率 |
+|:-------:|:---------:|:------:|:-----:|:-------:|:-------:|
+| TTL电平 | 0-5V | 0V    | 5V    | 短距离  | 低速   |
+| RS232电平 | -15V到+15V | -3V到-15V | +3V到+15V | 中距离  | 中速   |
+| RS485电平 | 差分信号 | -2V到-6V | +2V到+6V | 长距离  | 高速   |
+| RS422电平 | 差分信号 | -2V到-6V | +2V到+6V | 长距离  | 高速   |
+
+### 数据帧格式
+
+![串口数据帧格式](./assets_Protocol/串口数据帧格式.png)
+
+**波特率**：UART通信是异步的，不需要时钟信号。发送方和接收方必须在波特率上保持一致，以确保数据正确传输。波特率是UART通信中数据传输的速率，通常以比特每秒（bps）表示。常见的波特率有9600、115200等。
+
+**空闲状态**：UART通信在没有数据传输时处于空闲状态，通常为逻辑1（高电平）。当数据传输开始时，发送方将信号线拉低（逻辑0）以表示起始位。
+
+**数据位**：UART通信通常使用8位数据位，但也可以使用5、6、7或9位数据位。低位(LSB)在前，高位(MSB)在后。
+
+**起始位**：每个数据帧以一个起始位开始，表示数据传输的开始。起始位通常为逻辑0。
+
+**停止位**：每个数据帧以0.5、1、1.5、2个停止位结束，表示数据传输的结束。停止位通常为逻辑1。
+
+**奇偶校验**：UART通信可以选择使用奇偶校验位来检测数据传输中的错误。奇偶校验位(1的个数为奇)可以是奇校验或偶校验。可省略。
+
+### 接收模式
+
+[高手如何玩串口？ (qq.com)](https://mp.weixin.qq.com/s/_gnHkzjuN9fteFJzjI8Z2A)
+
 ## I2C
 [一文搞懂I2C通信总线_i2c通信的详细讲解-CSDN博客](https://blog.csdn.net/m0_38106923/article/details/123673285?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522171066245616800182126176%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=171066245616800182126176&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-123673285-null-null.142^v99^pc_search_result_base7&utm_term=I2C&spm=1018.2226.3001.4187)
 [I2C通信协议详解和通信流程分析_i2c通信的详细讲解-CSDN博客](https://blog.csdn.net/weixin_42031299/article/details/123602636?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522171066529816800226524854%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=171066529816800226524854&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-4-123602636-null-null.142^v99^pc_search_result_base7&utm_term=I2C&spm=1018.2226.3001.4187)
@@ -234,11 +289,6 @@ Interface（总线接口）：很好理解，不再赘述。
 *总线仲裁*
 *空闲态*
 *时钟同步/时钟延展*
-## UART 
-
-[高手如何玩串口？ (qq.com)](https://mp.weixin.qq.com/s/_gnHkzjuN9fteFJzjI8Z2A)
-
-
 
 ## USB
 
