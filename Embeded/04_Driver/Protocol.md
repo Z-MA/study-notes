@@ -181,11 +181,22 @@ Modbus TCP帧结构如下：
 
 > **从机的回复和主机的发送是一样的，如果不一样说明出现了错误**
 
-参考资料
+### Modbus协议开发
+
+**调试工具**
+
+modbus slave：一个Modbus从机模拟器，可以模拟Modbus从机的行为，方便开发和调试Modbus主机程序。它支持Modbus RTU、ASCII和TCP协议，并提供了图形化界面，便于用户进行配置和操作。
+modbus poll：一个Modbus主机模拟器，可以模拟Modbus主机的行为，方便开发和调试Modbus从机程序。它支持Modbus RTU、ASCII和TCP协议，并提供了图形化界面，便于用户进行配置和操作。
+
+**开发框架**
+
+freemodbus：一个开源的Modbus协议栈，支持Modbus RTU、ASCII和TCP协议。它提供了丰富的API接口，方便用户进行Modbus协议的开发和调试。freemodbus可以在多种操作系统上运行，包括Linux、Windows和RT-Thread等嵌入式操作系统。
+
+**参考资料**
 
 [RT-Thread官方移植freemodbus](https://github.com/RT-Thread-packages/freemodbus/blob/master/README_ZH.md)
 
-[FreeModbus官网]([About - Embedded Experts (embedded-experts.at)](https://www.embedded-experts.at/en/freemodbus/about/))
+[FreeModbus官网](https://www.embedded-experts.at/en/freemodbus/about/)
 
 [详解Modbus通信协议---清晰易懂-CSDN博客](https://blog.csdn.net/as480133937/article/details/123197782)
 
