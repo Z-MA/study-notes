@@ -432,6 +432,21 @@ Git 的分支功能强大，支持非线性开发，是团队协作中的重要�
 3. [Markdown 教程(菜鸟教程)](https://www.runoob.com/markdown/md-tutorial.html)
 4. [Markdown 教程](https://markdown.com.cn/)
 
+### Markdown数学公式
+| 名称  |  类型  |  作者/团队	 |  主要用途  |  支持范围  |
+| ----  |----|----| ----|----|
+| TeX	| 排版系统	| Donald Knuth	| 高质量排版	| 全面，复杂但灵活 |
+| LaTeX	| 宏包系统	| Leslie Lamport	| 结构化文档排版	| 基于 TeX，易用性更好 |
+| KaTeX	| JS渲染库	| Khan Academy	| 网页公式渲染	| LaTeX 数学公式子集 |
+| MathJax | JS渲染库 | MathJax团队 | 网页公式渲染 | 体积较大，渲染速度比 KaTeX 慢 |
+
+简言之：
+- TeX 是基础排版引擎，极为强大但使用复杂；
+- LaTeX 是对 TeX 的封装，让写论文和文档变得容易；
+- KaTeX 是让 LaTeX 数学公式能在网页端“即写即显”的轻量级工具。
+
+[KaTeX 支持的函数和语法](https://katex.org/docs/supported.html)
+
 # 其他
 ## 镜像站
 1. [清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/)
