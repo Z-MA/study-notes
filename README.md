@@ -1,24 +1,49 @@
-### Quick setup
-— if you’ve done this kind of thing before
-or	
-https://github.com/Z-MA/Study.git
-Get started by creating a new file or uploading an existing file.
+# 📚 个人学习笔记库
+这是一个结构化的个人学习笔记库，专注于 技术、工程与嵌入式开发 领域。本仓库用于系统化地记录和整理我的学习轨迹与知识要点。
 
-We recommend every repository include a README, LICENSE, and gitignore.
+# 🗂️ 目录结构概览
+```
+STUDY/
+│
+├── 📖 Base/           # 基础学科
+│   ├── 01_Math.md         # 数学
+│   ├── 02_Physics.md      # 物理学
+│   ├── 03_mechanics.md    # 力学
+│   ├── 04_Control.md      # 控制理论
+│   └── 06_Electronics.md  # 电子学
+│
+├── 🎨 Design/         # 设计与制造
+│   ├── assets_Design/     # 设计相关资源文件
+│   ├── 01_PMP.md          # 项目管理/产品管理
+│   ├── 02_Design.md       # 设计理论与原则
+│   ├── 03_CAX.md          # 计算机辅助技术 (CAD/CAE/CAM)
+│   ├── 04_DDC.md          # 数字内容创作 (DCC) 与媒体软件
+│   └── 05_TOOL.md         # 工具使用与技巧
+│
+└── 🔧 Embeded/        # 嵌入式系统开发
+    ├── 01_Code            # 编程语言与代码笔记
+    ├── 02_System          # 操作系统原理 (如RTOS, Linux)
+    ├── 03_SOC             # 片上系统与体系结构
+    ├── 04_Driver          # 设备驱动开发
+    ├── 05_Hardware        # 硬件设计与接口
+    └── 06_Field           # 现场应用与工程实践
+```
 
-### …or create a new repository on the command line
-```
-echo "# Study" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/Z-MA/Study.git
-git push -u origin main
-```
-### …or push an existing repository from the command line
-```
-git remote add origin https://github.com/Z-MA/Study.git
-git branch -M main
-git push -u origin main
-```
+# 🚀 内容领域
+基础理论 (Base): 夯实数理基础，为工程应用提供理论支撑。
+
+设计制造 (Design): 涵盖从工业设计、软件操作(CAx/DCC)到产品管理的全流程知识。
+
+嵌入式开发 (Embeded): 深入软硬件结合领域，包括底层驱动、系统移植、硬件设计等。
+
+# 📊 最近更新
+【您可以根据需要手动维护这个部分，或者使用Gitee的“动态”功能】
+
+2024-09-21: 仓库结构初始化。
+
+# ©️ 版权说明
+本仓库所有内容均为个人学习笔记，仅供个人参考。
+
+原创内容: 采用 CC BY-NC-SA 4.0 许可协议。
+
+参考文献: 笔记中可能包含对互联网公开资料、书籍、教程的归纳和引用，版权归原作者所有。如有侵权，请联系删除。
