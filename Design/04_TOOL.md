@@ -1,9 +1,5 @@
-[为什么现在宽带不让用路由器拨号？](https://www.zhihu.com/question/587820301/answer/3109086593)  
-[有谁介绍一个即时通信软件，最好是开源的，能够自己部署服务器的那种？](https://www.zhihu.com/question/270234898/answer/3177265453)  
-
-[ftp局域网搭建](https://www.bilibili.com/video/BV1fz4y1Z7n4)  
-
-
+# 工具类软件
+[GGTalk](https://www.cnblogs.com/justnow)
 [uTools](https://www.u-tools.cn/)  
 [冰点还原](https://www.bingdiancn.com/)  
 
@@ -14,7 +10,7 @@
 [wordpress官网](https://wordpress.org/)  
 
 
-###### 查看windows文件使用进程
+## 查看windows文件使用进程
 
 **应用背景**  
 windows操作系统中，有时我们关闭程序后，一些相关的进程仍在后台运行，并访问着一些文件，使得我们无法对这些文件及其所属的文件夹进行删除、重命名等操作。  
@@ -30,15 +26,7 @@ windows操作系统中，有时我们关闭程序后，一些相关的进程仍�
 7. 表中的第一列 映像 即是打开这个文件的进程名称，可考虑在任务管理器中结束该进程
 8. 如果有重名的多个进程，以第二列 PID 为准
 
-
-
-
-
-[这种架构图是用什么软件画的？](https://www.zhihu.com/question/387194463/answer/2942070608)
-
-
-
-
+# 在线小工具
 ## **在线素材工具：**
 
 如果你写文章，或者做视频，那就一定少不了要找素材，包括各种图片、背景、emoji表情、表情包、壁纸、视频、gif图等等。  
