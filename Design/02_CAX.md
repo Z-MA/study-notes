@@ -42,6 +42,16 @@ Computer-Aided Design，
 - Vivid Metallic Paint 明亮的金属漆
 - Wood 木材
 
+## AutoCAD
+
+## Freecad
+
+## Blender
+
+## 3DMax
+
+## Maya
+
 # CAE
 (Computer-Aided Engineering)： 计算机辅助工程，用于仿真分析（如应力、流体、热学），例如 ANSYS。
 
@@ -170,3 +180,8 @@ ABAQUS教程   仿真软件
 unity软件
 fusion机械设计
 [比较 Fusion 360 与面向个人用途的 Fusion 360 - Autodesk 欧特克官网](https://www.autodesk.com.cn/products/fusion-360/personal)
+
+- 逆向工具
+
+[完整扫描过程（详细教程）- MobileScan 手机3D扫描仪 工业设计 原型设计 自制娃娃 3D建模 学生党福音 使用超简单](https://www.bilibili.com/medialist/play/watchlater/BV1pf4y1u7b6)
+    

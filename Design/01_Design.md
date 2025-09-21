@@ -8,14 +8,6 @@
 [联系方式_南京苏高专利商标事务所](http://www.njsugao.com/column.asp?id=247)
 [国内有哪些知名的专利查询网站？](https://www.zhihu.com/question/483684367/answer/2204077967)
 
-# 工业设计
-被破解版商业软件惯坏的我现在觉得开源软件没一个好用的，虽然现在正在逐步转向开源软件社区，但是还是觉得这些开源软件的操作习惯都很反人类：  
-KiCAD — Altium Designer  
-Blender — 3DMax/Maya  
-freecad — Solidworks/AutoCAD  
-Inkscape — Adobe Illustrator（Inkscape还行就是自动吸附和AI完全不能比）  
-GIMP — Photoshop
-
 
 
 从0-1设计爆款产品，水下推进器，分享产品定义过程中各个环节的难点及决策工具。
@@ -31,116 +23,42 @@ https://www.bilibili.com/video/BV1SV4y1X7Vi/
 
 
 ## 工业设计思想
-    - **【形式美法则合集】设计美学的底层逻辑（持续更新中......）**
-        - [P1【片段剪辑】快速预告](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=1)[01:45](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=1)
-        - [P2【开栏序言】单纯想告诉大家的一些事](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=2)[03:39](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=2)
-        - [P3【主次与虚实】1.独立形主次思维模型 上](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=3)[19:44](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=3)
-        - [P4【主次与虚实】2.独立形主次思维模型 下](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=4)[18:56](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=4)
-        - [P5【主次与虚实】3.结合空间、环境对形态主次关系的运用](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=5)[26:50](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=5)
-        - [P6【主次与虚实】4.梳理虚实在物质及空间环境中的关系](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=6)[11:04](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=6)
-        - [P7【主次与虚实】5.界面设计中虚实的表达方式](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=7)[11:31](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=7)
-        - [P8【主次与虚实】6.顶部界面的虚与实逻辑](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=8)[12:12](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=8)
-        - [P9【主次与虚实】7.垂直界面的虚实逻辑](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=9)[21:43](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=9)
-        - [P10【主次与虚实】8.不同界面在空间中的组合关系](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=10)[19:38](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=10)
-        - [P11【主次与虚实】9.界面设计中虚实占比及虚实形态的思考](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=11)[26:26](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=11)
-        - [P12【主次与虚实】10.总结，对于没看前面课程的人，这节视频就是加密视频](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=12)[14:55](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=12)
-        - [P13【对称与均衡】1.视觉重力感受的底层逻辑](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=13)[18:07](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=13)
-        - [P14【对称与均衡】2.点、线、面、体在空间中的均衡影响以及思维模型](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=14)[37:12](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=14)
-        - [P15【对称与均衡】3.视域对于空间平衡设计的影响](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=15)[14:57](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=15)
-        - [P16【对称与均衡】4.平面与空间均衡的深入思考](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=16)[12:32](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=16)
-        - [P17【对称与均衡】5.空间立面调节平衡的方式方法](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=17)[14:44](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=17)
-        - [P18【对称与均衡】6.平衡中心强调法](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=18)[13:00](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=18)
-        - [P19【对称与均衡】7.视觉重力协调法](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=19)[10:04](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=19)
-        - [P20【对比与统一】1.用一个建筑讲清楚形态对比的四种用法](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=20)[10:10](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=20)
-        - [P21【对比与统一】2.以视知觉转译机制角度学习形式对比](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=21)[17:09](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=21)
-        - [P22【对比与统一】3.用三种对比的呈现方式梳理设计美学的对比运用逻辑](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=22)[07:55](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=22)
-        - [P23【对比与统一】4.用形式美法则的统一给设计加个BUFF](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=23)[13:20](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=23)
-        - [P24【节奏与韵律】1.凝固的音乐为什么让人上头？](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=24)[10:11](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=24)
-        - [P25【节奏与韵律】2.拆解理解设计中节奏感的运用逻辑](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=25)[10:56](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=25)
-        - [P26【节奏与韵律】3.韵律美在设计中的运用逻辑](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=26)[20:23](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=26)
-        - [P27【节奏与韵律】4.视觉与听觉语言中的韵律互通逻辑](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=27)[11:31](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=27)
-        - [P28【节奏与韵律】5.音乐与色彩构成要素的通感](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=28)[08:13](https://www.bilibili.com/video/BV1xP4y1W7Jd?p=28)
-
-  
-
-- 逆向工具
-    
-    [**完整扫描过程（详细教程）- MobileScan 手机3D扫描仪 工业设计 原型设计 自制娃娃 3D建模 学生党福音 使用超简单**](https://www.bilibili.com/medialist/play/watchlater/BV1pf4y1u7b6)
-    
-
-  
-
-[明明就是个画线而已…… 怎么就变成了这个样子？！](https://www.bilibili.com/video/BV12W411q7M3)
-
-[我愿称之为——无敌](https://www.bilibili.com/video/BV1Gq4y177z7)（环氧树脂胶制作琥珀般沙盘）
-
-[**拜托三连了！这绝对是全B站最用心（没有之一）的AN公开课程，耗时千余小时开发！**](https://www.bilibili.com/medialist/play/watchlater/BV1Yf4y1J77P)
-
-[**卡扣——盒子和盖子的合体姿势之五**](https://www.bilibili.com/medialist/play/watchlater/BV1Ag411w7GD)
-
-[**你所见的公共标识是如何被设计出来的?【dinlab宇宙电台】Vol.023**](https://www.bilibili.com/medialist/play/watchlater/BV1bU4y177eN)
-
-  
-
-[【一分钟快速了解】强大的Adobe全家桶软件都是做什么用的，你知道吗？PS PR AI AE DW ID AN XD LR AU SP..._哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/av49022108/?spm_id_from=333.788.videocard.0)
-
-[优设导航 - 学设计从这里开始！](http://hao.uisdc.com/)
-
-[魔泊云](https://www.mopaas.com/)
-
-[人人都是产品经理 | 产品经理、产品爱好者学习交流平台](http://www.woshipm.com/)
-
-[2022年了，是用CAD or REVIT？](https://www.bilibili.com/video/BV1uY4y1k7L2)
-
-[【产品结构设计】产品结构设计知识与基础结构设计实例-](https://www.bilibili.com/video/BV13K4y1s7cT)
-
-[【产品结构设计】基础结构设计入门](https://www.bilibili.com/video/BV1jy4y1Y7mi)
-
-[产品设计常犯的结构错误](https://www.bilibili.com/video/BV1xq4y1i7bf)
-
-[摄影师搞定99%透明产品的拍摄套路，首次公开！](https://www.bilibili.com/video/BV1hY4y1p7Ni)
-
-[c4d插件与非插件实现边缘破碎的双教程！](https://www.bilibili.com/video/BV1pY4y1t76C)
-
-[我看看还有谁用ps做涂鸦渐变字还在用画笔一点点涂！](https://www.bilibili.com/video/BV1va411C76S)
-
-[敬伟PS教程全集](https://www.bilibili.com/video/BV1YW411e7n5)
-
-[【设计前沿04】交互设计国内外最新设计前沿资讯分享｜持续更新、](https://www.bilibili.com/video/BV1qu411B79p)
-
-[PS-教程-抠羽毛系列](https://www.bilibili.com/video/BV1sL4y1u72f)[Niryo One 6自由度3D打印机械臂](https://www.bilibili.com/video/BV1sx411o7pt)
-
-[【Photoshop 教程】史上最容易听懂的PS入门基础教程（答疑在最后](https://www.bilibili.com/video/BV1Xs411q7DW)
-
-[【PS教程】终于有一套全面的PS教程啦！从零开始学PS！！](https://www.bilibili.com/video/BV187411Z7bx)
-
-[99%设计师必备的做字体神器](https://www.bilibili.com/video/BV1zZ4y1R7f8)
-
-> [!info] 【提高审美】导演私用的10个APP&网站！建议收藏_哔哩哔哩_bilibili  
-> 审美网站直达链接：01 https://film-grab.com02 https://shotdeck.com03 Daily Art04 Pinterest 05 i Museum 06 VART07 https://color.adobe.com08 https://coolors.co09 http://zhongguose.com10 https://nipponcolors.com11, 视频播放量 129013、弹幕量 1207、点赞数 15738、投硬币枚数 13939、收藏人数 30203、转发人数 1570, 视频作者 小鹿Lawrence, 作者简介 独立导演 / 摄影师 / 配音演员 wb:小鹿Lawrence Ins: lawrence_lue ，相关视频：【干货向】分分钟Get的调色+穿搭教程！，2023审美提升- 孤独治愈高级感配色 || Andoni Beristain 、 tinycactus，2023全年让你效率加倍，自律不摆烂！【2023年度计划模板分享】，【干货向】三个小技巧，帮你选到完美配乐!，审美积累 | 治愈风景 | 摄影师Kosuke Okude，影视飓风帮王冰冰做"视频装修"，历时41天 我终于搞定了ta！，满江红真「的是」喜剧！你们为什么不笑啊？！！【不要笑挑战】，【中文字幕】国外Youtube上爆火的Blender学习速成教程，千万级播放收藏，满足你对Blender动画的所有渴望，10分钟学会的3个提升B格的转场【干货向】  
-> [https://www.bilibili.com/video/BV1cG4y1X7AC/?spm_id_from=333.999.0.0](https://www.bilibili.com/video/BV1cG4y1X7AC/?spm_id_from=333.999.0.0)  
-
-> [!info] [编剧汪海林]煤老板就是比浙江财团好_哔哩哔哩_bilibili  
-> 剪自官方视频，侵删 看编剧汪海林如何吐槽国内的电视剧市场, 视频播放量 691017、弹幕量 1154、点赞数 17360、投硬币枚数 1085、收藏人数 5877、转发人数 3680, 视频作者 Akademia, 作者简介 哲学，综艺节目旧档挖掘，相关视频：汪海林：导演所加了1500块，女演员的质量，立马就提上去了，现在资本的审美VS以前煤老板的审美，山西煤老板 到底有多土豪？，汪海林：甲方要求，为了流量偶像，已经不写两行以上台词了，煤老板说的都对，央视某著名主持人提问:"为什么年轻人都不愿进工厂，搞不懂这群年轻人！"，"你TM的又不是开窑子！什么都往演艺圈里塞！！"，中国的煤老板富有到何种程度，现在的编剧都是在搞笑吗？连清朝人都知道虎门销烟而不是"烧烟"！，哪个老板的秘书是男的？  
-> [https://www.bilibili.com/video/BV1vs411g753/?spm_id_from=333.999.0.0](https://www.bilibili.com/video/BV1vs411g753/?spm_id_from=333.999.0.0)  
-
-> [!info] 厨子与驴的傻雕发明,无所不能天才创意,这脑洞无敌了_哔哩哔哩_bilibili  
-> 厨子与驴的傻雕发明,无所不能天才创意,这脑洞无敌了, 视频播放量 528188、弹幕量 447、点赞数 21219、投硬币枚数 1275、收藏人数 17504、转发人数 2852, 视频作者 搞笑得管理员, 作者简介 爱搞笑，爱生活！，相关视频：千万网红"厨子与驴"，最有才的民间发明夫妻！，厨子与驴的沙雕发明，夫妻俩都是发明天才，沙雕发明：摩托床，厨子与驴："野蛮"情侣，美食博主蜕变为十足沙雕搞笑CP，发明：撕咬辅助，厨子与驴搞笑名场面，为了让大爷吃水果，我付出了多大的努力...，这是魔术吗？不这是花手魔法，厨子与驴，各科老师的特殊技能  
-> [https://www.bilibili.com/video/BV1VA411D7Ea/?spm_id_from=333.999.0.0](https://www.bilibili.com/video/BV1VA411D7Ea/?spm_id_from=333.999.0.0)  
-
-> [!info] 产品结构设计工程师未来职业规划和建议,结构工程师未来发展规划_哔哩哔哩_bilibili  
-> 产品结构设计工程师未来职业规划和建议,结构工程师未来发展规划, 视频播放量 2540、弹幕量 1、点赞数 48、投硬币枚数 18、收藏人数 98、转发人数 3, 视频作者 金三维教程, 作者简介 ...  
-> [https://www.bilibili.com/video/BV1sP4y1e7Ve/?spm_id_from=333.999.0.0](https://www.bilibili.com/video/BV1sP4y1e7Ve/?spm_id_from=333.999.0.0)  
-
-> [!info] 如何在麻省理工学院做手工_哔哩哔哩_bilibili  
-> 如何在麻省理工学院做手工, 视频播放量 148615、弹幕量 167、点赞数 9697、投硬币枚数 216、收藏人数 1508、转发人数 388, 视频作者 试作间, 作者简介 一个麻省理工博士生，前硅谷无人驾驶工程师的试作间，相关视频：拍个大佬卷死你们！中国中车超级智慧工厂（下），机械臂设计（sw并安装），"一人得道，全班满分"__- 俄亥俄州立大学的有机化学教授Christopher ...  
-> [https://www.bilibili.com/video/BV1nA411Q79L/?spm_id_from=333.999.0.0](https://www.bilibili.com/video/BV1nA411Q79L/?spm_id_from=333.999.0.0)  
-
+[设计美学的底层逻辑（第一期）](https://www.bilibili.com/video/BV1xP4y1W7Jd?vd_source=8628b70b8921792574747e076af0f11a)  
+[明明就是个画线而已…… 怎么就变成了这个样子？！](https://www.bilibili.com/video/BV12W411q7M3)  
+[卡扣——盒子和盖子的合体姿势之五](https://www.bilibili.com/medialist/play/watchlater/BV1Ag411w7GD)  
+[你所见的公共标识是如何被设计出来的](https://www.bilibili.com/medialist/play/watchlater/BV1bU4y177eN)  
+[优设导航 - 学设计从这里开始！](http://hao.uisdc.com/)  
+[人人都是产品经理 | 产品经理、产品爱好者学习交流平台](http://www.woshipm.com/)  
+[2022年了，是用CAD or REVIT？](https://www.bilibili.com/video/BV1uY4y1k7L2)  
+[【产品结构设计】产品结构设计知识与基础结构设计实例-](https://www.bilibili.com/video/BV13K4y1s7cT)  
+[【产品结构设计】基础结构设计入门](https://www.bilibili.com/video/BV1jy4y1Y7mi)  
+[产品设计常犯的结构错误](https://www.bilibili.com/video/BV1xq4y1i7bf)  
+[摄影师搞定99%透明产品的拍摄套路，首次公开！](https://www.bilibili.com/video/BV1hY4y1p7Ni)  
+[c4d插件与非插件实现边缘破碎的双教程！](https://www.bilibili.com/video/BV1pY4y1t76C)  
+[我看看还有谁用ps做涂鸦渐变字还在用画笔一点点涂！](https://www.bilibili.com/video/BV1va411C76S)  
+[【设计前沿04】交互设计国内外最新设计前沿资讯分享｜持续更新、](https://www.bilibili.com/video/BV1qu411B79p)  
+[99%设计师必备的做字体神器](https://www.bilibili.com/video/BV1zZ4y1R7f8)  
+[厨子与驴的傻雕发明,无所不能天才创意,这脑洞无敌了](https://www.bilibili.com/video/BV1VA411D7Ea/?spm_id_from=333.999.0.0)    
+[产品结构设计工程师未来职业规划和建议,结构工程师未来发展规划](https://www.bilibili.com/video/BV1sP4y1e7Ve/?spm_id_from=333.999.0.0)  
+[ 如何在麻省理工学院做手工](https://www.bilibili.com/video/BV1nA411Q79L/?spm_id_from=333.999.0.0)  
 [设计软件通-用心做最好的教程！](http://www.sjrjt.com/)
+[强大的Adobe全家桶软件都是做什么用的](https://www.bilibili.com/video/av49022108/?spm_id_from=333.788.videocard.0)  
+[GIF动图在线制作工具](http://www.soogif.com/)
 
-[【一分钟快速了解】强大的Adobe全家桶软件都是做什么用的，你知道吗？PS PR AI AE DW ID AN XD LR AU SP..._哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/av49022108/?spm_id_from=333.788.videocard.0)
 
-[SOOGIF - GIF搜索_GIF动图搜索平台_GIF动图素材库_野表情发源地_GIF动图在线制作工具](http://www.soogif.com/)
+审美网站直达链接：
+1. https://film-grab.com
+1. https://shotdeck.com
+1. Daily Art
+1. Pinterest 
+1. i Museum 
+1. VART
+1. https://color.adobe.com
+1. https://coolors.co
+1. http://zhongguose.com
+1. https://nipponcolors.com
+1. https://vimeo.com
+
 
 # 机械工艺及制造
 #### 

@@ -205,8 +205,12 @@
 [P201D12  新液化 03:49](https://www.bilibili.com/video/BV1YW411e7n5?p=201)  
 [P202D13  透视变形 03:11](https://www.bilibili.com/video/BV1YW411e7n5?p=202)  
 
+## GIMP
+
 ## PR
 
 
 ## AE
 ## AI
+
+## Inkscape
