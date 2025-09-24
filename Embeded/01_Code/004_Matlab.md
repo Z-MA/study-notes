@@ -172,7 +172,8 @@ Simulink 基础知识学习
 - 模块库：代表方程和建模组件的模块
 
 ### Simulink 模块库
-Simulink模块库包括标准Simulink模块库和专业模块库两大类。
+Simulink模块库包括标准Simulink模块库和专业模块库两大类。  
+模块库的详细描述请参见[Simulink模块库详解](https://www.yuque.com/lizho/gniseg/gg1gptqllkrlpg2v?singleDoc#g1dv)。
 
 | # | English Name | 中文名称 | Purpose / 用途 |
 |---|---|---|---|
@@ -294,6 +295,7 @@ Simulink模块库包括标准Simulink模块库和专业模块库两大类。
 | 21 | Switch | 开关切换模块 | 由第二输入控制在第一与第三输入间切换 |
 | 22 | Terminator | 信号终端模块 | 连接未使用的输出端，避免警告 |
 | 23 | Vector Concatenate | 向量串联模块 | 将相同数据类型的向量输入按维度串联 |
+
 
 
 Derivative	计算连续输入信号关于时间的逼近连续导数
