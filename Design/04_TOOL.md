@@ -4,7 +4,8 @@
 [冰点还原](https://www.bingdiancn.com/)  
 
 [泡泡Dog官网(需翻墙)](https://www.paopao.dog/)  
-[泡泡Dog官网入口](https://ppg.369.cyou)
+[泡泡Dog官网入口](https://ppg.369.cyou)  
+邀请码：4ma9meq8
 
 [hexo官网](https://hexo.io/zh-cn/)   
 [wordpress官网](https://wordpress.org/)  
