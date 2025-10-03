@@ -1,128 +1,82 @@
-### 磁
+# 磁路
+## 基础概念
+### 安倍环路定理$\oint$
+$$\oint_i H \cdot dl = \sum_{k=1}^N i_k \quad\Rarr\quad Hl=Ni$$
 
-**磁感应强度**（磁通密度）
+### 磁场强度$H$
+$$H=\frac{Ni}{l}$$
 
-$$
-\vec{dB}=\frac{Idl \vec{a_{R}}}{R^2}
-$$
+### 相对磁导率$\mu$
+$$\mu>>\mu_0\quad(真空磁导率\mu_0=4\pi \times10^{-7}H/m)$$
 
-$$
-B=\frac{F}{IL}(1T=1\frac{N}{A\cdot m})
-$$
+### 磁感应强度$B$
+磁通密度
+$$B=\mu H（磁场强度推导）$$
 
-**磁通量**
+$$\vec{dB}=\frac{Idl \vec{a_{R}}}{R^2}$$  
 
-$$
-\phi=\int_AB \cdot dA
-$$
+$$B=\frac{F}{IL} \quad(电磁力推导，1T=1\frac{N}{A\cdot m})$$
 
-$$
-\phi=B\cdot S(1Wb=1T\cdot m^2)
-$$
+### 磁动势$F$
+（磁路欧姆定律，安匝数）
+$$F=Ni=Hl$$
 
-**磁导率**
+### 磁阻$R_m$
+$$Hl=\frac{B}{\mu}\cdot l=\phi \frac{l}{\mu A}=\phi R_m  \quad\Rarr\quad R_m=\frac{l}{\mu A}= \frac{1}{\Lambda_m} \\（R_m磁阻：A/Wb或1/H，铁磁材料磁阻非线性 \Lambda_m，磁导：Wb/A或H）$$
 
-$$
-\mu>>\mu_0（\mu_0=4\pi \times10^{-7}H/m）
-$$
+### 磁通量$\phi$
+$$\phi=\int_AB \cdot dA \quad\Rarr\quad \phi=B\cdot S(1Wb=1T\cdot m^2)$$
 
-**磁场强度**（[B与H的关系](https://zhuanlan.zhihu.com/p/57868125)）
+### 磁链$\psi$
+$$\psi=N\phi\quad(单位：Wb·turn 或 V·s)$$
 
-$$
-H=\frac{B}{\mu}
-$$
+$$\psi=Li \quad\Rarr\quad e=-L\frac{di}{dt}\\(线性磁路中的自感关系，L为自感系数，单位：H)$$
 
-**安倍环路定理**
+$$\psi_1=L_1i_1+M_{12}i_2 \quad \quad \psi_2=M_{21}i_1 \\ (多绕组或互感情况，M为互感，M_{12}=M_{21})$$
 
-$$
-\oint_i H \cdot dl = \sum_{k=1}^N i_k
-$$
+### 感应电动势$e$
+感应电动势依据法拉第电磁感应定律表达。
+$$e=-N\frac{d\phi}{dt}=-\frac{d\psi}{dt}\\(螺旋管；e回路感应电动势；\psi交链回路的磁链)$$
 
-$$
-Hl=Ni
-$$
+$$e= \frac{B\cdot dS}{dt}=\int (\nu \times B) \cdot dl=Blv\\(导体在磁场中运动；\nu:导体速度)$$
 
-**磁动势**（**磁路欧姆定律**，安匝数）
+$$\phi= \phi_m sin(\omega t)(正弦磁通)\Rarr  e_t=N\omega \phi_m sin(\omega t-\frac{\pi}{2})\quad(瞬时值) \Rarr e_{rms} = 4.44fN\phi_m （有效值）$$
 
-$$
-F=Ni=Hl=\frac{B}{\mu}\cdot l=\phi \frac{l}{\mu A}=\phi R_m=\frac{\phi}{\Lambda_m} （\Lambda_m磁导：Wb/A或H）
-$$
+### 磁路基尔霍夫第一定律
+$$\phi_1=\phi_2+\phi_3+\cdots+\phi_n$$
 
-**磁阻**
+### 磁路基尔霍夫第二定律
+$$\sum_{k=1}^N H_kl_k=Ni（H_kl_k是第k段磁位降）$$
 
-$$
-R_m=\frac{l}{\mu A}（R_m磁阻：A/Wb或1/H，铁磁材料磁阻非线性）
-$$
-
-**磁路基尔霍夫第一定律**
-
-$$
-\phi_1=\phi_2+\phi_3+\cdots+\phi_n
-$$
-
-**磁路基尔霍夫第二定律**
-
-$$
-\sum_{k=1}^N H_kl_k=Ni（H_kl_k是第k段磁位降）
-$$
-
-**磁化**
+### 磁化
 
 - 磁畴
 - 起始段、直线段（起始点：膝点）、饱和段
 - 磁滞回线（顽磁性，剩磁）
 - 基本磁化曲线（用于磁路计算）
 
-**铁磁材料**
+### 铁磁材料
 
 软磁材料：磁滞损耗小，磁导率高，常用来制造变压器和电机的铁芯。（铸铁、铸钢、硅钢片、坡莫合金）
 
 硬磁材料（永磁材料）：磁滞回线宽，剩磁和矫顽力都大，常用来制造永磁铁。（铝镍钴合金和稀土合金）
 
-**铁芯损耗（铁损）**
+### 磁滞损耗
+$$P_h=C_hfB_m^nV\\(n取决于材料，硅钢片n=1.6\sim 2.3;V铁磁材料体积；C_h磁滞损耗系数，取决于材料)$$
 
-磁滞损耗：
+### 涡流损耗
+$$P_e=C_e\Delta^2f^2B_m^2V\\(C^e涡流损耗系数，反比于材料电阻率；\Delta硅钢片厚度)$$
 
-$$
-P_h=C_hfB_m^nV(n取决于材料，硅钢片n=1.6\sim 2.3;V铁磁材料体积；C_h磁滞损耗系数，取决于材料)
-$$
+### 铁芯损耗
+$$P_{Fe}\approx C_{Fe}f^{1.3}B_m^2G\\(C_{Fe}铁芯损耗系数；G铁芯质量)$$
 
-涡流损耗：
 
-$$
-P_e=C_e\Delta^2f^2B_m^2V(C^e涡流损耗系数，反比于材料电阻率；\Delta硅钢片厚度)
-$$
+### 毕奥-萨伐尔电磁力定律（电磁力）
+$$f=i\int dl\times B$$
 
- 铁芯损耗：
+$$f=Bil$$
 
-$$
-P_{Fe}\approx C_{Fe}f^1.3B_m^2G(C_{Fe}铁芯损耗系数；G铁芯质量)
-$$
-
-**感应电动势**（法拉第电磁感应定律）
-
-$$
-e=-N\frac{d\phi}{dt}=-\frac{d\psi}{dt}(螺旋管；e回路感应电动势；\psi交链回路的磁链)
-$$
-
-$$
-\psi=N\phi
-$$
-
-$$
-e=\frac{d\phi}{dt}= \frac{B\cdot dS}{dt}=\int (\nu \times B) \cdot dl(导体在磁场中运动；\nu导体速度)
-$$
-
-**毕奥-萨伐尔电磁力定律**（电磁力）
-
-$$
-f=i\int dl\times B
-$$
-
-$$
-f=Bil
-$$
-
+### 能量守恒
 **能量守恒**
 
 $$
@@ -235,7 +189,6 @@ $$
 $$
 E_2=4.44fN_2\Phi_m
 $$
-
 ### 电机
 
 ### 算法
@@ -290,6 +243,8 @@ $$
 \varphi_A = \frac{W_{A\rightarrow 0}}{q}
 $$
 
+# 参考文档
+[BH关系](https://zhuanlan.zhihu.com/p/57868125)
 [高中数学](https://mp.weixin.qq.com/s/TqTkFqDkfi4g_OH8I-T64A?mpshare=1&scene=1&srcid=0424XSmeuh63kcVvwmaLM5tE&sharer_shareinfo=9e06fb0c2aea07cf17aebc92cc7548e3&sharer_shareinfo_first=9e06fb0c2aea07cf17aebc92cc7548e3&from=industrynews&color_scheme=light#rd)
 
 [高中电磁学](https://mp.weixin.qq.com/s/AzVT87d--sKFoAk6RupNrQ?mpshare=1&scene=1&srcid=0425iEsLOTVJEYMIP9LokiDf&sharer_shareinfo=4d7ff84501ec73cb3d2130357b1012d3&sharer_shareinfo_first=4d7ff84501ec73cb3d2130357b1012d3&from=industrynews&color_scheme=light#rd)
