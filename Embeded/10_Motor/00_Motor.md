@@ -1,28 +1,124 @@
-# 电机的分类
-## 同步电动机
-### 永磁同步电动机
-永磁同步电动机（PMSM）是一种使用永磁体作为转子磁场源的同步电动机。它们通常用于需要高效率和高功率密度的应用，如电动车辆和工业自动化。
-## 异步电动机
-异步电动机是一种广泛使用的电动机，主要用于工业驱动和家用电器。它们的转子与旋转磁场之间存在相对运动，因而称为“异步”。
-## 直流电动机
-## 步进电动机
-## 无刷直流电动机
-## 伺服电动机
+## 电机的分类
+- 同步电动机
+  - 永磁同步电动机
+- 异步电动机
+- 直流电动机
+- 步进电动机
+- 无刷直流电动机
+- 伺服电动机
 
 
 
-# 其他
-## ST电机生态
+## 教程
+### ST官方
+[面向电机控制的STM32生态系统](https://www.st.com.cn/content/st_com/zh/ecosystems/stm32-motor-control-ecosystem.html)
 
-官网地址：[面向电机控制的STM32生态系统 - 意法半导体STMicroelectronics](https://www.st.com.cn/content/st_com/zh/ecosystems/stm32-motor-control-ecosystem.html)
 
-## 硬石资料
+### 硬石资料
+#### 资料下载
+[硬石科技](http://www.ing10bbs.com/page.php?id=2)
 
-#### 学习资料下载
+#### 教程
+[F407教程](https://www.bilibili.com/video/BV1yp411f7gs/?spm_id_from=333.1387.homepage.video_card.click)
 
-[资料下载 | 广州大硬石科技有限责任公司 - Powered by DouPHP](http://www.ing10bbs.com/page.php?id=2)
+[电机驱动与控制](https://www.bilibili.com/video/BV1Fs411p7Zc/?spm_id_from=333.999.0.0&vd_source=8628b70b8921792574747e076af0f11a)
 
-#### 其他学习资料
+专题1：直流有刷电机驱动基础
+1. 电机概述&硬石电机实验箱
+2. 有刷电机原理和减速电机
+3. 电机参数和电机控制基础
+4. H桥驱动的不同模式分析
+5. [MOS管驱动原理分析(含自举电路)](https://www.bilibili.com/video/BV1Fs411p7Zc/?spm_id_from=333.788.videopod.episodes&vd_source=8628b70b8921792574747e076af0f11a&p=5)
+6. 硬石有刷驱动板原理图分析
+7. 有刷电机基本旋转驱动代码分析
+8. 有刷电机的按键和串口控制实现
+9. 有刷电机编码器测速实现
+
+专题2：PID算法实现闭环控制
+1. 闭环控制系统
+2. PID控制的比例P和积分I的介绍
+3. PID控制的微分项
+4. 位置式PID和增量式PID算法介绍
+5. 增量式PID速度闭环代码分析1(PID上位机使用介绍)
+6. 增量式PID速度闭环代码分析2
+7. 位置式PID速度环和位置环代码分析
+8. PID参数调试方法
+9. 电机电流采集原理和代码分析
+10. 提高电流采集精度
+11. 限流保护功能
+12. 电流环
+13. 位置速度电流多闭环
+
+专题3：舵机控制
+1. 舵机的内部结构和工作原理
+2. 舵机的控制信号和控制演示
+
+专题4：步进电机驱动与控制
+1. 步进电机的几个基本概念
+2. 单相和两相步进电机结构和工作原理
+3. 步进电机分类与结构特点
+4. 步进电机工作原理和细分驱动原理
+5. 28步进电机驱动硬件设计分析
+6. 28步进电机旋转和控制
+7. 57步进电机参数介绍
+8. 57步进电机驱动芯片说明1
+9. 57步进电机驱动芯片说明2
+10. 57步进电机旋转实现
+11. 57步进电机旋转控制
+12. 4个步进电机和RS485的控制例程分析
+
+专题5：步进电机梯形加减速
+1. 步进电机的失步和过冲
+2. 梯形加减速算法原理分析
+3. 梯形加减速算法实现分析1
+4. 梯形加减速算法实现分析2
+5. 梯形加减速代码分析1
+6. 梯形加减速代码分析2
+7. 直线滑台和接近开关
+8. 丝杆滑台运动控制
+9. 丝杆滑台控制代码实现分析1
+10. 丝杆滑台控制代码实现分析2
+
+专题6：步进电机闭环系统
+1. 双出轴步进电机和编码器
+2. 增量式AB相编码器数据读取
+3. 光栅尺和绝对式编码器读取
+4. PID速度环
+5. 位置闭环和双闭环
+
+专题7：直流无刷电机驱动与控制
+1. 简介及例程演示
+2. 直流无刷电机工作原理
+3. 驱动板硬件设计
+4. STM32定时器基础
+5. 无刷电机的基础驱动_HALL
+6. 无刷电机的简单控制例程解释
+7. 霍尔传感器测速基础
+8. 无刷电机速度闭环例程解释
+9. 总结及控制波形测量
+
+专题8：FOC控制原理及软件
+1. 软件安装及使用
+2. 基础简介
+3. SVPWM原理(一)
+4. SVPWM原理(二)
+5. SVPWM原理(三)
+6. 坐标变换
+7. 坐标变换验证
+8. HALL传感器测量电角度
+9. ADC采样时机
+10. 源码解析_HALL传感器中断
+11. 源码解析_系统嘀嗒定时器中断
+12. 源码解析_ADC采样中断(一)
+13. 源码解析_ADC采样中断(二)
+14. ST FOC电机库串口通信协议
+15. 源码解析_总结
+
+## 其他
+
+
+
+### 其他学习资料
 
 [FOC?看这篇文章就够了 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/364247816)
 
@@ -30,110 +126,7 @@
 
 [如何从零开始学习电机控制 - YouTube](https://www.youtube.com/watch?v=cQY4S9r86Rg&list=PLX9pXgLRG1A8Qt8bdvsia8S_cK4MKL_ZU)
 
-#### 视频课程
-
-课程链接：[基于STM32的电机驱动与控制](https://www.bilibili.com/video/BV1Fs411p7Zc/?spm_id_from=333.999.0.0&vd_source=8628b70b8921792574747e076af0f11a)
-
-##### 专题1：直流有刷电机驱动基础
-
-1. 专题01 直流有刷电机(第1节)_电机概述&硬石电机实验箱
-2. 专题01 直流有刷电机(第2节)_有刷电机原理和减速电机
-3. 专题01 直流有刷电机(第3节)_电机参数和电机控制基础
-4. 专题01 直流有刷电机(第4节)_H桥驱动的不同模式分析
-5. 专题01 直流有刷电机(第5节)_MOS管驱动原理分析(含自举电路)
-6. 专题01 直流有刷电机(第6节)_硬石有刷驱动板原理图分析
-7. 专题01 直流有刷电机(第7节)_有刷电机基本旋转驱动代码分析
-8. 专题01 直流有刷电机(第8节)_有刷电机的按键和串口控制实现
-9. 专题01 直流有刷电机(第9节)_有刷电机编码器测速实现
-
-##### 专题2：PID算法实现闭环控制
-
-1. 专题02 PID算法实现闭环控制(第1节)_闭环控制系统
-2. 专题02 PID算法实现闭环控制(第2节)_PID控制的比例P和积分I的介绍
-3. 专题02 PID算法实现闭环控制(第3节)_PID控制的微分项
-4. 专题02 PID算法实现闭环控制(第4节)_位置式PID和增量式PID算法介绍
-5. 专题02 PID算法实现闭环控制(第5节)_增量式PID速度闭环代码分析1(PID上位机使用介绍)
-6. 专题02 PID算法实现闭环控制(第6节)_增量式PID速度闭环代码分析2
-7. 专题02 PID算法实现闭环控制(第7节)_位置式PID速度环和位置环代码分析
-8. 专题02 PID算法实现闭环控制(第8节)_PID参数调试方法
-9. 专题02 PID算法实现闭环控制(第9节)_电机电流采集原理和代码分析
-10. 专题02 PID算法实现闭环控制(第10节)_提高电流采集精度
-11. 专题02 PID算法实现闭环控制(第11节)_限流保护功能
-12. 专题02 PID算法实现闭环控制(第12节)_电流环
-13. 专题02 PID算法实现闭环控制(第13节)_位置速度电流多闭环
-
-##### 专题3：舵机控制
-
-1. 专题03 舵机控制(第1节)_舵机的内部结构和工作原理
-2. 专题03 舵机控制(第2节)_舵机的控制信号和控制演示
-
-##### 专题4：步进电机驱动与控制
-
-1. 专题04 步进电机驱动与控制(第1节)_步进电机的几个基本概念
-2. 专题04 步进电机驱动与控制(第2节)_单相和两相步进电机结构和工作原理
-3. 专题04 步进电机驱动与控制(第3节)_步进电机分类与结构特点
-4. 专题04 步进电机驱动与控制(第4节)_步进电机工作原理和细分驱动原理
-5. 专题04 步进电机驱动与控制(第5节)_28步进电机驱动硬件设计分析
-6. 专题04 步进电机驱动与控制(第6节)_28步进电机旋转和控制
-7. 专题04 步进电机驱动与控制(第7节)_57步进电机参数介绍
-8. 专题04 步进电机驱动与控制(第8节)_57步进电机驱动芯片说明1
-9. 专题04 步进电机驱动与控制(第9节)_57步进电机驱动芯片说明2
-10. 专题04 步进电机驱动与控制(第10节)_57步进电机旋转实现
-11. 专题04 步进电机驱动与控制(第11节)_57步进电机旋转控制
-12. 专题04 步进电机驱动与控制(第12节)_4个步进电机和RS485的控制例程分析
-
-##### 专题5：步进电机梯形加减速
-
-1. 专题05 步进电机梯形加减速(第1节)_步进电机的失步和过冲
-2. 专题05 步进电机梯形加减速(第2节)_梯形加减速算法原理分析
-3. 专题05 步进电机梯形加减速(第3节)_梯形加减速算法实现分析1
-4. 专题05 步进电机梯形加减速(第4节)_梯形加减速算法实现分析2
-5. 专题05 步进电机梯形加减速(第5节)_梯形加减速代码分析1
-6. 专题05 步进电机梯形加减速(第6节)_梯形加减速代码分析2
-7. 专题05 步进电机梯形加减速(第7节)_直线滑台和接近开关
-8. 专题05 步进电机梯形加减速(第8节)_丝杆滑台运动控制
-9. 专题05 步进电机梯形加减速(第9节)_丝杆滑台控制代码实现分析1
-10. 专题05 步进电机梯形加减速(第10节)_丝杆滑台控制代码实现分析2
-
-##### 专题6：步进电机闭环系统
-
-1. 专题06 步进电机闭环系统(第1节)_双出轴步进电机和编码器
-2. 专题06 步进电机闭环系统(第2节)_增量式AB相编码器数据读取
-3. 专题06 步进电机闭环系统(第3节)_光栅尺和绝对式编码器读取
-4. 专题06 步进电机闭环系统(第4节)_PID速度环
-5. 专题06 步进电机闭环系统(第5节)_位置闭环和双闭环
-
-##### 专题7：直流无刷电机驱动与控制
-
-1. 专题07 直流无刷电机驱动与控制(第1节)_简介及例程演示
-2. 专题07 直流无刷电机驱动与控制(第2节)_直流无刷电机工作原理
-3. 专题07 直流无刷电机驱动与控制(第3节)_驱动板硬件设计
-4. 专题07 直流无刷电机驱动与控制(第4节)_STM32定时器基础
-5. 专题07 直流无刷电机驱动与控制(第5节)_无刷电机的基础驱动_HALL
-6. 专题07 直流无刷电机驱动与控制(第6节)_无刷电机的简单控制例程解释
-7. 专题07 直流无刷电机驱动与控制(第7节)_霍尔传感器测速基础
-8. 专题07 直流无刷电机驱动与控制(第8节)_无刷电机速度闭环例程解释
-9. 专题07 直流无刷电机驱动与控制(第9节)_总结及控制波形测量
-
-##### 专题8：FOC控制原理及软件
-
-1. 专题08 FOC控制原理(第1节)_软件安装及使用
-2. 专题08 FOC控制原理(第2节)_基础简介
-3. 专题08 FOC控制原理(第3节)_SVPWM原理(一)
-4. 专题08 FOC控制原理(第4节)_SVPWM原理(二)
-5. 专题08 FOC控制原理(第5节)_SVPWM原理(三)
-6. 专题08 FOC控制原理(第6节)_坐标变换
-7. 专题08 FOC控制原理(第7节)_坐标变换验证
-8. 专题08 FOC控制原理(第8节)_HALL传感器测量电角度
-9. 专题08 FOC控制原理(第9节)_ADC采样时机
-10. 专题08 FOC控制原理(第10节)_源码解析_HALL传感器中断
-11. 专题08 FOC控制原理(第11节)_源码解析_系统嘀嗒定时器中断
-12. 专题08 FOC控制原理(第12节)_源码解析_ADC采样中断(一)
-13. 专题08 FOC控制原理(第13节)_源码解析_ADC采样中断(二)
-14. 专题08 FOC控制原理(第14节)_ST FOC电机库串口通信协议
-15. 专题08 FOC控制原理(第15节)_源码解析_总结
-
-## 其他
+### 视频课程
 
 ##### FOC
 
@@ -247,122 +240,9 @@
 [BLDC有感启动](https://blog.csdn.net/weixin_43626341/article/details/112599175)
 [步进电机权威平台_中国步进电机网](http://www.zgbjdj.com/)
 
-##### 步进电机调速算法
-
-###### 梯形调速算法
-
-为啥需要设计一个调速算法呢？步进电机不是给多少脉冲就动多少步吗？但是带上负载了就可能失步，所谓失步，简单理解就是实际电机轴转过的度数，没有输入脉冲对应度数多。为什么会这样呢？电机的扭矩有可能无法驱动负载。一般会做一个启动加速控制过程，停止的时候做一个减速控制，中间做一个匀速控制。这就是比较常见的梯形调速控制算法。
-
-[![](https://mmbiz.qpic.cn/mmbiz_png/qFV4SqXFJYut2yWK4ERxam3ckYfU9bBT17iaNFT2aJgLiaBRdRic7QS6x3AWFg5gIKns1GcicNFliavLZOmxiccQIibrg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_png/qFV4SqXFJYut2yWK4ERxam3ckYfU9bBT17iaNFT2aJgLiaBRdRic7QS6x3AWFg5gIKns1GcicNFliavLZOmxiccQIibrg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
-
-这样一个梯形调速算法，相当于步进电机的运动过程包含三个阶段：
-
-- ①加速过程
-- ②匀速过程
-- ③减速过程
-
-①加速过程所用到的加速度为：
-
-一般加速过程与减速过程所用的加速度绝对值是相同的，减速过程相当于加速度为-a.
-
-所以总的行程图中速度曲线下阴影部分三个过程的面积：
-
-由于加速过程与减速过程所用到的加速度绝对值相等，所以,所以
-
-梯形速度调速算法很简单，比较容易实现，但是这个算法却有缺陷。
-
-[![](https://mmbiz.qpic.cn/mmbiz_png/qFV4SqXFJYut2yWK4ERxam3ckYfU9bBTzqM8o4TwqJHHic1KoIXocB5LOWAicgHWWxP1RRSPrxGFQEvBBlJ1RyPg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_png/qFV4SqXFJYut2yWK4ERxam3ckYfU9bBTzqM8o4TwqJHHic1KoIXocB5LOWAicgHWWxP1RRSPrxGFQEvBBlJ1RyPg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
-
-图中红色圆圈的位置，加速度从a突变为0，或从0突变为-a,这些突变点会带来什么后果呢？来看看其加速度曲线：
-
-[![](https://mmbiz.qpic.cn/mmbiz_png/qFV4SqXFJYut2yWK4ERxam3ckYfU9bBTNbLgvjEreEJ6Cfianv9u1nxM6FQIkMyiazticVjvTEicPRcdPgHM7PuDOA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_png/qFV4SqXFJYut2yWK4ERxam3ckYfU9bBTNbLgvjEreEJ6Cfianv9u1nxM6FQIkMyiazticVjvTEicPRcdPgHM7PuDOA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
-
-电机带着负载运动，比如常见的丝杆将电机的旋转运动，转化直线运动，又或者齿轮或滚珠结构，带动负载进行旋转运动。具有一定的质量的负载，在加速度突变情况下，很有可能会造成机械振动。
-
-比较专业一点的术语称为急动(Jerk)，其实就是考察加速度的变化率的，也可以称为**加加速度**，我们知道速度的变化率就是加速度，而加速度的变化率就是加加速度。
-
-如果用数学语言来装下逼，就是速度函数对时间的一阶导数就是加速度，而对加速度曲线的一阶导数就是加加速度。因此上图中加速度在时刻突变，意味着加加速度为无穷大。
-
-> 对于给定的负载，加加速度越大，产生的不需要的振动能量就越大，振动能量的频谱也就越宽。这意味着加速度变化越快，振动就越强大，激发的振动模式数量也就越多。由于振动能量被系统机械吸收，如果振动频率与机械和控制系统中的共振相匹配，则可能会导致稳定时间增加或精度降低。
-
-这样一说，好像就有思路了，我们如果能做到加速度的变化率是连续的，是否这种变化就会变得平滑呢？运动是不是就更柔性？所谓变化率连续，是不是就是相对于加速度函数的导数曲线是连续的就可以了？
-
-###### S-曲线调速算法
-
-假定来归一化速度曲线为从0加速到1，假设能做出如下调速曲线：
-
-[![](https://mmbiz.qpic.cn/mmbiz_png/qFV4SqXFJYut2yWK4ERxam3ckYfU9bBTOWrVcN6oDklOjKumARMA4pt6icjq0Eia9lZgXWicsuroWlfdSibQdr0dPA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_png/qFV4SqXFJYut2yWK4ERxam3ckYfU9bBTOWrVcN6oDklOjKumARMA4pt6icjq0Eia9lZgXWicsuroWlfdSibQdr0dPA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
-
-这样来看看这些拐点：
-
-看速度曲线先是比较缓慢的增加，然后再比较快速的增加，然后在慢慢第逼近到期望的设定速度，因此这是一个变加速过程。再来做一个进一步的假设，把加速度过程的时间也做一个归一化：
-
-[![](https://mmbiz.qpic.cn/mmbiz_png/qFV4SqXFJYut2yWK4ERxam3ckYfU9bBTKCk1vrfGFWskqGE84czc4DQia9aNj4ojRRIpbKr0XQVF2FW8X4EnrCg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_png/qFV4SqXFJYut2yWK4ERxam3ckYfU9bBTKCk1vrfGFWskqGE84czc4DQia9aNj4ojRRIpbKr0XQVF2FW8X4EnrCg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
-
-对于函数，可以看出：
-
-前面说,那么，意味着在0、1时刻，加速度为0。
-
-假设速度曲线函数为：
-
-则其一阶导数为：
-
-这样就可以得出下面的方程组了：
-
-解出a和b：
-
-因此，调速曲线就得到了：
-
-其加速度曲线为：
-
-整个过程的加速度曲线长这样：
-
-[![](https://mmbiz.qpic.cn/mmbiz_png/qFV4SqXFJYut2yWK4ERxam3ckYfU9bBTOuuNn85R3DJPiaaz2RcTtuX635nTnUgabKg21NqicP2o7k64kib3ibAysw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_png/qFV4SqXFJYut2yWK4ERxam3ckYfU9bBTOuuNn85R3DJPiaaz2RcTtuX635nTnUgabKg21NqicP2o7k64kib3ibAysw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
-
-这样一来，加速度就是连续变化的，没有突变点。解决了之前提到的急动的问题。由于加速、减速过程完全对称，因此我们关心的运动距离控制，则很容易用下图中绿色区域的面积计算得到：
-
-[![](https://mmbiz.qpic.cn/mmbiz_png/qFV4SqXFJYut2yWK4ERxam3ckYfU9bBTTsia47vrItColNXibmTqgk6lD2JXpZ3tRr1wlhtxicaiav4fsVNLuyh6dw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_png/qFV4SqXFJYut2yWK4ERxam3ckYfU9bBTTsia47vrItColNXibmTqgk6lD2JXpZ3tRr1wlhtxicaiav4fsVNLuyh6dw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
-
-有了这样的数学模型，编码实现就是水到渠成的事情了。
-
-###### **总结一下**
-
-电机速度控制，一般尽量做到柔性调速，本文分享的步进电机的S-曲线调速数学算法模型，是一个非常棒的算法模型。速度一开始缓慢增加到快速增加，再回到缓慢增加直到速度达到设定期望速度。从设计上，兼顾了快速启停，又能尽最大程度降低加速度突变这一对矛盾。希望对有兴趣的朋友有所帮助。
-
-##### 步进电机控制
-
-###### arduino控制步进电机
-
-> [!info] arduino控制步进电机的库（带有驱动器）  
-> Arduino的最吸引人的地方之一就是有丰富的例子，丰富的库函数。 对于控制步进电机，虽然是一正一负给出脉冲即可，但是自己从头编写也不容易。根据最近的搜索，把了解到的步进电机库做一个简单罗列。 1，Stepper库。 ( http:// arduino.cc/en/Reference /Stepper ...  
-> [https://zhuanlan.zhihu.com/p/149573299](https://zhuanlan.zhihu.com/p/149573299)  
-
 ##### FOC
+[STM32 PMSM FOC SDK V3 2讲座](https://www.bilibili.com/video/BV1EW411D7ZF?vd_source=8628b70b8921792574747e076af0f11a)
 
-###### STM32 PMSM FOC SDK V3 2讲座
-
-- [P1STM32 PMSM FOC SDK V3 2 讲座1](https://www.bilibili.com/video/BV1EW411D7ZF?p=1)[44:08](https://www.bilibili.com/video/BV1EW411D7ZF?p=1)
-
-- [P2STM32 PMSM FOC SDK V3 2 讲座2](https://www.bilibili.com/video/BV1EW411D7ZF?p=2)[31:36](https://www.bilibili.com/video/BV1EW411D7ZF?p=2)
-
-- [P3STM32 PMSM FOC SDK V3 2 讲座3](https://www.bilibili.com/video/BV1EW411D7ZF?p=3)[36:29](https://www.bilibili.com/video/BV1EW411D7ZF?p=3)
-
-- [P4STM32 PMSM FOC SDK V3 2 讲座4](https://www.bilibili.com/video/BV1EW411D7ZF?p=4)[32:55](https://www.bilibili.com/video/BV1EW411D7ZF?p=4)
-
-- [P5STM32 PMSM FOC SDK V3 2 讲座5](https://www.bilibili.com/video/BV1EW411D7ZF?p=5)[38:46](https://www.bilibili.com/video/BV1EW411D7ZF?p=5)
-
-- [P6STM32 PMSM FOC SDK V3 2 讲座6](https://www.bilibili.com/video/BV1EW411D7ZF?p=6)[11:33](https://www.bilibili.com/video/BV1EW411D7ZF?p=6)
-
-- [P7STM32 PMSM FOC SDK V3 2 讲座7](https://www.bilibili.com/video/BV1EW411D7ZF?p=7)[28:38](https://www.bilibili.com/video/BV1EW411D7ZF?p=7)
-
-- [P8STM32 PMSM FOC SDK V3 2 讲座8](https://www.bilibili.com/video/BV1EW411D7ZF?p=8)[37:36](https://www.bilibili.com/video/BV1EW411D7ZF?p=8)
-
-- [P9STM32 PMSM FOC SDK V3 2 讲座9](https://www.bilibili.com/video/BV1EW411D7ZF?p=9)[18:10](https://www.bilibili.com/video/BV1EW411D7ZF?p=9)
-
-- [P10STM32 PMSM FOC SDK V3 2 讲座10](https://www.bilibili.com/video/BV1EW411D7ZF?p=10)[34:53](https://www.bilibili.com/video/BV1EW411D7ZF?p=10)
-
-- [P11STM32 PMSM FOC SDK V3 2 讲座11](https://www.bilibili.com/video/BV1EW411D7ZF?p=11)[33:13](https://www.bilibili.com/video/BV1EW411D7ZF?p=11)
-  
   ###### FOC基本概念
   
   [外行人怎么去理解foc电机控制](https://www.bilibili.com/video/BV19E411g7jj)
