@@ -1,17 +1,17 @@
 # 磁路
 ## 基础物理量
-### 安倍环路定理$\oint$
+### 安倍环路定理 $\oint$
 $$\oint_i H \cdot dl = \sum_{k=1}^N i_k \quad\Rarr\quad Hl=Ni$$
 
 $$\sum_{k=1}^N H_kl_k=Ni（H_kl_k是第k段磁位降，磁路基尔霍夫第二定律）$$
 
-### 磁场强度$H$
+### 磁场强度 $H$
 $$H=\frac{Ni}{l}$$
 
-### 相对磁导率$\mu$
+### 相对磁导率 $\mu$
 $$\mu>>\mu_0\quad(真空磁导率\mu_0=4\pi \times10^{-7}H/m)$$
 
-### 磁感应强度$B$
+### 磁感应强度 $B$
 $$B=\mu H（磁场强度推导）$$
 
 $$\vec{dB}=\frac{Idl \vec{a_{R}}}{R^2}$$  
@@ -20,29 +20,31 @@ $$B=\frac{F}{IL} \quad(电磁力推导，1T=1\frac{N}{A\cdot m})$$
 
 $$B=\frac{\phi}{S}(B又被称为磁通密度)$$
 
-### 磁动势$F$
+### 磁动势 $F$
 $$F=Ni=Hl$$
 
-### 电磁力$F$
+### 电磁力 $F$
 毕奥-萨伐尔电磁力定律
 $$F=i\int dl\times B \quad\Rarr\quad F=Bil$$
 
-### 磁阻$R_m$
+### 磁阻 $R_m$
 $$Hl=\frac{B}{\mu}\cdot l=\phi \frac{l}{\mu A}=\phi R_m  \quad\Rarr\quad R_m=\frac{l}{\mu A}= \frac{1}{\Lambda_m} \\（R_m磁阻：A/Wb或1/H，铁磁材料磁阻非线性，\Lambda_m，磁导：Wb/A或H）$$
 
-### 磁通量$\phi$
+### 磁通量 $\phi$
 $$\phi=\int_AB \cdot dA \quad\Rarr\quad \phi=B\cdot S(1Wb=1T\cdot m^2)$$
 
 $$\phi_1=\phi_2+\phi_3+\cdots+\phi_n(磁路基尔霍夫第一定律)$$
 
-### 磁链$\psi$
+### 磁链 $\psi$
 $$\psi=N\phi\quad(单位：Wb·turn 或 V·s)$$
 
 $$\psi=Li \quad\Rarr\quad e=-L\frac{di}{dt}\\(线性磁路中的自感关系，L为自感系数，单位：H)$$
 
 $$\psi_1=L_1i_1+M_{12}i_2 \quad \quad \psi_2=M_{21}i_1 \\ (多绕组或互感情况，M为互感，M_{12}=M_{21})$$
 
-### 感应电动势$e$
+### 电感 $L$
+$$L=\frac{N^2}{R_m}=\frac{N^2\mu A}{l} \quad\Rarr\quad e=-L\frac{di}{dt}$$
+### 感应电动势 $e$
 感应电动势依据法拉第电磁感应定律表达。
 $$e=-N\frac{d\phi}{dt}=-\frac{d\psi}{dt}\\(螺旋管；e回路感应电动势；\psi交链回路的磁链)$$
 

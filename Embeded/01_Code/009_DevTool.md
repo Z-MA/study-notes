@@ -60,8 +60,15 @@ VScode大家肯定不陌生。先打开一个项目，再在File下面的`Add Fo
 
 ### NotePad++
 ### Typora
+
 ## IDE工具
-### Keil
+### Keil(MDK)
+[解决KEIL工程无法点击 go to definition 跳转问题](https://blog.csdn.net/qq7258477/article/details/143876117)
+
+1. 魔术棒 -> Output -> Browse Information（勾选）
+2. 路径不能有中文
+3. Project -> Clean Targets，然后重新编译整个工程
+4. 魔术棒 -> Output -> Browse Information（先取消勾选 -> 全编译 -> 再勾选上 -> 全编译）
 
 
 ## 代码对比
@@ -75,7 +82,6 @@ WinMerge是一个开源差异和合并工具。WinMerge可以比较文件夹和�
 
 [![](https://mmbiz.qpic.cn/mmbiz_png/f80N5WPNTbxUiceWx86WgJ0kSq6x86G35IYKPG7EV6GfVuCQX7HwEST8yl6bQrwwBcsj8gibbDT3k1BgYf5J14Cw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_png/f80N5WPNTbxUiceWx86WgJ0kSq6x86G35IYKPG7EV6GfVuCQX7HwEST8yl6bQrwwBcsj8gibbDT3k1BgYf5J14Cw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
 
-[![](
 
 效果图
 

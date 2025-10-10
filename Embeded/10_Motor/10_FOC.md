@@ -16,7 +16,7 @@
 
 PWM（Pulse Width Modeulation）脉宽调制技术（DC-DC）
 
-![](assets_02_FOC/2025-05-14-10-19-13-image.png)
+![](assets_10_FOC/2025-05-14-10-19-13-image.png)
 
 **占空比**
 
@@ -38,7 +38,7 @@ SPWM 波形是通过比较正弦波和三角波得到的，***正弦波*** 叫�
 
 **调制极性**  
 根据调制波形极性的不同分为单极性 SPWM 和 双极性 SPWM。这两种方式的 SPWM 波形如图所示。 
-![](assets_02_FOC/2025-05-14-10-55-17-image.png)
+![](assets_10_FOC/2025-05-14-10-55-17-image.png)
 在单极性 SPWM 中，载波与调制波的比较是单边的，即载波在调制波上方时输出高电平，载波在调制波下方时输出低电平。  
 在双极性 SPWM 中，载波与调制波的比较是双边的，即载波在调制波上方时输出低电平，载波在调制波下方时输出高电平。  
 单极性SPWM的输出电压谐波含量较低，但开关频率是双极性的两倍，开关损耗较大。而双极性SPWM的开关损耗较小，但输出电压谐波含量较高。两者各有优缺点，实际应用中可根据需要选择。
@@ -72,13 +72,13 @@ $$调制比 R =\frac{正弦输出波峰值电压幅值 V_s}{三角载波电压�
 
 ##### 自然采样法
 在正弦波和三角波的**每个自然自然交点时刻切换一次功率开关器件的通断**，SPWM 波形很接近正弦波，解方程复杂。
-![](assets_02_FOC/2025-05-14-12-16-57-image.png)
+![](assets_10_FOC/2025-05-14-12-16-57-image.png)
 
 ##### 规则采样法
 使用规则采样的方法实现 SPWM 输出是属于异步调制，调制波形频率改变的时候，载波频率是不变的，当调制频率越高，载波比就越低，正弦波的平滑度就越差。
 ###### 对称规则采样法
 过三角波的对称轴与正弦波的交点，做平行 x 轴的直线，该平行线与三角波的两个交点作为开关器件的通断时刻。因为这两个交点是对称的，所以称为规则采样法。这种方法实际使用一个阶梯波逼近正弦波，由于在每个载波周期当中只采样一次，因此计算得到简化。由于每个载波周期只采样一次，因此形成的阶梯波与正弦波的逼近程序仍存在较大误差。
-![](assets_02_FOC/2025-05-14-12-18-03-image.png)
+![](assets_10_FOC/2025-05-14-12-18-03-image.png)
 
 在底点对称轴对正弦波采样，采样值作为载波交点控制开关器件的通断。三角波的幅值就是 $𝑈_𝑇$，正弦波的幅值就是 $𝑈_𝑆$，将三角波和正弦波向上平移 1 个单位，使其在时间轴上方，根据相似三角形原理，可得如下关系式。
 $$\frac{1+asin(\omega t_D)}{\delta / 2}=\frac{2}{T_C/2}\\
@@ -92,7 +92,7 @@ $$\delta = \frac{T_C(1+asin(\omega t_D)}{2}\\(其中调制比 a=\frac{U_S}{U_T}�
 
 ###### 不对称规则采样法
 每个载波周期采样两次，在三角波的顶点对称轴或者底点对称轴都采样一次，这样所形成的阶梯波与正弦波的逼近程度会大大提高。这种采样所形成的阶梯波与三角波的交点并不对称，因此称为不对称规则采样。
-![](assets_02_FOC/2025-05-14-13-55-46-image.png)
+![](assets_10_FOC/2025-05-14-13-55-46-image.png)
 
 $$t_{on} = \begin{cases} 
 \frac{T_c}{4} \left( 1 + a \sin \frac{k\pi}{N} \right), & (k = 0,2,4,...,2N-2) \\
@@ -119,18 +119,18 @@ $$t_{on} = \begin{cases}
 
 ## 直流无刷电机驱动基础
 ### 电机模型
-![alt text](assets_02_FOC/电机模型.png)
-![alt text](assets_02_FOC/电机简化模型.png)
-![alt text](assets_02_FOC/电机驱动电路.png)
+![alt text](assets_10_FOC/电机模型.png)
+![alt text](assets_10_FOC/电机简化模型.png)
+![alt text](assets_10_FOC/电机驱动电路.png)
 
 ### 位置获取
 #### 传感器
 ##### 霍尔传感器
 霍尔传感器是利用霍尔效应来检测磁场变化的传感器。霍尔效应是指当电流通过导体时，如果导体处于磁场中，导体内会产生一个与电流方向和磁场方向垂直的电压，这个电压称为霍尔电压。霍尔传感器通常由一个霍尔元件和一些辅助电路组成，当霍尔元件处于磁场中时，霍尔电压会随着磁场强度的变化而变化，通过测量霍尔电压的变化，可以检测到磁场的变化，从而实现位置检测。
-![alt text](assets_02_FOC/霍尔传感器原理.png)
-![alt text](assets_02_FOC/安装霍尔传感器电机示意图.png)
-![alt text](assets_02_FOC/霍尔传感器安装位置图.png)
-![alt text](assets_02_FOC/霍尔传感器旋转信号.png)
+![alt text](assets_10_FOC/霍尔传感器原理.png)
+![alt text](assets_10_FOC/安装霍尔传感器电机示意图.png)
+![alt text](assets_10_FOC/霍尔传感器安装位置图.png)
+![alt text](assets_10_FOC/霍尔传感器旋转信号.png)
 
 ``` matlab
 x = 0:1:360;
@@ -167,28 +167,28 @@ plot(x,z1,x,z2,x,z3)
 针对异步电机，为了保证电机磁通和出力不变（转矩不变） ，电机改变频率时，需维持电压V 和频率F 的比率近似不变，所以这种方式称为恒压频比（$V/f$）控制。$V/f$ 控制－控制简单,通用性强,经济性好,用于速度精度要求不十分严格或负载变动较小的场合。从本质上讲，$V/f$ 控制实际上控制的是三相交流电的电压大小和频率大小，然而交流电有三要素，就是除了电压大小和频率之外，还存在相位。$V/f$ 控制没有对电压的相位进行控制，这就导致在瞬态变化过程中， 例如突加负载的时候， 电机转速受冲击会变慢， 但是电机供电频率也就是同步速还是保持不变， 这样异步电机会产生瞬时失步， 从而引起转矩和转速振荡， 经过一段时间后在一个更大转差下保持平衡。这个瞬时过程中没有对相位进行控制， 所以恢复过程较慢，而且电机转速会随负载变化，这就是所谓 $V/f$ 控制精度不高和响应较慢的原因。
 
 ## BLDC
-![alt text](assets_02_FOC/六步换向过程.png)
-![alt text](assets_02_FOC/六步换向正转控制.png)
-![alt text](assets_02_FOC/六步换向反转控制.png)
-![alt text](assets_02_FOC/六步换向MOS状态.png)
+![alt text](assets_10_FOC/六步换向过程.png)
+![alt text](assets_10_FOC/六步换向正转控制.png)
+![alt text](assets_10_FOC/六步换向反转控制.png)
+![alt text](assets_10_FOC/六步换向MOS状态.png)
 
 ## SVPWM
 
 SVPWM(Space Vector Pulse Width Modulation)，将逆变系统和异步电机看作一个整体来考虑，以三相对称正弦波电压供电时三相对称电动机定子理想磁链圆为参考标准，以三相逆变器不同开关模式作适当的切换，从而形成 PWM波，以所形成的实际磁链矢量来追踪其准确磁链圆。
 
-<img title="" src="assets_02_FOC/2025-05-15-09-49-55-image.png" alt="" width="404" data-align="center">
+<img title="" src="assets_10_FOC/2025-05-15-09-49-55-image.png" alt="" width="404" data-align="center">
 
-<img title="" src="assets_02_FOC/9ed94f9c4dbab136525dc7d5702d6540843113bd.png" alt="" width="407" data-align="center"><img title="" src="assets_02_FOC/2025-05-15-09-52-47-image.png" alt="" width="417" data-align="center">
+<img title="" src="assets_10_FOC/9ed94f9c4dbab136525dc7d5702d6540843113bd.png" alt="" width="407" data-align="center"><img title="" src="assets_10_FOC/2025-05-15-09-52-47-image.png" alt="" width="417" data-align="center">
 
-<img title="" src="assets_02_FOC/2025-05-15-10-00-22-image.png" alt="" width="417" data-align="center">
+<img title="" src="assets_10_FOC/2025-05-15-10-00-22-image.png" alt="" width="417" data-align="center">
 
 <img title="" src="https://picx.zhimg.com/v2-3205aeb27909d78fbd284d57a36ad219_b.webp" alt="动图" data-align="center">
 
-![](assets_02_FOC/2025-05-15-13-35-11-7段式SVPWM开关顺序_增强后.png)
+![](assets_10_FOC/2025-05-15-13-35-11-7段式SVPWM开关顺序_增强后.png)
 
 
 
-<img src="assets_02_FOC/2025-05-15-13-49-55-IMG_20250515_132301.png" title="" alt="" width="296">
+<img src="assets_10_FOC/2025-05-15-13-49-55-IMG_20250515_132301.png" title="" alt="" width="296">
 
 ### 参考资料
 
