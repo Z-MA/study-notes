@@ -5,120 +5,120 @@
 
 | 名称 | 公式 |
 |------|------|
-| 倒数关系 | \( \sin x \cdot \csc x = 1 \) <br> \( \cos x \cdot \sec x = 1 \) <br> \( \tan x \cdot \cot x = 1 \) |
-| 商数关系 | \( \tan x = \dfrac{\sin x}{\cos x} \) <br><br> \( \cot x = \dfrac{\cos x}{\sin x} \) |
-| 平方关系 | \( \sin^2 x + \cos^2 x = 1 \) <br> \( 1 + \tan^2 x = \sec^2 x \) <br> \( 1 + \cot^2 x = \csc^2 x \) |
+| 倒数关系 | $ \sin x \cdot \csc x = 1 $ <br> $ \cos x \cdot \sec x = 1 $ <br> $ \tan x \cdot \cot x = 1 $ |
+| 商数关系 | $ \tan x = \dfrac{\sin x}{\cos x} $ <br><br> $ \cot x = \dfrac{\cos x}{\sin x} $ |
+| 平方关系 | $ \sin^2 x + \cos^2 x = 1 $ <br> $ 1 + \tan^2 x = \sec^2 x $ <br> $ 1 + \cot^2 x = \csc^2 x $ |
 
 ### 两角和差公式
 
 | 函数 | 公式 |
 |------|------|
-| 正弦 | \( \sin(\alpha + \beta) = \sin\alpha\cos\beta + \cos\alpha\sin\beta \) <br> \( \sin(\alpha - \beta) = \sin\alpha\cos\beta - \cos\alpha\sin\beta \) |
-| 余弦 | \( \cos(\alpha + \beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta \) <br> \( \cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta \) |
-| 正切 | \( \tan(\alpha + \beta) = \dfrac{\tan\alpha + \tan\beta}{1 - \tan\alpha\tan\beta} \) <br> \( \tan(\alpha - \beta) = \dfrac{\tan\alpha - \tan\beta}{1 + \tan\alpha\tan\beta} \) |
+| 正弦 | $ \sin(\alpha + \beta) = \sin\alpha\cos\beta + \cos\alpha\sin\beta $ <br> $ \sin(\alpha - \beta) = \sin\alpha\cos\beta - \cos\alpha\sin\beta $ |
+| 余弦 | $ \cos(\alpha + \beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta $ <br> $ \cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta $ |
+| 正切 | $ \tan(\alpha + \beta) = \dfrac{\tan\alpha + \tan\beta}{1 - \tan\alpha\tan\beta} $ <br> $ \tan(\alpha - \beta) = \dfrac{\tan\alpha - \tan\beta}{1 + \tan\alpha\tan\beta} $ |
 
 ### 二倍角公式
 
 | 函数 | 公式 |
 |------|------|
-| 正弦 | \( \sin 2\alpha = 2\sin\alpha\cos\alpha \) |
-| 余弦 | \( \cos 2\alpha = \cos^2\alpha - \sin^2\alpha = 2\cos^2\alpha - 1 = 1 - 2\sin^2\alpha \) |
-| 正切 | \( \tan 2\alpha = \dfrac{2\tan\alpha}{1 - \tan^2\alpha} \) |
+| 正弦 | $ \sin 2\alpha = 2\sin\alpha\cos\alpha $ |
+| 余弦 | $ \cos 2\alpha = \cos^2\alpha - \sin^2\alpha = 2\cos^2\alpha - 1 = 1 - 2\sin^2\alpha $ |
+| 正切 | $ \tan 2\alpha = \dfrac{2\tan\alpha}{1 - \tan^2\alpha} $ |
 
 ### 三倍角公式
 
 | 函数 | 公式 |
 |------|------|
-| 正弦 | \( \sin 3\alpha = 3\sin\alpha - 4\sin^3\alpha \) |
-| 余弦 | \( \cos 3\alpha = 4\cos^3\alpha - 3\cos\alpha \) |
-| 正切 | \( \tan 3\alpha = \dfrac{3\tan\alpha - \tan^3\alpha}{1 - 3\tan^2\alpha} \) |
+| 正弦 | $ \sin 3\alpha = 3\sin\alpha - 4\sin^3\alpha $ |
+| 余弦 | $ \cos 3\alpha = 4\cos^3\alpha - 3\cos\alpha $ |
+| 正切 | $ \tan 3\alpha = \dfrac{3\tan\alpha - \tan^3\alpha}{1 - 3\tan^2\alpha} $ |
 
 ### 半角公式
 
 | 函数 | 公式 |
 |------|------|
-| 正弦 | \( \sin\dfrac{\alpha}{2} = \pm\sqrt{\dfrac{1 - \cos\alpha}{2}} \) |
-| 余弦 | \( \cos\dfrac{\alpha}{2} = \pm\sqrt{\dfrac{1 + \cos\alpha}{2}} \) |
-| 正切 | \( \tan\dfrac{\alpha}{2} = \pm\sqrt{\dfrac{1 - \cos\alpha}{1 + \cos\alpha}} = \dfrac{\sin\alpha}{1 + \cos\alpha} = \dfrac{1 - \cos\alpha}{\sin\alpha} \) |
+| 正弦 | $ \sin\dfrac{\alpha}{2} = \pm\sqrt{\dfrac{1 - \cos\alpha}{2}} $ |
+| 余弦 | $ \cos\dfrac{\alpha}{2} = \pm\sqrt{\dfrac{1 + \cos\alpha}{2}} $ |
+| 正切 | $ \tan\dfrac{\alpha}{2} = \pm\sqrt{\dfrac{1 - \cos\alpha}{1 + \cos\alpha}} = \dfrac{\sin\alpha}{1 + \cos\alpha} = \dfrac{1 - \cos\alpha}{\sin\alpha} $ |
 
 ### 和差化积公式
 
 | 公式 |
 |------|
-| \( \sin\alpha + \sin\beta = 2\sin\dfrac{\alpha + \beta}{2}\cos\dfrac{\alpha - \beta}{2} \) |
-| \( \sin\alpha - \sin\beta = 2\cos\dfrac{\alpha + \beta}{2}\sin\dfrac{\alpha - \beta}{2} \) |
-| \( \cos\alpha + \cos\beta = 2\cos\dfrac{\alpha + \beta}{2}\cos\dfrac{\alpha - \beta}{2} \) |
-| \( \cos\alpha - \cos\beta = -2\sin\dfrac{\alpha + \beta}{2}\sin\dfrac{\alpha - \beta}{2} \) |
+| $ \sin\alpha + \sin\beta = 2\sin\dfrac{\alpha + \beta}{2}\cos\dfrac{\alpha - \beta}{2} $ |
+| $ \sin\alpha - \sin\beta = 2\cos\dfrac{\alpha + \beta}{2}\sin\dfrac{\alpha - \beta}{2} $ |
+| $ \cos\alpha + \cos\beta = 2\cos\dfrac{\alpha + \beta}{2}\cos\dfrac{\alpha - \beta}{2} $ |
+| $ \cos\alpha - \cos\beta = -2\sin\dfrac{\alpha + \beta}{2}\sin\dfrac{\alpha - \beta}{2} $ |
 
 ### 积化和差公式
 
 | 公式 |
 |------|
-| \( \sin\alpha\cos\beta = \dfrac{1}{2}[\sin(\alpha + \beta) + \sin(\alpha - \beta)] \) |
-| \( \cos\alpha\sin\beta = \dfrac{1}{2}[\sin(\alpha + \beta) - \sin(\alpha - \beta)] \) |
-| \( \cos\alpha\cos\beta = \dfrac{1}{2}[\cos(\alpha + \beta) + \cos(\alpha - \beta)] \) |
-| \( \sin\alpha\sin\beta = -\dfrac{1}{2}[\cos(\alpha + \beta) - \cos(\alpha - \beta)] \) |
+| $ \sin\alpha\cos\beta = \dfrac{1}{2}[\sin(\alpha + \beta) + \sin(\alpha - \beta)] $ |
+| $ \cos\alpha\sin\beta = \dfrac{1}{2}[\sin(\alpha + \beta) - \sin(\alpha - \beta)] $ |
+| $ \cos\alpha\cos\beta = \dfrac{1}{2}[\cos(\alpha + \beta) + \cos(\alpha - \beta)] $ |
+| $ \sin\alpha\sin\beta = -\dfrac{1}{2}[\cos(\alpha + \beta) - \cos(\alpha - \beta)] $ |
 
 ### 万能公式
 
-令 \( t = \tan\dfrac{\alpha}{2} \)，则：
+令 $ t = \tan\dfrac{\alpha}{2} $，则：
 
-| 函数 | 用 \( t \) 表示 |
+| 函数 | 用 $ t $ 表示 |
 |------|---------------|
-| \( \sin\alpha \) | \( \dfrac{2t}{1 + t^2} \) |
-| \( \cos\alpha \) | \( \dfrac{1 - t^2}{1 + t^2} \) |
-| \( \tan\alpha \) | \( \dfrac{2t}{1 - t^2} \) |
+| $ \sin\alpha $ | $ \dfrac{2t}{1 + t^2} $ |
+| $ \cos\alpha $ | $ \dfrac{1 - t^2}{1 + t^2} $ |
+| $ \tan\alpha $ | $ \dfrac{2t}{1 - t^2} $ |
 
 ### 辅助角公式
 
-对于 \( a\sin x + b\cos x \)：
+对于 $ a\sin x + b\cos x $：
 
 | 形式 | 公式 |
 |------|------|
-| 正弦形式 | \( a\sin x + b\cos x = \sqrt{a^2 + b^2}\sin(x + \varphi) \) <br> 其中 \( \tan\varphi = \dfrac{b}{a} \) |
-| 余弦形式 | \( a\sin x + b\cos x = \sqrt{a^2 + b^2}\cos(x - \theta) \) <br> 其中 \( \tan\theta = \dfrac{a}{b} \) |
+| 正弦形式 | $ a\sin x + b\cos x = \sqrt{a^2 + b^2}\sin(x + \varphi) $ <br> 其中 $ \tan\varphi = \dfrac{b}{a} $ |
+| 余弦形式 | $ a\sin x + b\cos x = \sqrt{a^2 + b^2}\cos(x - \theta) $ <br> 其中 $ \tan\theta = \dfrac{a}{b} $ |
 
 ### 幂次公式
 
 | 公式 |
 |------|
-| \( \sin^2\alpha = \dfrac{1 - \cos 2\alpha}{2} \) |
-| \( \cos^2\alpha = \dfrac{1 + \cos 2\alpha}{2} \) |
-| \( \sin^3\alpha = \dfrac{3\sin\alpha - \sin 3\alpha}{4} \) |
-| \( \cos^3\alpha = \dfrac{3\cos\alpha + \cos 3\alpha}{4} \) |
+| $ \sin^2\alpha = \dfrac{1 - \cos 2\alpha}{2} $ |
+| $ \cos^2\alpha = \dfrac{1 + \cos 2\alpha}{2} $ |
+| $ \sin^3\alpha = \dfrac{3\sin\alpha - \sin 3\alpha}{4} $ |
+| $ \cos^3\alpha = \dfrac{3\cos\alpha + \cos 3\alpha}{4} $ |
 ## 求导法则
 
 ### 基本初等函数求导公式
 
 | 函数 | 导数 |
 |------|------|
-| \( c \) (常数) | \( 0 \) |
-| \( x^n \) | \( n x^{n-1} \) |
-| \( e^x \) | \( e^x \) |
-| \( a^x(a>0,a≠1) \) | \( a^x \ln a \) |
-| \( \ln x \) | \( \frac{1}{x} \) |
-| \( \log_a x(a>0,a≠1) \) | \( \frac{1}{x \ln a} \) |
-| \( \sin x \) | \( \cos x \) |
-| \( \cos x \) | \( -\sin x \) |
-| \( \tan x \) | \( \sec^2 x \) |
-| \( \cot x \) | \( -\csc^2 x \) |
-| \( \sec x \) | \( \sec x \tan x \) |
-| \( \csc x \) | \( -\csc x \cot x \) |
-| \( \arcsin x \) | \( \frac{1}{\sqrt{1-x^2}} \) |
-| \( \arccos x \) | \( -\frac{1}{\sqrt{1-x^2}} \) |
-| \( \arctan x \) | \( \frac{1}{1+x^2} \) |
-| \( \operatorname{arccot} x \) | \( -\frac{1}{1+x^2} \) |
+| $ c $ (常数) | $ 0 $ |
+| $ x^n $ | $ n x^{n-1} $ |
+| $ e^x $ | $ e^x $ |
+| $ a^x(a>0,a≠1) $ | $ a^x \ln a $ |
+| $ \ln x $ | $ \frac{1}{x} $ |
+| $ \log_a x(a>0,a≠1) $ | $ \frac{1}{x \ln a} $ |
+| $ \sin x $ | $ \cos x $ |
+| $ \cos x $ | $ -\sin x $ |
+| $ \tan x $ | $ \sec^2 x $ |
+| $ \cot x $ | $ -\csc^2 x $ |
+| $ \sec x $ | $ \sec x \tan x $ |
+| $ \csc x $ | $ -\csc x \cot x $ |
+| $ \arcsin x $ | $ \frac{1}{\sqrt{1-x^2}} $ |
+| $ \arccos x $ | $ -\frac{1}{\sqrt{1-x^2}} $ |
+| $ \arctan x $ | $ \frac{1}{1+x^2} $ |
+| $ \operatorname{arccot} x $ | $ -\frac{1}{1+x^2} $ |
 
 ### 求导法则
 
 | 法则 | 公式 |
 |------|------|
-| 常数倍法则 | \( (cu)' = cu' \) |
-| 加减法则 | \( (u \pm v)' = u' \pm v' \) |
-| 乘法法则 | \( (uv)' = u'v + uv' \) |
-| 除法法则 | \( \left( \frac{u}{v} \right)' = \frac{u'v - uv'}{v^2} \) |
-| 链式法则 | \( [f(g(x))]' = f'(g(x)) \cdot g'(x) \) |
-| 反函数求导 | \( (f^{-1}(y))' = \frac{1}{f'(x)} \)，其中 \( y = f(x) \) |
+| 常数倍法则 | $ (cu)' = cu' $ |
+| 加减法则 | $ (u \pm v)' = u' \pm v' $ |
+| 乘法法则 | $ (uv)' = u'v + uv' $ |
+| 除法法则 | $ \left( \frac{u}{v} \right)' = \frac{u'v - uv'}{v^2} $ |
+| 链式法则 | $ [f(g(x))]' = f'(g(x)) \cdot g'(x) $ |
+| 反函数求导 | $ (f^{-1}(y))' = \frac{1}{f'(x)} $，其中 $ y = f(x) $ |
 
 ## 积分法则
 
@@ -126,52 +126,52 @@
 
 | 函数 | 积分 |
 |------|------|
-| \( 0 \) | \( C \) |
-| \( k \) (常数) | \( kx + C \) |
-| \( x^n \) (\( n \neq -1 \)) | \( \frac{x^{n+1}}{n+1} + C \) |
-| \( \frac{1}{x} \) | \( \ln\|x\| + C \) |
-| \( e^x \) | \( e^x + C \) |
-| \( a^x \) | \( \frac{a^x}{\ln a} + C \) |
-| \( \sin x \) | \( -\cos x + C \) |
-| \( \cos x \) | \( \sin x + C \) |
-| \( \tan x \) | \( -\ln\|\cos x\| + C \) |
-| \( \cot x \) | \( \ln\|\sin x\| + C \) |
-| \( \sec x \) | \( \ln\|\sec x + \tan x\| + C \) |
-| \( \csc x \) | \( \ln\|\csc x - \cot x\| + C \) |
-| \( \sec^2 x \) | \( \tan x + C \) |
-| \( \csc^2 x \) | \( -\cot x + C \) |
-| \( \sec x \tan x \) | \( \sec x + C \) |
-| \( \csc x \cot x \) | \( -\csc x + C \) |
-| \( \frac{1}{\sqrt{1-x^2}} \) | \( \arcsin x + C \) |
-| \( \frac{1}{1+x^2} \) | \( \arctan x + C \) |
+| $ 0 $ | $ C $ |
+| $ k $ (常数) | $ kx + C $ |
+| $ x^n $ ($ n \neq -1 $) | $ \frac{x^{n+1}}{n+1} + C $ |
+| $ \frac{1}{x} $ | $ \ln\|x\| + C $ |
+| $ e^x $ | $ e^x + C $ |
+| $ a^x $ | $ \frac{a^x}{\ln a} + C $ |
+| $ \sin x $ | $ -\cos x + C $ |
+| $ \cos x $ | $ \sin x + C $ |
+| $ \tan x $ | $ -\ln\|\cos x\| + C $ |
+| $ \cot x $ | $ \ln\|\sin x\| + C $ |
+| $ \sec x $ | $ \ln\|\sec x + \tan x\| + C $ |
+| $ \csc x $ | $ \ln\|\csc x - \cot x\| + C $ |
+| $ \sec^2 x $ | $ \tan x + C $ |
+| $ \csc^2 x $ | $ -\cot x + C $ |
+| $ \sec x \tan x $ | $ \sec x + C $ |
+| $ \csc x \cot x $ | $ -\csc x + C $ |
+| $ \frac{1}{\sqrt{1-x^2}} $ | $ \arcsin x + C $ |
+| $ \frac{1}{1+x^2} $ | $ \arctan x + C $ |
 
 ### 积分基本法则
 
 | 法则 | 公式 |
 |------|------|
-| 常数倍法则 | \( \int kf(x)dx = k\int f(x)dx \) |
-| 加减法则 | \( \int [f(x) \pm g(x)]dx = \int f(x)dx \pm \int g(x)dx \) |
-| 换元积分法 | \( \int f(g(x))g'(x)dx = \int f(u)du \)，其中 \( u = g(x) \) |
-| 分部积分法 | \( \int udv = uv - \int vdu \) |
+| 常数倍法则 | $ \int kf(x)dx = k\int f(x)dx $ |
+| 加减法则 | $ \int [f(x) \pm g(x)]dx = \int f(x)dx \pm \int g(x)dx $ |
+| 换元积分法 | $ \int f(g(x))g'(x)dx = \int f(u)du $，其中 $ u = g(x) $ |
+| 分部积分法 | $ \int udv = uv - \int vdu $ |
 
 ### 常用积分技巧
 
 | 技巧 | 说明 |
 |------|------|
 | 凑微分法 | 将被积函数变形为容易积分的形式 |
-| 三角代换 | 含 \( \sqrt{a^2-x^2} \)、\( \sqrt{a^2+x^2} \)、\( \sqrt{x^2-a^2} \) 的积分 |
+| 三角代换 | 含 $ \sqrt{a^2-x^2} $、$ \sqrt{a^2+x^2} $、$ \sqrt{x^2-a^2} $ 的积分 |
 | 有理函数积分 | 将有理函数分解为部分分式之和 |
-| 倒代换 | 令 \( x = \frac{1}{t} \) 简化积分 |
-| 万能公式 | 用 \( t = \tan\frac{x}{2} \) 将三角有理式化为有理函数 |
+| 倒代换 | 令 $ x = \frac{1}{t} $ 简化积分 |
+| 万能公式 | 用 $ t = \tan\frac{x}{2} $ 将三角有理式化为有理函数 |
 
 ### 定积分性质
 
 | 性质 | 公式 |
 |------|------|
-| 区间可加性 | \( \int_a^b f(x)dx = \int_a^c f(x)dx + \int_c^b f(x)dx \) |
-| 保号性 | 若 \( f(x) \geq 0 \) 在 \([a,b]\) 上，则 \( \int_a^b f(x)dx \geq 0 \) |
-| 估值定理 | \( m(b-a) \leq \int_a^b f(x)dx \leq M(b-a) \) |
-| 积分中值定理 | \( \int_a^b f(x)dx = f(\xi)(b-a) \)，\( \xi \in [a,b] \) |
+| 区间可加性 | $ \int_a^b f(x)dx = \int_a^c f(x)dx + \int_c^b f(x)dx $ |
+| 保号性 | 若 $ f(x) \geq 0 $ 在 $[a,b]$ 上，则 $ \int_a^b f(x)dx \geq 0 $ |
+| 估值定理 | $ m(b-a) \leq \int_a^b f(x)dx \leq M(b-a) $ |
+| 积分中值定理 | $ \int_a^b f(x)dx = f(\xi)(b-a) $，$ \xi \in [a,b] $ |
 
 # 初等数学
 
