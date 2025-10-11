@@ -7,6 +7,16 @@
 - 无刷直流电动机
 - 伺服电动机
 
+## 书籍
+1. 电机学(Stephen j.Chapman 第五版).pdf
+2. 电机学(哈理工 戈宝军 第三版)·pdf
+3. 电机学(西交大 阎治安 第三版).pdf
+4. 电机与拖动基础(汤天浩 第三版).pdf
+5. 现代电机控制技术 PPT(王成元 第二版).pdf
+6. 现代电机控制技术(王成元 第二版).pdf
+7. 现代永磁电机理论与设计(唐任远).pdf
+8. 永磁无刷电机及其驱动技术(R,Krishnan).pdf
+
 ## 教程
 ### ST官方
 [面向电机控制的STM32生态系统](https://www.st.com.cn/content/st_com/zh/ecosystems/stm32-motor-control-ecosystem.html)
@@ -18,17 +28,17 @@
 
 #### 教程
 ##### F407教程
-[F407教程](https://www.bilibili.com/video/BV1yp411f7gs/?spm_id_from=333.1387.homepage.video_card.click)
+[F407教程](https://www.bilibili.com/video/BV1yp411f7gs/?)
 
 ##### 电机控制教程
-[电机驱动与控制](https://www.bilibili.com/video/BV1Fs411p7Zc/?spm_id_from=333.999.0.0&vd_source=8628b70b8921792574747e076af0f11a)
+[电机驱动与控制](https://www.bilibili.com/video/BV1Fs411p7Zc/?)
 
 ###### 1.直流有刷
    1. 电机概述&硬石电机实验箱
    2. 有刷电机原理和减速电机
    3. 电机参数和电机控制基础
    4. H桥驱动的不同模式分析
-   5. [MOS管驱动原理分析(含自举电路)](https://www.bilibili.com/video/BV1Fs411p7Zc/?spm_id_from=333.788.videopod.episodes&vd_source=8628b70b8921792574747e076af0f11a&p=5)
+   5. [MOS管驱动原理分析(含自举电路)](https://www.bilibili.com/video/BV1Fs411p7Zc/?p=5)
    6. 硬石有刷驱动板原理图分析
    7. 有刷电机基本旋转驱动代码分析
    8. 有刷电机的按键和串口控制实现
@@ -111,17 +121,33 @@
   11. 源码解析_系统嘀嗒定时器中断
   12. 源码解析_ADC采样中断(一)
   13. 源码解析_ADC采样中断(二)
-  14. [ST FOC电机库串口通信协议](https://www.bilibili.com/video/BV1Fs411p7Zc?spm_id_from=333.788.videopod.episodes&vd_source=8628b70b8921792574747e076af0f11a&p=74)
+  14. [ST FOC电机库串口通信协议](https://www.bilibili.com/video/BV1Fs411p7Zc?p=74)
   15. 源码解析_总结
 
+### 澄远FOC
+1. [课程介绍](https://www.bilibili.com/video/BV1n7421o798/?)
+2. [PMSM调速逻辑及控制方式](https://www.bilibili.com/video/BV1Ps421u7ja/?)
+3. [SVPWM原理及实现](https://www.bilibili.com/video/BV1eM4m1U7hi?)
+4. [VF控制的仿真与代码生成](https://www.bilibili.com/video/BV1ux4y187ua?)
+5. 多模式FOC控制系统
+   1. [统一框架设计](https://www.bilibili.com/video/BV1kJ4m1T7Kp?)
+   2. [电流环设计](https://www.bilibili.com/video/BV1VtvveNEFD?)
+   3. [IF控制](https://www.bilibili.com/video/BV1iUsMezE4o?)
+   4. [速度环设计](https://www.bilibili.com/video/BV1wL4JeUEEA?)
+6. Hall速度控制
+   1. [传感器测量速度与电角度](https://www.bilibili.com/video/[BV1U6ieYgEX8?)
+   2. [建模+CubeMX配置+代码集成](https://www.bilibili.com/video/[BV1qzckegEY3?)
+   3. [Hall自学习](https://www.bilibili.com/video/BV15cTWzxE6W?)
+7. 龙伯格无感控制
+   1. [数学模型推导与定点化处理](https://www.bilibili.com/video/BV1FWTkzpEom?)
+   2. [零速闭环启动的设计与实现](https://www.bilibili.com/video/BV1ZtTkzUEUe?)
+   3. [IF启动切观测器](https://www.bilibili.com/video/BV15EguztEUs?)
+8. 非线性磁链无感FOC
+   1. [数学模型推导与定点化处理](https://www.bilibili.com/video/BV1hmtQzJEBf?)
+   2. [零速闭环启动的设计与实现](https://www.bilibili.com/video/BV1D1tQzDERt?)
 
-
-
-
-
-
-
-
+### 稚晖
+[深入浅出讲解FOC算法与SVPWM技术](https://zhuanlan.zhihu.com/p/147659820)
 
 
 
@@ -129,8 +155,6 @@
 ### 其他学习资料
 
 [FOC?看这篇文章就够了 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/364247816)
-
-[【自制FOC驱动器】深入浅出讲解FOC算法与SVPWM技术 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/147659820)
 
 [如何从零开始学习电机控制 - YouTube](https://www.youtube.com/watch?v=cQY4S9r86Rg&list=PLX9pXgLRG1A8Qt8bdvsia8S_cK4MKL_ZU)
 
@@ -191,7 +215,6 @@
 
 ##### 电机本体
 
-[工程师必知，DD马达和伺服电机的区别在哪！](https://www.bilibili.com/video/BV1EG4y1h7bU/)
 [600克57牛米关节电机](https://www.bilibili.com/video/BV1Pu411G7M2/)
 [国内第一台六自由度磁悬浮平面电机样机和六自由度驱动完整展示](https://www.bilibili.com/video/BV1JZ4y1o7FM)
 
