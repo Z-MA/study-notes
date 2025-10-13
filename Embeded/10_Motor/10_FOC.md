@@ -178,6 +178,7 @@ plot(x,z1,x,z2,x,z3)
 
 SVPWM(Space Vector Pulse Width Modulation)，将逆变系统和异步电机看作一个整体来考虑，以三相对称正弦波电压供电时三相对称电动机定子理想磁链圆为参考标准，以三相逆变器不同开关模式作适当的切换，从而形成 PWM波，以所形成的实际磁链矢量来追踪其准确磁链圆。
 
+![alt text](image.png)
 <img title="" src="assets_10_FOC/2025-05-15-09-49-55-image.png" alt="" width="404" data-align="center">
 
 <img title="" src="assets_10_FOC/9ed94f9c4dbab136525dc7d5702d6540843113bd.png" alt="" width="407" data-align="center"><img title="" src="assets_10_FOC/2025-05-15-09-52-47-image.png" alt="" width="417" data-align="center">
