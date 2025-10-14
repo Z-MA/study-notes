@@ -27,6 +27,10 @@
 2. [QCOM](https://www.quectel.com.cn/download/qcom_v1-8_cn) 调试AT比较方便
 3. [匿名助手](http://www.anotc.com/wiki/%E5%8C%BF%E5%90%8D%E4%BA%A7%E5%93%81%E8%B5%84%E6%96%99/%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5%E6%B1%87%E6%80%BB)
 4. [VOFA+](https://www.vofa.plus/)
+5. [NetAssist网络调试助手](https://www.cmsoft.cn/resource/102.html)
+6. [UartAssist串口调试助手](https://www.cmsoft.cn/resource/101.html)
+7. [TCPCOM 网络与串口二合一调试助手](https://www.cmsoft.cn/resource/110.html)
+8. [SCOMM串口网络二合一调试助手](https://www.cmsoft.cn/resource/103.html)
 
 ## 代码
 
