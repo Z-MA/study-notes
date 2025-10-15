@@ -4,6 +4,8 @@ import { webpackBundler } from '@vuepress/bundler-webpack'
 import { markdownMathPlugin } from '@vuepress/plugin-markdown-math'
 
 export default defineUserConfig({
+  
+  base: '/study-notes/',
   lang: 'zh-CN',
 
   title: 'LiZhou 学习笔记',
