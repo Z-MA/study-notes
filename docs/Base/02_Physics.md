@@ -1,6 +1,6 @@
 ---
 lang: zh-CN
-title: 数学
+title: 物理
 description: 这是一个数学基础页面
 ---
 

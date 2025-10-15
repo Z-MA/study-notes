@@ -5,64 +5,95 @@ description: 这是一个C语言基础页面
 ---
 
 # 磁路
+
 ## 基础物理量
+
 ### 安倍环路定理 $\oint$
+
 $$\oint_i H \cdot dl = \sum_{k=1}^N i_k \quad\Rarr\quad Hl=Ni$$
 
-$$\sum_{k=1}^N H_kl_k=Ni（H_kl_k是第k段磁位降，磁路基尔霍夫第二定律）$$
+$$\sum_{k=1}^N H_kl_k=Ni$$
+$H_kl_k$ 是第 $k$ 段磁位降，磁路基尔霍夫第二定律。
 
 ### 磁场强度 $H$
+
 $$H=\frac{Ni}{l}$$
 
 ### 相对磁导率 $\mu$
-$$\mu>>\mu_0\quad(真空磁导率\mu_0=4\pi \times10^{-7}H/m)$$
+
+$$\mu>>\mu_0\quad$$
+
+真空磁导率：$\mu_0=4\pi \times10^{-7}H/m$
 
 ### 磁感应强度 $B$
-$$B=\mu H（磁场强度推导）$$
+
+$$B=\mu H$$
+上式由磁场强度推导。
 
 $$\vec{dB}=\frac{Idl \vec{a_{R}}}{R^2}$$  
 
-$$B=\frac{F}{IL} \quad(电磁力推导，1T=1\frac{N}{A\cdot m})$$
+$$B=\frac{F}{IL} \quad(1T=1\frac{N}{A\cdot m})$$
+上式由电磁力推导。
 
-$$B=\frac{\phi}{S}(B又被称为磁通密度)$$
+$$B=\frac{\phi}{S}$$
+B又被称为磁通密度。
 
 ### 磁动势 $F$
+
 $$F=Ni=Hl$$
 
 ### 电磁力 $F$
+
 毕奥-萨伐尔电磁力定律
 $$F=i\int dl\times B \quad\Rarr\quad F=Bil$$
 
 ### 磁阻 $R_m$
-$$Hl=\frac{B}{\mu}\cdot l=\phi \frac{l}{\mu A}=\phi R_m  \quad\Rarr\quad R_m=\frac{l}{\mu A}= \frac{1}{\Lambda_m} \\（R_m磁阻：A/Wb或1/H，铁磁材料磁阻非线性，\Lambda_m，磁导：Wb/A或H）$$
+
+$$Hl=\frac{B}{\mu}\cdot l=\phi \frac{l}{\mu A}=\phi R_m  \quad\Rarr\quad R_m=\frac{l}{\mu A}= \frac{1}{\Lambda_m}$$
+
+$R_m$：磁阻（单位：$A/Wb$ 或 $1/H$），铁磁材料磁阻非线性，$\Lambda_m$：磁导（单位是 $Wb/A$ 或 $H$）
 
 ### 磁通量 $\phi$
+
 $$\phi=\int_AB \cdot dA \quad\Rarr\quad \phi=B\cdot S(1Wb=1T\cdot m^2)$$
 
-$$\phi_1=\phi_2+\phi_3+\cdots+\phi_n(磁路基尔霍夫第一定律)$$
+$$\phi_1=\phi_2+\phi_3+\cdots+\phi_n$$
+上式是磁路基尔霍夫第一定律。
 
 ### 磁链 $\psi$
-$$\psi=N\phi\quad(单位：Wb·turn 或 V·s)$$
 
-$$\psi=Li \quad\Rarr\quad e=-L\frac{di}{dt}\\(线性磁路中的自感关系，L为自感系数，单位：H)$$
+$$\psi=N\phi\quad$$
+单位：$Wb·turn$ 或 $V·s$
 
-$$\psi_1=L_1i_1+M_{12}i_2 \quad \quad \psi_2=M_{21}i_1 \\ (多绕组或互感情况，M为互感，M_{12}=M_{21})$$
+$$\psi=Li \quad\Rarr\quad e=-L\frac{di}{dt}$$
+线性磁路中的自感关系，$L$为自感系数，单位：$H$
+
+$$\psi_1=L_1i_1+M_{12}i_2 \quad \quad \psi_2=M_{21}i_1 $$
+多绕组或互感情况，$M$为互感，$M_{12}=M_{21}$
 
 ### 电感 $L$
+
 $$L=\frac{N^2}{R_m}=\frac{N^2\mu A}{l} \quad\Rarr\quad e=-L\frac{di}{dt}$$
+
 ### 感应电动势 $e$
+
 感应电动势依据法拉第电磁感应定律表达。
-$$e=-N\frac{d\phi}{dt}=-\frac{d\psi}{dt}\\(螺旋管；e回路感应电动势；\psi交链回路的磁链)$$
+$$e=-N\frac{d\phi}{dt}=-\frac{d\psi}{dt}$$
+螺旋管；$e$回路感应电动势；$\psi$交链回路的磁链。
 
-$$e= \frac{B\cdot dS}{dt}=\int (\nu \times B) \cdot dl=Blv\\(导体在磁场中运动；\nu:导体速度)$$
+$$e= \frac{B\cdot dS}{dt}=\int (\nu \times B) \cdot dl=Blv$$
+导体在磁场中运动；$\nu$:导体速度
 
-$$\phi= \phi_m sin(\omega t)(正弦磁通)\Rarr  e_t=N\omega \phi_m sin(\omega t-\frac{\pi}{2})(瞬时值) \Rarr e_{rms} = 4.44fN\phi_m(有效值)$$
+$$\phi= \phi_m sin(\omega t)  \Rarr  e_t=N\omega \phi_m sin(\omega t-\frac{\pi}{2})  e_{rms} = 4.44fN\phi_m$$
+
+上式：正弦磁通 $\Rarr$ 瞬时值 $\Rarr$ 有效值
 
 ### 磁能
 
 ### 磁共能
 
 ## 基础概念
+
 ### 磁化
 
 - 磁畴
@@ -77,21 +108,33 @@ $$\phi= \phi_m sin(\omega t)(正弦磁通)\Rarr  e_t=N\omega \phi_m sin(\omega t
 硬磁材料（永磁材料）：磁滞回线宽，剩磁和矫顽力都大，常用来制造永磁铁。（铝镍钴合金和稀土合金）
 
 ### 磁滞损耗
-$$P_h=C_hfB_m^nV\\(n取决于材料，硅钢片n=1.6\sim 2.3;V铁磁材料体积；C_h磁滞损耗系数，取决于材料)$$
+
+$$P_h=C_hfB_m^nV$$
+
+- $n$ 取决于材料，硅钢片 $n=1.6\sim 2.3$;  
+- $V$ 铁磁材料体积；  
+- $C_h$ 磁滞损耗系数，取决于材料
 
 ### 涡流损耗
-$$P_e=C_e\Delta^2f^2B_m^2V\\(C^e涡流损耗系数，反比于材料电阻率；\Delta硅钢片厚度)$$
+
+$$P_e=C_e\Delta^2f^2B_m^2V$$
+
+- $C^e$ 涡流损耗系数，反比于材料电阻率；  
+- $\Delta$ 硅钢片厚度
 
 ### 铁芯损耗
-$$P_{Fe}\approx C_{Fe}f^{1.3}B_m^2G\\(C_{Fe}铁芯损耗系数；G铁芯质量)$$
+
+$$P_{Fe}\approx C_{Fe}f^{1.3}B_m^2G$$
+
+- $C_{Fe}$ 铁芯损耗系数；
+- $G$ 铁芯质量
 
 ### 能量守恒
-**能量守恒**
 
-$$
 输入/输出电能=磁场储存在增量+转换为热能的能量损耗+输出的机械能
-$$
+
 ## 示例分析
+
 <img src="assets_01%20电机基础/2025-05-12-15-14-57-image.png" title="" alt="" width="301"> 
 
 **磁动势**
@@ -122,27 +165,25 @@ $$
 
 **电磁**
 
-$$
-u_A=R_Ai_A-e_{AA}=R_Ai_A+\frac{d\psi_{AA}}{dt}
-$$
+$$u_A=R_Ai_A-e_{AA}=R_Ai_A+\frac{d\psi_{AA}}{dt}$$
 
-$$
-dW_{eAA}=dW_m=u_Ai_Adt-R_Ai_A^2dt=-e_{AA}i_Adt=i_Ad\psi_{AA}=i_Ad\psi_{mA}\
-(忽略漏磁)
-$$
+$$dW_{eAA}=dW_m=u_Ai_Adt-R_Ai_A^2dt=-e_{AA}i_Adt=i_Ad\psi_{AA}=i_Ad\psi_{mA}$$
+
+忽略漏磁。
 
 **磁能**
 
-$$
-W_m=\omega_mV_\delta=\frac{1}{2}BHV_\delta=\frac{1}{2}\frac{B^2}{\mu}V_\delta\
-(忽略铁心储能)
-$$
+$$W_m=\omega_mV_\delta=\frac{1}{2}BHV_\delta=\frac{1}{2}\frac{B^2}{\mu}V_\delta$$
+
+忽略铁心储能。
 
 $$
 W_m=\int_0^{mA(\psi)}i_Ad\psi
 =\int_0^{ma(\psi)}i_Ad(\frac{N_A^2}{R_{m\delta}})
-=\int_0^{ma(\psi)}i_Ad(\frac{N_A^2}{R_{\delta}})(忽略铁心磁阻)
+=\int_0^{ma(\psi)}i_Ad(\frac{N_A^2}{R_{\delta}})
 $$
+
+忽略铁心磁阻。
 
 **磁共能**
 
@@ -168,8 +209,10 @@ $$
 **一次绕组电压方程**
 
 $$
-u_1=R_1i_{10}-e_{1\sigma}-e_1=R1i_{10}+L_{1\sigma} \frac{di_{10}}{dt}-e_1\approx -e_1（e_{1\sigma}一次漏磁通）
+u_1=R_1i_{10}-e_{1\sigma}-e_1=R1i_{10}+L_{1\sigma} \frac{di_{10}}{dt}-e_1\approx -e_1
 $$
+
+$e_{1\sigma}$一次漏磁通。
 
 $$
 e_2=e_2
@@ -178,14 +221,18 @@ $$
 **一次主磁通**
 
 $$
-\phi=\Phi_m sin(\omega t)（\Phi_m主磁通幅值；\omega磁通交变的角频率；\omega=2\pi f）
+\phi=\Phi_m sin(\omega t)
 $$
+
+$\Phi_m$主磁通幅值；$\omega$磁通交变的角频率；$\omega=2\pi f$
 
 **感应电动势**
 
 $$
-e_1=-N_1\frac{d\phi}{dt}=\omega N_1\Phi_m sin(\omega t-\frac{\pi}{2})=\sqrt{2}E_1sin(\omega t-\frac{\pi}{2})（E_1感应电动势有效值）
+e_1=-N_1\frac{d\phi}{dt}=\omega N_1\Phi_m sin(\omega t-\frac{\pi}{2})=\sqrt{2}E_1sin(\omega t-\frac{\pi}{2})
 $$
+
+$E_1$感应电动势有效值。
 
 $$
 E_1=\frac{\omega N_1\Phi_m}{\sqrt{2}}=\frac{2\pi}{\sqrt{2}}fN_1\Phi_m=4.44fN_1\Phi_m
@@ -416,16 +463,20 @@ $$
 **场强**
 
 $$
-E=\frac{F}{q}(定义式)
+E=\frac{F}{q}
 $$
 
-$$
-E=\frac{KQ}{r^2}(真空点电荷)
-$$
+(定义式)
 
 $$
-E=\frac{U}{d}(匀强电场E、d共线)
+E=\frac{KQ}{r^2}
 $$
+
+(真空点电荷)
+
+$$E=\frac{U}{d}$$
+
+匀强电场E、d共线
 
 **电势**
 

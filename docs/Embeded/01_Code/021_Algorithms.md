@@ -1,6 +1,6 @@
 ---
 lang: zh-CN
-title: 计算机系统
+title: 算法
 description: 这是一个C语言基础页面
 ---
 

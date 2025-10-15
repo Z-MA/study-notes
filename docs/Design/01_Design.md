@@ -1,6 +1,6 @@
 ---
 lang: zh-CN
-title: 电气
+title: 设计基础
 description: 这是一个电气基础页面
 ---
 
