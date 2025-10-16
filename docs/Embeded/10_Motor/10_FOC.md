@@ -181,13 +181,38 @@ plot(x,z1,x,z2,x,z3)
 扩展卡尔曼滤波器（Extended Kalman Filter, EKF）是一种非线性状态估计方法，主要用于估算电机的状态变量，如位置、速度和电流等。EKF通过对系统的非线性模型进行线性化处理，结合测量数据和系统动态方程，实现对系统状态的估算。EKF具有较高的估算精度和适应性，适用于无传感器控制中的状态估算。
 
 ## BLDC
+
+六步换向线圈导通状态
 ![alt text](assets_10_FOC/六步换向过程.png)
+
+六步换向正反转控制
 ![alt text](assets_10_FOC/六步换向正转控制.png)
 ![alt text](assets_10_FOC/六步换向反转控制.png)
+
+六步换向MOS状态
 ![alt text](assets_10_FOC/六步换向MOS状态.png)
 
 ## FOC
 
+### 旋转电流矢量
+
+<img src="./image-6.png" alt="示例图片" width="400" style="display: block; margin: 20 auto;">
+
+三相对称电流：
+$$\begin{cases}
+i_a(t) = I_m*cos(\omega t) \\
+i_b(t) = I_m*cos(\omega t - \frac{2\pi}{3}) \\
+i_c(t) = I_m*cos(\omega t + \frac{2\pi}{3})
+\end{cases}$$
+这里的 $\omega t$ 可以理解为每个线圈的电流矢量相比于初相矢量旋转过的角度，后面的 $x$ 分别表示每个线圈的电流矢量相对于 $0°$ 的初相角。$cos(\omega t +x)$ 是电流矢量在旋转过程中投影到对应轴上的瞬时值。
+
+合成电流矢量：
+$$\begin{aligned}
+I_{vr}=&i_a(t)*e^{j0}+i_b(t)*e^{j(\frac{2\pi}{3})}+i_c(t)*e^{j(-\frac{2\pi}{3})}\\
+=&\frac{3}{2}*I_m*e^{j(\omega t+\frac{\pi}{2})}
+\end{aligned}$$
+
+由上式可见在空间呈 $\frac{2\pi}{3}$ 分布的三相定子绕组上加载三相对称电流，合成电流 $I_{vr}$ 是一个幅值为 $1.5$ 倍 $I_m$，并以角速度 $\omega$ 旋转的合成电流矢量。后面的 $e^{j(\omega t+\frac{\pi}{2})}$ 表示该合成电流矢量的初相角是 $\frac{\pi}{2}$。
 ### 坐标变换
 #### Clark和反Clark变换
 
@@ -197,39 +222,43 @@ plot(x,z1,x,z2,x,z3)
 
 SVPWM(Space Vector Pulse Width Modulation)，将逆变系统和异步电机看作一个整体来考虑，以三相对称正弦波电压供电时三相对称电动机定子理想磁链圆为参考标准，以三相逆变器不同开关模式作适当的切换，从而形成 PWM波，以所形成的实际磁链矢量来追踪其准确磁链圆。
 
-#### 六边形磁场
+#### 三相逆变电路
 
-**三相电压理想波形**
-![alt text](image.png)
+![alt text](image-3.png)
 
-**三相逆变器**
-![三相逆变器](assets_10_FOC/2025-05-15-09-49-55-image.png)
-
-当 $S_a S_b S_c = 100$：
+当 $S_a S_b S_c = 100$ :
 
 相电压
 $$\begin{cases}
-U_{aN} = U_{dc}*\frac{Z}{Z+\frac{Z}{2}}=U_{dc}*\frac{Z}{\frac{3Z}{2}=\frac{2}{3}U_{dc}} \\
-U_{bN} = -\frac{1}{3}U_{dc} \\
-U_{cN} = -\frac{1}{3}U_{dc}
+U_{AN} = U_{dc}*\frac{Z}{Z+\frac{Z}{2}}=U_{dc}*\frac{Z}{\frac{3}{2}Z}=\frac{2}{3}U_{dc} \\
+U_{BN} = -\frac{1}{3}U_{dc} \\
+U_{CN} = -\frac{1}{3}U_{dc}
 \end{cases}$$
 
 线电压
 $$\begin{cases}
-U_{ab} = U_{aN}-U_{bN}= \frac{2}{3}U_{dc}+\frac{1}{3}U_{dc}=U_{dc}\\
-U_{bc} = U_{bN}-U_{cN}= -\frac{1}{3}U_{dc}+\frac{1}{3}U_{dc}=0\\
-U_{ca} = U_{cN}-U_{aN}= -\frac{1}{3}U_{dc}-\frac{2}{3}U_{dc}=-U_{dc}\\
+U_{AB} = U_{AN}-U_{BN}= \frac{2}{3}U_{dc}+\frac{1}{3}U_{dc}=U_{dc}\\
+U_{BC} = U_{BN}-U_{CN}= -\frac{1}{3}U_{dc}+\frac{1}{3}U_{dc}=0\\
+U_{CA} = U_{CN}-U_{AN}= -\frac{1}{3}U_{dc}-\frac{2}{3}U_{dc}=-U_{dc}\\
 \end{cases}$$
 
 合成矢量
 $$\begin{aligned}
-U_1=&\frac{2}{3}(U_{aN}*e^{j0}+U_{bN}*e^{j^{(\frac{2\pi}{3})}}+U_{cN}*e^{j^{(-\frac{2\pi}{3})}}) \\
-=&\frac{2}{3}(\frac{2}{3}U_{dc}-\frac{1}{3}U_{dc}*(cos(\frac{2\pi}{3})+jsin(\frac{2\pi}{3}))-\frac{1}{3}U_{dc}*(cos(-\frac{2\pi}{3})+jsin(-\frac{2\pi}{3})))\\
-=&\frac{2}{3}(\frac{2}{3}U_{dc}-\frac{1}{3}U_{dc}*(-\frac{1}{2}+j(\frac{3}{2}))-\frac{1}{3}U_{dc}*(-\frac{1}{2}+j(-\frac{3}{2})))\\
-=&\frac{2}{3}(\frac{2}{3}U_{dc}-\frac{1}{3}U_{dc})\\
+U_1=&\frac{2}{3}(U_{AN}*e^{j0}+U_{BN}*e^{j^{(\frac{2\pi}{3})}}+U_{CN}*e^{j^{(-\frac{2\pi}{3})}}) \\
+=&\frac{2}{3}\{\frac{2}{3}U_{dc}-\frac{1}{3}U_{dc}*[cos(\frac{2\pi}{3})+jsin(\frac{2\pi}{3})]-\frac{1}{3}U_{dc}*[cos(-\frac{2\pi}{3})+jsin(-\frac{2\pi}{3})]\}\\
+=&\frac{2}{3}\{\frac{2}{3}U_{dc}-\frac{1}{3}U_{dc}*[-\frac{1}{2}+j(\frac{3}{2})]-\frac{1}{3}U_{dc}*[-\frac{1}{2}+j(-\frac{3}{2})]\}\\
+=&\frac{2}{3}(\frac{2}{3}U_{dc}+\frac{1}{3}U_{dc})\\
 =&\frac{2}{3}U_{dc}
 \end{aligned}
 $$
+
+![alt text](image-4.png)
+![alt text](image-5.png)
+
+#### 六边形磁场
+
+**三相电压理想波形**
+![alt text](image.png)
 
 **8种组合下的空间电压矢量**
 ![8种组合下的空间电压矢量](assets_10_FOC/9ed94f9c4dbab136525dc7d5702d6540843113bd.png)
