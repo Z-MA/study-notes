@@ -196,7 +196,7 @@ plot(x,z1,x,z2,x,z3)
 
 ### 旋转电流矢量
 
-<img src="./image-6.png" alt="示例图片" width="400" style="display: block; margin: 20 auto;">
+<img src="./image-6.png" alt="示例图片" width="400" style="display: block; margin: 0 auto;">
 
 三相对称电流：
 $$\begin{cases}
@@ -204,7 +204,7 @@ i_a(t) = I_m*cos(\omega t) \\
 i_b(t) = I_m*cos(\omega t - \frac{2\pi}{3}) \\
 i_c(t) = I_m*cos(\omega t + \frac{2\pi}{3})
 \end{cases}$$
-这里的 $\omega t$ 可以理解为每个线圈的电流矢量相比于初相矢量旋转过的角度，后面的 $x$ 分别表示每个线圈的电流矢量相对于 $0°$ 的初相角。$cos(\omega t +x)$ 是电流矢量在旋转过程中投影到对应轴上的瞬时值。
+这里的 $\omega t$ 可以理解为每个线圈的电流矢量相比于初相矢量旋转过的角度，后面的 $x$ 分别表示每个线圈的电流矢量相对于 $0°$ 的初相角。$I_mcos(\omega t +x)$ 是电流矢量在旋转过程中投影到对应轴上的瞬时值。
 
 合成电流矢量：
 $$\begin{aligned}
@@ -213,11 +213,62 @@ I_{vr}=&i_a(t)*e^{j0}+i_b(t)*e^{j(\frac{2\pi}{3})}+i_c(t)*e^{j(-\frac{2\pi}{3})}
 \end{aligned}$$
 
 由上式可见在空间呈 $\frac{2\pi}{3}$ 分布的三相定子绕组上加载三相对称电流，合成电流 $I_{vr}$ 是一个幅值为 $1.5$ 倍 $I_m$，并以角速度 $\omega$ 旋转的合成电流矢量。后面的 $e^{j(\omega t+\frac{\pi}{2})}$ 表示该合成电流矢量的初相角是 $\frac{\pi}{2}$。
+
 ### 坐标变换
 #### Clark和反Clark变换
 
+<img src="./image-7.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+
+Clark变换  
+将 $ABC$ 三相静止坐标系 变换到 $\alpha\beta$ 两相静止坐标系。
+$$
+\begin{bmatrix} f_{\alpha} \\ f_{\beta} \\ f_{0} \end{bmatrix} = \frac{2}{3} \begin{bmatrix} 1 & -\frac{1}{2} & -\frac{1}{2} \\ 0 & \frac{\sqrt{3}}{2} & -\frac{\sqrt{3}}{2} \\ \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} \end{bmatrix} \begin{bmatrix} f_{A} \\ f_{B} \\ f_{C} \end{bmatrix}
+$$
+
+反Clark变换  
+将 $\alpha\beta$ 两相静止坐标系 变换到 $ABC$ 三相静止坐标系。
+$$
+\begin{bmatrix} f_A \\ f_B \\ f_C \end{bmatrix} =
+\begin{bmatrix} 1 & 0 & \frac{\sqrt{2}}{2} \\ -\frac{1}{2} & \frac{\sqrt{3}}{2} & \frac{\sqrt{2}}{2} \\ -\frac{1}{2} & -\frac{\sqrt{3}}{2} & \frac{\sqrt{2}}{2} \end{bmatrix} \begin{bmatrix} f_\alpha \\ f_\beta \\ f_0 \end{bmatrix}
+$$
+
+这里的Clark变换和反Clark变换是等幅值的变换，系数是 $\frac{2}{3}$ ,变换前后信号的幅值不变。另外，等幅值的Clark变换和反Clark变换中，$f_0$ 分量是多余的，可以忽略。  
+而等功率的Clark变换和反Clark变换中，系数是 $\sqrt{\frac{2}{3}}$ ,变换前后信号的功率不变。
+
 #### Park和反Park变换
 
+<img src="./image-8.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+
+Park变换  
+将 $\alpha\beta$ 两相静止坐标系 变换到 $dq$ 两相旋转坐标系。
+$$
+\left[ \begin{matrix} f_d \\ f_q \end{matrix} \right] = \left[ \begin{matrix} \cos\theta_e & \sin\theta_e \\ -\sin\theta_e & \cos\theta_e \end{matrix} \right] \left[ \begin{matrix} f_\alpha \\ f_\beta \end{matrix} \right]
+$$
+
+反Park变换  
+将 $dq$ 两相旋转坐标系 变换到 $\alpha\beta$ 两相静止坐标系。
+$$
+\begin{cases}
+f_\alpha = f_d \cos \theta_e - f_q \sin \theta_e \\
+f_\beta = f_d \sin \theta_e + f_q \cos \theta_e
+\end{cases}
+$$
+
+### FOC原理
+
+<img src="./image-9.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+
+实现
+
+- 将dq坐标系的d轴定向到转子永磁体的N极，则dq坐标系将随转子以角速度ωe旋转
+- 通过测量或观测获取转子永磁体位置θe，基于θe的坐标转换可建立dq-αβ-ABC坐标系之间的等价关系
+- Copy 第5节：两相旋转定子绕组上加载两相直流电流
+
+总结
+• 基于感知转子位置θe，通过Id = 0，Iq = Iref控制策略，实现了定子磁场 紧紧跟随
+转子磁场并时刻超前 $\frac{\pi}{2}$（最大力矩且稳定运行），这就是FOC磁场定向控制
+
+一句话：磁场定向控制实现了转矩角的最佳控制
 ### SVPWM
 
 SVPWM(Space Vector Pulse Width Modulation)，将逆变系统和异步电机看作一个整体来考虑，以三相对称正弦波电压供电时三相对称电动机定子理想磁链圆为参考标准，以三相逆变器不同开关模式作适当的切换，从而形成 PWM波，以所形成的实际磁链矢量来追踪其准确磁链圆。
