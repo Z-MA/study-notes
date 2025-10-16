@@ -17,6 +17,29 @@ description: 这是一个视觉设计基础页面
 [wordpress官网](https://wordpress.org/)  
 
 
+## Github推送代码时设置代理
+使用github推送代码时总是显示连接不上服务器，这时我们就需要设定git代理解决。首先在首页查到Clash的混合代理地址：127.0.0.1:32210 (打开clash在“首页”页面能看到)。
+
+打开Git CMD
+
+添加全局代理:
+```bash
+git config --global http.proxy http://127.0.0.1:32210
+git config --global https.proxy http://127.0.0.1:32210
+```
+
+验证代理设置:
+```bash
+git config --global --get http.proxy
+git config --global --get https.proxy
+```
+
+取消代理:
+```bash
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```
+
 ## 查看windows文件使用进程
 
 **应用背景**  
