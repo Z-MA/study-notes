@@ -17,6 +17,7 @@ export default defineUserConfig({
     navbar: [
       { text: 'Github', link: 'https://www.github.com/Z-MA' },
       { text: 'Gitee', link: 'https://www.Gitee.com/Z-MA' },
+      { text: 'VuePress', link: 'https://vuejs.press/zh/' },
     ],
 
     sidebar: {
