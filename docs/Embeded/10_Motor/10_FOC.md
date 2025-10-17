@@ -368,7 +368,7 @@ $$
 
 $$\psi_{vr}=\psi_m*e^{j\omega t}$$
 
-单向线圈电压 $U_{vr}=R_s*I_{vr}+\frac{d\psi_{vr}}{dt}$，由于 R_s 很小，可以忽略不计，所以 $U_{vr}=\frac{d\psi_{vr}}{dt}$，则有：$U_{vr}\approx\frac{d\psi_{vr}}{dt}$。因此得到：
+单向线圈电压 $U_{vr}=R_s*I_{vr}+\frac{d\psi_{vr}}{dt}$，由于 $R_s$ 很小，可以忽略不计，所以 $U_{vr}=\frac{d\psi_{vr}}{dt}$，则有：$U_{vr}\approx\frac{d\psi_{vr}}{dt}$。因此得到：
 $$\Delta \psi_{vr} \approx U_{vr}*\Delta t$$
 
 ##### 六边形磁场的由来
@@ -378,21 +378,54 @@ $$\Delta \psi_{vr} \approx U_{vr}*\Delta t$$
 - 将 $U_1 \sim U_6$ 按 $\Delta t$ 间隔时间依次加载到绕组，产生 6 个磁链增量 $(\Delta \psi_1 \sim \Delta \psi_6)$，幅值相等、相位依次相差 $\frac{\pi}{6}$ ，首尾连接形成正六边形合成磁链。
 - 虽然正六边形磁场不是我们期望的圆形磁场，在旋转过程中，磁链矢量的幅值不恒定！
 
-**三相电压理想波形**
-<img src="./image.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
-
-**8种组合下的空间电压矢量**
-<img src="./assets_10_FOC/9ed94f9c4dbab136525dc7d5702d6540843113bd.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
-
 ##### 合成近似圆形磁场
 
+<img src="./image-12.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+
+单个电压空间矢量作用时间太长了，导致磁链矢量幅值变化过大，无法近似圆形磁场，只能形成六边形磁场。将每个电压空间矢量作用时间缩短，通过多个电压空间矢量的叠加，更高频施加作用，形成近似圆形磁场。
+
+<img src="./image-13.png" alt="示例图片" width="740" style="display: block; margin: 0 auto;">
+
+- 磁链增量等效
+  - $V_{ref} * T_s = U_1 * T_1 + U_2 * T_2; \quad T_s: PWM\text{周期}$
+
+  - 基于磁链增量等效，用两个相邻基础电压空间矢量合成更多的矢量 $V_{ref}$ ，从而近似构建圆形旋转磁场。
+
+注意:
+
+- $𝑉_{ref}$ 是一个期望的、旋转的合成电压矢量。
+- $𝑇_s$（作用时间）时间越短（频率越高），磁场越来越圆。
+
 ##### 电压空间矢量作用时间计算
+
+<img src="./image-14.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+
+基于合成矢量 $𝑉_{ref}$ 计算作用时间，期望合成的电压空间矢量 $𝑉_{ref}$ 用幅值、相位表示如图所示。
+
+$$\begin{cases}
+L1 = V_{ref} * T_s * \sin(\frac{\pi}{3} - \theta)\\
+|U1| = \frac{2}{3} U_{dc}\\
+|U1| * T1 = \frac{L1}{\sin(\frac{\pi}{3})} = \frac{L1}{\frac{\sqrt{3}}{2}} \xrightarrow[\text{整理}]{} T1= \frac{L1}{\frac{\sqrt{3}}{2}} * \frac{1}{|U1|} \xrightarrow[\text{代入} U1, L1]{} T1 = \frac{V_{ref} * T_s * \sin(\frac{\pi}{3} - \theta)}{\frac{\sqrt{3}}{2}} * \frac{1}{\frac{2}{3} U_{dc}} = \frac{\sqrt{3} * V_{ref} * T_s * \sin(\frac{\pi}{3} - \theta)}{U_{dc}}
+\end{cases}$$
+
+$$\begin{cases}
+L2 = V_{ref} * T_s * \sin\theta\\
+|U2| = \frac{2}{3} U_{dc}\\
+\|U2| * T2 = \frac{L2}{\sin(\frac{\pi}{3})} = \frac{L2}{\frac{\sqrt{3}}{2}} \xrightarrow[\text{整理}]{} T2= \frac{L2}{\frac{\sqrt{3}}{2}} \cdot \frac{1}{|U2|}  \xrightarrow[\text{代入} U2, L2]{} T2 = \frac{V_{ref} * T_s * \sin\theta}{\frac{\sqrt{3}}{2}} * \frac{1}{\frac{2}{3} U_{dc}} = \frac{\sqrt{3} * V_{ref} * T_s * \sin\theta}{U_{dc}}
+\end{cases}$$
+
 
 ##### 内切圆、正六边形边界
 
 ##### 合成矢量幅值范围
 
 ##### PWM发波
+
+**三相电压理想波形**
+<img src="./image.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+
+**8种组合下的空间电压矢量**
+<img src="./assets_10_FOC/9ed94f9c4dbab136525dc7d5702d6540843113bd.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
 
 **电压空间矢量图**
 ![电压空间矢量图](assets_10_FOC/2025-05-15-09-52-47-image.png)
