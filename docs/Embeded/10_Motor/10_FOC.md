@@ -414,6 +414,21 @@ L2 = V_{ref} * T_s * \sin\theta\\
 \|U2| * T2 = \frac{L2}{\sin(\frac{\pi}{3})} = \frac{L2}{\frac{\sqrt{3}}{2}} \xrightarrow[\text{整理}]{} T2= \frac{L2}{\frac{\sqrt{3}}{2}} \cdot \frac{1}{|U2|}  \xrightarrow[\text{代入} U2, L2]{} T2 = \frac{V_{ref} * T_s * \sin\theta}{\frac{\sqrt{3}}{2}} * \frac{1}{\frac{2}{3} U_{dc}} = \frac{\sqrt{3} * V_{ref} * T_s * \sin\theta}{U_{dc}}
 \end{cases}$$
 
+<img src="./image-15.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+
+基于 $\alpha \beta$ 坐标系计算作用时间，期望合成的电压空间矢量 $V_{ref}$ 用 $U_\alpha$、$U_\beta$ 表示:
+
+$$
+\begin{cases}U_\alpha*T_s=\left|V_{ref}\right|*cos\theta*T_s=|U1|*T1+|U2|*T2*\cos(\frac\pi3)\\U_\beta*T_s=\left|V_{ref}\right|*sin\theta*T_S=|U2|*T2*\sin(\frac\pi3)\\|U1|=|U2|=\frac23U_{dc}\end{cases}
+$$
+
+$$
+U_\beta*T_s=\frac23U_{dc}*T2*\frac{\sqrt3}2=\frac{\sqrt3}3*U_{dc}*T2\to T2=\frac{\sqrt3*U_{\beta}*T_s}{U_{dc}}
+$$
+
+$$
+\begin{aligned}&U_{\alpha}*T_{s}=\frac{2}{3}U_{dc}*T1+\frac{2}{3}U_{dc}*\frac{\sqrt{3}*U_{\beta}*T_{s}}{U_{dc}}*\frac{1}{2}=\frac{2}{3}U_{dc}*T1+\frac{\sqrt{3}*U_{\beta}*T_{s}}{3}\to\boldsymbol{T}\mathbf{1}=\frac{U_{\alpha}*T_{s}-\frac{\sqrt{3}*U_{\beta}*T_{s}}{3}}{\frac{2}{3}U_{dc}}\\&=\frac{3*U_{\alpha}*T_{s}-\sqrt{3}*U_{\beta}*T_{s}}{3}*\frac{3}{2U_{dc}}=\frac{3*U_{\alpha}*T_{s}-\sqrt{3}*U_{\beta}*T_{s}}{2U_{dc}}=\frac{\sqrt{3}T_{s}}{U_{dc}}(\frac{\sqrt{3}}{2U_{dc}}-\frac{1}{2}U_{\beta})\end{aligned}
+$$
 
 ##### 内切圆、正六边形边界
 
