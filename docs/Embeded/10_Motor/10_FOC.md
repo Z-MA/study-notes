@@ -402,17 +402,23 @@ $$\Delta \psi_{vr} \approx U_{vr}*\Delta t$$
 
 基于合成矢量 $𝑉_{ref}$ 计算作用时间，期望合成的电压空间矢量 $𝑉_{ref}$ 用幅值、相位表示如图所示。
 
-$$\begin{cases}
+$$
+\begin{aligned}
+&\begin{cases}
 L1 = V_{ref} * T_s * \sin(\frac{\pi}{3} - \theta)\\
 |U1| = \frac{2}{3} U_{dc}\\
-|U1| * T1 = \frac{L1}{\sin(\frac{\pi}{3})} = \frac{L1}{\frac{\sqrt{3}}{2}} \xrightarrow[\text{整理}]{} T1= \frac{L1}{\frac{\sqrt{3}}{2}} * \frac{1}{|U1|} \xrightarrow[\text{代入} U1, L1]{} T1 = \frac{V_{ref} * T_s * \sin(\frac{\pi}{3} - \theta)}{\frac{\sqrt{3}}{2}} * \frac{1}{\frac{2}{3} U_{dc}} = \frac{\sqrt{3} * V_{ref} * T_s * \sin(\frac{\pi}{3} - \theta)}{U_{dc}}
-\end{cases}$$
-
-$$\begin{cases}
+|U1| * T1 = \frac{L1}{\sin(\frac{\pi}{3})} = \frac{L1}{\frac{\sqrt{3}}{2}} \\
+\xrightarrow[\text{整理}]{} T1= \frac{L1}{\frac{\sqrt{3}}{2}} * \frac{1}{|U1|} \xrightarrow[\text{代入} U1, L1]{} T1 = \frac{V_{ref} * T_s * \sin(\frac{\pi}{3} - \theta)}{\frac{\sqrt{3}}{2}} * \frac{1}{\frac{2}{3} U_{dc}} = \frac{\sqrt{3} * V_{ref} * T_s * \sin(\frac{\pi}{3} - \theta)}{U_{dc}}
+\end{cases}\\
+\\[0em]
+&\begin{cases}
 L2 = V_{ref} * T_s * \sin\theta\\
 |U2| = \frac{2}{3} U_{dc}\\
-\|U2| * T2 = \frac{L2}{\sin(\frac{\pi}{3})} = \frac{L2}{\frac{\sqrt{3}}{2}} \xrightarrow[\text{整理}]{} T2= \frac{L2}{\frac{\sqrt{3}}{2}} \cdot \frac{1}{|U2|}  \xrightarrow[\text{代入} U2, L2]{} T2 = \frac{V_{ref} * T_s * \sin\theta}{\frac{\sqrt{3}}{2}} * \frac{1}{\frac{2}{3} U_{dc}} = \frac{\sqrt{3} * V_{ref} * T_s * \sin\theta}{U_{dc}}
-\end{cases}$$
+|U2| * T2 = \frac{L2}{\sin(\frac{\pi}{3})} = \frac{L2}{\frac{\sqrt{3}}{2}} \\
+\xrightarrow[\text{整理}]{} T2= \frac{L2}{\frac{\sqrt{3}}{2}} \cdot \frac{1}{|U2|}  \xrightarrow[\text{代入} U2, L2]{} T2 = \frac{V_{ref} * T_s * \sin\theta}{\frac{\sqrt{3}}{2}} * \frac{1}{\frac{2}{3} U_{dc}} = \frac{\sqrt{3} * V_{ref} * T_s * \sin\theta}{U_{dc}}
+\end{cases}
+\end{aligned}
+$$
 
 <img src="./image-15.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
 
@@ -423,16 +429,55 @@ $$
 $$
 
 $$
-U_\beta*T_s=\frac23U_{dc}*T2*\frac{\sqrt3}2=\frac{\sqrt3}3*U_{dc}*T2\to T2=\frac{\sqrt3*U_{\beta}*T_s}{U_{dc}}
+\begin{aligned}
+&U_\beta*T_s=\frac23U_{dc}*T2*\frac{\sqrt3}2=\frac{\sqrt3}3*U_{dc}*T2\\
+&\to T2=\frac{\sqrt3*U_{\beta}*T_s}{U_{dc}}
+\end{aligned}
 $$
 
 $$
-\begin{aligned}&U_{\alpha}*T_{s}=\frac{2}{3}U_{dc}*T1+\frac{2}{3}U_{dc}*\frac{\sqrt{3}*U_{\beta}*T_{s}}{U_{dc}}*\frac{1}{2}=\frac{2}{3}U_{dc}*T1+\frac{\sqrt{3}*U_{\beta}*T_{s}}{3}\to\boldsymbol{T}\mathbf{1}=\frac{U_{\alpha}*T_{s}-\frac{\sqrt{3}*U_{\beta}*T_{s}}{3}}{\frac{2}{3}U_{dc}}\\&=\frac{3*U_{\alpha}*T_{s}-\sqrt{3}*U_{\beta}*T_{s}}{3}*\frac{3}{2U_{dc}}=\frac{3*U_{\alpha}*T_{s}-\sqrt{3}*U_{\beta}*T_{s}}{2U_{dc}}=\frac{\sqrt{3}T_{s}}{U_{dc}}(\frac{\sqrt{3}}{2U_{dc}}-\frac{1}{2}U_{\beta})\end{aligned}
+\begin{aligned}
+&U_{\alpha}*T_{s}=\frac{2}{3}U_{dc}*T1+\frac{2}{3}U_{dc}*\frac{\sqrt{3}*U_{\beta}*T_{s}}{U_{dc}}*\frac{1}{2}=\frac{2}{3}U_{dc}*T1+\frac{\sqrt{3}*U_{\beta}*T_{s}}{3}\\
+&\to\boldsymbol{T}\mathbf{1}=\frac{U_{\alpha}*T_{s}-\frac{\sqrt{3}*U_{\beta}*T_{s}}{3}}{\frac{2}{3}U_{dc}}=\frac{3*U_{\alpha}*T_{s}-\sqrt{3}*U_{\beta}*T_{s}}{3}*\frac{3}{2U_{dc}}\\
+&=\frac{3*U_{\alpha}*T_{s}-\sqrt{3}*U_{\beta}*T_{s}}{2U_{dc}}=\frac{\sqrt{3}T_{s}}{U_{dc}}(\frac{\sqrt{3}}{2U_{dc}}-\frac{1}{2}U_{\beta})
+\end{aligned}
 $$
 
 ##### 内切圆、正六边形边界
 
+<img src="./image-16.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+
+- 设$T1+T2<=T_s$：
+
+$$
+\begin{aligned}
+T1+T2&=\frac{\sqrt{3}*V_{ref}*T_{s}}{\upsilon_{dc}}\Big(sin\theta+\sin\left(\frac{\pi}{3}-\theta\right)\Big)\\
+&=\frac{\sqrt{3}\times V_{ref}*T_{s}}{\upsilon_{dc}}\Big(sin\theta+\sin\left(\frac{\pi}{3}\right)*\cos\theta-sin\theta*\cos\left(\frac{\pi}{3}\right)\Big)\\
+&=\frac{\sqrt{3}*V_{ref}*T_{s}}{U_{dc}}\Big(sin\theta+\frac{\sqrt{3}}{2}*\cos\theta-sin\theta*\frac{1}{2}\Big)\\
+&=\frac{\sqrt{3}*V_{ref}*T_{s}}{U_{dc}}\Big(\frac{1}{2}*sin\theta+\frac{\sqrt{3}}{2}*\cos\theta\Big)\\
+&=\frac{\sqrt{3}*V_{ref}*T_{s}}{U_{dc}}\Big(\sin(\frac{\pi}{6})*sin\theta+\cos(\frac{\pi}{6})*\cos\theta\Big)\\
+&=\frac{\sqrt{3}*V_{ref}*T_{s}}{U_{dc}}\cos\left(\frac{\pi}{6}-\theta\right)\leq T_{s}
+\end{aligned}
+$$
+
+$\theta$ 取值范围：$[0,\pi/3]$
+
+<img src="./image-17.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+
+
+$\theta=\pi/6 :\quad \cos\left(\frac{\pi}{6}-\theta\right)$位于最大值 1,$\frac{\sqrt{3}*V_{ref}T_s}{U_{dc}}<=T_{s}\to V_{ref}<=\frac{\sqrt{3}}{3}U_{dc}=0.577*U_{dc}$，对应”图-8下”的$V_{ref2}$ 矢量。
+
+$\theta=0:\cos(\frac{\pi}{6}-\theta)$位于最小值$\frac{\sqrt{3}}{2}$，$\frac{\sqrt{3}*V_{ref}*T_{s}}{U_{dc}}*\frac{\sqrt{3}}{2}=T_{s}\to V_{ref}=\frac{2}{3}U_{dc}=0.667*U_{dc}$，对应“图-8下”的 $U1$ 矢量。
+
+可见，当 $T_1+T_2<=T$ 时，正六边形就是合成电压矢量幅值的边界，内切圆就是最大不失真圆形电压矢量的边界！
+
+- 设 $T_1+T_2>T_s$：合成矢量的幅值将会超过电压矢量幅值 $\frac23U_{dc}$。
+
 ##### 合成矢量幅值范围
+
+- $T1+T2<=Ts$，合成矢量 $Vref$ 质点不会超出正六边形范围,否则就会过调制
+- 若希望旋转的电压空间矢量是圆形的,则: $V_{ref}|=\frac{\sqrt{3}}{3}U_{dc}=0.577*U_{dc}$ 就是圆形的最大半径(即图-8内切圆)
+- 最终合成的矢量幅值都要小于 $\frac{\sqrt{3}}{3}U_{dc}$
 
 ##### PWM发波
 
@@ -478,3 +523,20 @@ $$
 ## 参考资料
 
 [彻底吃透SVPWM如此简单 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/414721065)
+
+$$
+\begin{cases}
+U_a = U_m \sin(\omega t)\\
+U_b = U_m \sin(\omega t + \frac{2\pi}{3})\\
+U_c = U_m \sin(\omega t + \frac{4\pi}{3})
+\end{cases}
+$$
+
+$$
+\begin{cases}
+I_a = I_m \sin(\omega t - \frac{\pi}{2})\\
+I_b = I_m \sin(\omega t + \frac{2\pi}{3} - \frac{\pi}{2})\\
+I_c = I_m \sin(\omega t + \frac{4\pi}{3} - \frac{\pi}{2})
+\end{cases}
+$$
+

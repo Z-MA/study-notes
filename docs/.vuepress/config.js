@@ -17,7 +17,10 @@ export default defineUserConfig({
     navbar: [
       { text: 'Github', link: 'https://www.github.com/Z-MA' },
       { text: 'Gitee', link: 'https://www.Gitee.com/Z-MA' },
-      { text: 'VuePress', link: 'https://vuejs.press/zh/' },
+      { text: 'DeepSeek', link: 'https://chat.deepseek.com/' },
+      { text: 'BdNetdisk', link: 'https://pan.baidu.com/disk/main' },
+      { text: 'yuque', link: 'https://www.yuque.com/dashboard/books' },
+      { text: 'vuepress', link: 'https://vuepress.vuejs.org/zh/' },
     ],
 
     sidebar: {
