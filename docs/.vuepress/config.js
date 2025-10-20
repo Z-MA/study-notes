@@ -13,7 +13,9 @@ export default defineUserConfig({
 
   theme: defaultTheme({
     logo: 'https://vuejs.press/images/hero.png',
-
+    
+    externalLinkIcon: false,
+    
     navbar: [
       { text: 'Github', link: 'https://www.github.com/Z-MA' },
       { text: 'Gitee', link: 'https://www.Gitee.com/Z-MA' },

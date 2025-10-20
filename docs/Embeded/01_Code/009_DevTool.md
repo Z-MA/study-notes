@@ -77,9 +77,12 @@ description: 这是一个C语言基础页面
 1. [Excalidraw](https://excalidraw.com/)
 2. [ProcessOn](https://www.processon.com/)
 3. [Draw.io](https://www.drawio.com/)
-4. Xmind
+4. [Xmind](https://xmind.cn/)
+5. [shapefly](https://zzzhan.github.io/shapefly/index_zh-CN.html)
 
 ## 在线工具
+
+[菜鸟在线工具](https://www.jyshare.com/)
 
 ### 在线编解码工具
 
@@ -94,14 +97,6 @@ description: 这是一个C语言基础页面
 [正则表达式调试](https://regexr.com/)|[正则表达式可视化](https://jex.im/regulex/)
 
 [any86/any-rule: 🦕 常用正则大全, 支持web / vscode / idea / Alfred Workflow多平台 (github.com)](https://github.com/any86/any-rule)
-
-### 网络工具
-
-[IP地址归属地查询](https://www.ip138.com/)|[IP地址查询](https://www.ipip.net/ip.html)
-
-### 在线编译运行工具
-
-[C/C++在线编译](https://www.onlinegdb.com/)  
 
 ### 可视化/格式化工具
 
