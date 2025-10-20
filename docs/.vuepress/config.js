@@ -8,7 +8,7 @@ export default defineUserConfig({
   base: '/study-notes/',
   lang: 'zh-CN',
 
-  title: 'LiZhou 学习笔记',
+  title: 'Z-MA',//'LiZhou 学习笔记',
   description: 'LiZhou Study Notes',
 
   theme: defaultTheme({
