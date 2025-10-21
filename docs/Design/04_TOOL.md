@@ -1,10 +1,11 @@
 ---
 lang: zh-CN
-title: 设计工具
 description: 这是一个视觉设计基础页面
 ---
+# 设计工具
 
-# 工具类软件
+## 工具类软件
+
 [GGTalk](https://www.cnblogs.com/justnow)
 [uTools](https://www.u-tools.cn/)  
 [冰点还原](https://www.bingdiancn.com/)  
@@ -13,22 +14,35 @@ description: 这是一个视觉设计基础页面
 [泡泡Dog官网入口](https://ppg.369.cyou)  
 邀请码：4ma9meq8（注册的时候填写）
 
-[hexo官网](https://hexo.io/zh-cn/)   
+[喵官网(需翻墙)](https://233.gr)  
+[喵官网地址1](https://user1.喵.host)  
+[喵官网地址2](https://user.喵.biz)  
+
+[hexo官网](https://hexo.io/zh-cn/)  
 [wordpress官网](https://wordpress.org/)  
 
+## 原型设计工具
+
+- [墨刀](https://modao.cc/)
+- [摹客](https://www.mockplus.cn/)
+- [Axure RP](https://www.axure.com/)
+- [Figma](https://www.figma.com/)
 
 ## Github推送代码时设置代理
+
 使用github推送代码时总是显示连接不上服务器，这时我们就需要设定git代理解决。首先在首页查到Clash的混合代理地址：127.0.0.1:32210 (打开clash在“首页”页面能看到)。
 
 打开Git CMD
 
 添加全局代理:
+
 ```bash
 git config --global http.proxy http://127.0.0.1:32210
 git config --global https.proxy http://127.0.0.1:32210
 ```
 
 验证代理设置:
+
 ```bash
 git config --global --get http.proxy
 git config --global --get https.proxy
@@ -56,7 +70,7 @@ windows操作系统中，有时我们关闭程序后，一些相关的进程仍�
 7. 表中的第一列 映像 即是打开这个文件的进程名称，可考虑在任务管理器中结束该进程
 8. 如果有重名的多个进程，以第二列 PID 为准
 
-# 在线小工具
+## 在线小工具
 ## **在线素材工具：**
 
 如果你写文章，或者做视频，那就一定少不了要找素材，包括各种图片、背景、emoji表情、表情包、壁纸、视频、gif图等等。  

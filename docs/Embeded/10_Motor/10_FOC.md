@@ -238,6 +238,13 @@ $$
 
 由上式可见在空间呈 $\frac{2\pi}{3}$ 分布的三相定子绕组上加载三相对称电流，合成电流 $I_{vr}$ 是一个幅值为 $1.5$ 倍 $I_m$，并以角速度 $\omega$ 旋转的合成电流矢量。后面的 $e^{j(\omega t+\frac{\pi}{2})}$ 表示该合成电流矢量的初相角是 $\frac{\pi}{2}$。
 
+最终形成的旋转矢量如下图：
+
+<img src="https://picx.zhimg.com/v2-3205aeb27909d78fbd284d57a36ad219_b.webp" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+
+三相电压理想波形如下图：
+<img src="./image.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+
 ### 坐标变换
 
 #### Clark和反Clark变换
@@ -402,17 +409,23 @@ $$\Delta \psi_{vr} \approx U_{vr}*\Delta t$$
 
 基于合成矢量 $𝑉_{ref}$ 计算作用时间，期望合成的电压空间矢量 $𝑉_{ref}$ 用幅值、相位表示如图所示。
 
-$$\begin{cases}
+$$
+\begin{aligned}
+&\begin{cases}
 L1 = V_{ref} * T_s * \sin(\frac{\pi}{3} - \theta)\\
 |U1| = \frac{2}{3} U_{dc}\\
-|U1| * T1 = \frac{L1}{\sin(\frac{\pi}{3})} = \frac{L1}{\frac{\sqrt{3}}{2}} \xrightarrow[\text{整理}]{} T1= \frac{L1}{\frac{\sqrt{3}}{2}} * \frac{1}{|U1|} \xrightarrow[\text{代入} U1, L1]{} T1 = \frac{V_{ref} * T_s * \sin(\frac{\pi}{3} - \theta)}{\frac{\sqrt{3}}{2}} * \frac{1}{\frac{2}{3} U_{dc}} = \frac{\sqrt{3} * V_{ref} * T_s * \sin(\frac{\pi}{3} - \theta)}{U_{dc}}
-\end{cases}$$
-
-$$\begin{cases}
+|U1| * T1 = \frac{L1}{\sin(\frac{\pi}{3})} = \frac{L1}{\frac{\sqrt{3}}{2}} \\
+\xrightarrow[\text{整理}]{} T1= \frac{L1}{\frac{\sqrt{3}}{2}} * \frac{1}{|U1|} \xrightarrow[\text{代入} U1, L1]{} T1 = \frac{V_{ref} * T_s * \sin(\frac{\pi}{3} - \theta)}{\frac{\sqrt{3}}{2}} * \frac{1}{\frac{2}{3} U_{dc}} = \frac{\sqrt{3} * V_{ref} * T_s * \sin(\frac{\pi}{3} - \theta)}{U_{dc}}
+\end{cases}\\
+\\[0em]
+&\begin{cases}
 L2 = V_{ref} * T_s * \sin\theta\\
 |U2| = \frac{2}{3} U_{dc}\\
-\|U2| * T2 = \frac{L2}{\sin(\frac{\pi}{3})} = \frac{L2}{\frac{\sqrt{3}}{2}} \xrightarrow[\text{整理}]{} T2= \frac{L2}{\frac{\sqrt{3}}{2}} \cdot \frac{1}{|U2|}  \xrightarrow[\text{代入} U2, L2]{} T2 = \frac{V_{ref} * T_s * \sin\theta}{\frac{\sqrt{3}}{2}} * \frac{1}{\frac{2}{3} U_{dc}} = \frac{\sqrt{3} * V_{ref} * T_s * \sin\theta}{U_{dc}}
-\end{cases}$$
+|U2| * T2 = \frac{L2}{\sin(\frac{\pi}{3})} = \frac{L2}{\frac{\sqrt{3}}{2}} \\
+\xrightarrow[\text{整理}]{} T2= \frac{L2}{\frac{\sqrt{3}}{2}} \cdot \frac{1}{|U2|}  \xrightarrow[\text{代入} U2, L2]{} T2 = \frac{V_{ref} * T_s * \sin\theta}{\frac{\sqrt{3}}{2}} * \frac{1}{\frac{2}{3} U_{dc}} = \frac{\sqrt{3} * V_{ref} * T_s * \sin\theta}{U_{dc}}
+\end{cases}
+\end{aligned}
+$$
 
 <img src="./image-15.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
 
@@ -423,35 +436,197 @@ $$
 $$
 
 $$
-U_\beta*T_s=\frac23U_{dc}*T2*\frac{\sqrt3}2=\frac{\sqrt3}3*U_{dc}*T2\to T2=\frac{\sqrt3*U_{\beta}*T_s}{U_{dc}}
+\begin{aligned}
+&U_\beta*T_s=\frac23U_{dc}*T2*\frac{\sqrt3}2=\frac{\sqrt3}3*U_{dc}*T2\\
+&\to T2=\frac{\sqrt3*U_{\beta}*T_s}{U_{dc}}
+\end{aligned}
 $$
 
 $$
-\begin{aligned}&U_{\alpha}*T_{s}=\frac{2}{3}U_{dc}*T1+\frac{2}{3}U_{dc}*\frac{\sqrt{3}*U_{\beta}*T_{s}}{U_{dc}}*\frac{1}{2}=\frac{2}{3}U_{dc}*T1+\frac{\sqrt{3}*U_{\beta}*T_{s}}{3}\to\boldsymbol{T}\mathbf{1}=\frac{U_{\alpha}*T_{s}-\frac{\sqrt{3}*U_{\beta}*T_{s}}{3}}{\frac{2}{3}U_{dc}}\\&=\frac{3*U_{\alpha}*T_{s}-\sqrt{3}*U_{\beta}*T_{s}}{3}*\frac{3}{2U_{dc}}=\frac{3*U_{\alpha}*T_{s}-\sqrt{3}*U_{\beta}*T_{s}}{2U_{dc}}=\frac{\sqrt{3}T_{s}}{U_{dc}}(\frac{\sqrt{3}}{2U_{dc}}-\frac{1}{2}U_{\beta})\end{aligned}
+\begin{aligned}
+&U_{\alpha}*T_{s}=\frac{2}{3}U_{dc}*T1+\frac{2}{3}U_{dc}*\frac{\sqrt{3}*U_{\beta}*T_{s}}{U_{dc}}*\frac{1}{2}=\frac{2}{3}U_{dc}*T1+\frac{\sqrt{3}*U_{\beta}*T_{s}}{3}\\
+&\to\boldsymbol{T}\mathbf{1}=\frac{U_{\alpha}*T_{s}-\frac{\sqrt{3}*U_{\beta}*T_{s}}{3}}{\frac{2}{3}U_{dc}}=\frac{3*U_{\alpha}*T_{s}-\sqrt{3}*U_{\beta}*T_{s}}{3}*\frac{3}{2U_{dc}}\\
+&=\frac{3*U_{\alpha}*T_{s}-\sqrt{3}*U_{\beta}*T_{s}}{2U_{dc}}=\frac{\sqrt{3}T_{s}}{U_{dc}}(\frac{\sqrt{3}}{2}U_{\alpha}-\frac{1}{2}U_{\beta})
+\end{aligned}
 $$
 
 ##### 内切圆、正六边形边界
 
+<img src="./image-16.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+
+- 设$T1+T2<=T_s$：
+
+$$
+\begin{aligned}
+T1+T2&=\frac{\sqrt{3}*V_{ref}*T_{s}}{\upsilon_{dc}}\Big(sin\theta+\sin\left(\frac{\pi}{3}-\theta\right)\Big)\\
+&=\frac{\sqrt{3}\times V_{ref}*T_{s}}{\upsilon_{dc}}\Big(sin\theta+\sin\left(\frac{\pi}{3}\right)*\cos\theta-sin\theta*\cos\left(\frac{\pi}{3}\right)\Big)\\
+&=\frac{\sqrt{3}*V_{ref}*T_{s}}{U_{dc}}\Big(sin\theta+\frac{\sqrt{3}}{2}*\cos\theta-sin\theta*\frac{1}{2}\Big)\\
+&=\frac{\sqrt{3}*V_{ref}*T_{s}}{U_{dc}}\Big(\frac{1}{2}*sin\theta+\frac{\sqrt{3}}{2}*\cos\theta\Big)\\
+&=\frac{\sqrt{3}*V_{ref}*T_{s}}{U_{dc}}\Big(\sin(\frac{\pi}{6})*sin\theta+\cos(\frac{\pi}{6})*\cos\theta\Big)\\
+&=\frac{\sqrt{3}*V_{ref}*T_{s}}{U_{dc}}\cos\left(\frac{\pi}{6}-\theta\right)\leq T_{s}
+\end{aligned}
+$$
+
+$\theta$ 取值范围：$[0,\pi/3]$
+
+<img src="./image-17.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+
+$\theta=\pi/6 :\quad \cos\left(\frac{\pi}{6}-\theta\right)$位于最大值 1,$\frac{\sqrt{3}*V_{ref}T_s}{U_{dc}}<=T_{s}\to V_{ref}<=\frac{\sqrt{3}}{3}U_{dc}=0.577*U_{dc}$，对应”图-8下”的$V_{ref2}$ 矢量。
+
+$\theta=0:\cos(\frac{\pi}{6}-\theta)$位于最小值$\frac{\sqrt{3}}{2}$，$\frac{\sqrt{3}*V_{ref}*T_{s}}{U_{dc}}*\frac{\sqrt{3}}{2}=T_{s}\to V_{ref}=\frac{2}{3}U_{dc}=0.667*U_{dc}$，对应“图-8下”的 $U1$ 矢量。
+
+可见，当 $T_1+T_2<=T$ 时，正六边形就是合成电压矢量幅值的边界，内切圆就是最大不失真圆形电压矢量的边界！
+
+- 设 $T_1+T_2>T_s$：合成矢量的幅值将会超过电压矢量幅值 $\frac23U_{dc}$。
+
 ##### 合成矢量幅值范围
 
-##### PWM发波
+- $T1+T2<=Ts$，合成矢量 $Vref$ 质点不会超出正六边形范围,否则就会过调制
+- 若希望旋转的电压空间矢量是圆形的,则: $V_{ref}|=\frac{\sqrt{3}}{3}U_{dc}=0.577*U_{dc}$ 就是圆形的最大半径(即图-8内切圆)
+- 最终合成的矢量幅值都要小于 $\frac{\sqrt{3}}{3}U_{dc}$
 
-**三相电压理想波形**
-<img src="./image.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+<img src="./合成矢量幅值范围图示证明.jpg" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
 
-**8种组合下的空间电压矢量**
-<img src="./assets_10_FOC/9ed94f9c4dbab136525dc7d5702d6540843113bd.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+如上图，当 $U_1 * T_\text{单位时间}$ 时，构成六边形的边界，当 $U_1\&U_6$ 分别作用半个单位单位时间时，调制出的电压矢量是如图 $U_{Vr1}$，同理可得$U_{Vr2}$。
 
-**电压空间矢量图**
-![电压空间矢量图](assets_10_FOC/2025-05-15-09-52-47-image.png)
+当 $T_1+T_2>T_s$ 过调制时，采用等比例缩小的方式：
 
-![1](assets_10_FOC/2025-05-15-10-00-22-image.png)
+$$
+\begin{cases}
+T_1=\frac{T_1}{T_1+T_2}T_s\\
+T_2=\frac{T_2}{T_1+T_2}T_s
+\end{cases}
+$$
 
-![1](https://picx.zhimg.com/v2-3205aeb27909d78fbd284d57a36ad219_b.webp)
+#### PWM发波
 
-![1](assets_10_FOC/2025-05-15-13-35-11-7段式SVPWM开关顺序_增强后.png)
+发波流程：
 
-![1](assets_10_FOC/2025-05-15-13-49-55-IMG_20250515_132301.png)
+- 发波前确定转子所处机械角度，多对极时用机械角度*极对数；
+- 对各相电流值进行采样，通过clark变换和park变换得到 $d$、$q$ 轴电流值；
+- 计算电流值 和目标电流值计算出 $d$、$q$ 轴电流误差，通过PI调节器计算出 $d$、$q$ 轴电压指令值；
+- 经过反Park变换和反Clark变换得到 $\alpha\beta$ 坐标系下的电压指令值，进而计算出期望的电压空间矢量 $V_{ref}$ 的幅值和相位。
+- 确定所处扇区，计算出各个开关管的导通时间，最后根据导通时间发出PWM波形。
+
+零矢量分散的7段式PWM发波如图：
+
+<img src="./image-18.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+
+在SVPWM应用中，采用零矢量分散的7段式PWM发波方式具有多方面优势。比如：降低电流谐波、提高控制精度、减小换向冲击、降低损耗等。
+
+其中零电压矢量作用时间:
+
+$$T_0=T_7=\frac{T_s-T_1-T_2}{2}$$
+
+各扇区PWM发波顺序如下图：
+
+<img src="./image-19.png" alt="示例图片" width="740" style="display: block; margin: 0 auto;">
+
+#### SVPWM实现
+
+##### 扇区判断
+
+- 通过 $U_\alpha,U_\beta$ 原始输入直接进行判断。
+- 将 $U_\alpha,U_\beta$ 原始输入转换为 $XYZ$ 中间变量后进行判断（节省总体计算量）。
+
+<img src="./image-20.png" alt="示例图片" width="740" style="display: block; margin: 0 auto;">
+
+##### 空间矢量作用时间(T1、T2)计算
+
+<img src="./image-21.png" alt="示例图片" width="740" style="display: block; margin: 0 auto;">
+
+##### 矢量切换点确定
+
+<img src="./image-22.png" alt="示例图片" width="540" style="display: block; margin: 0 auto;">
+
+- 矢量切换点：
+  - 各相开关管在一个 $𝑇_s$ 周期内从关闭到导通的时刻
+  - 见图：$T_P1,T_P2,T_P3$
+  - 矢量切换点适用于：STM32 PWM模式2
+
+- 各相作用时间：
+  - 各相开关管在一个 $𝑇_s$ 周期内持续导通的时间
+  - 它是一个时间段，见图：$T_a,T_b,T_c$
+  - 各相作用时间适用于：STM32 PWM模式1
+
+$T_1,T_2$ 及 $ABC$ 作用时间
+<img src="./image-23.png" alt="示例图片" width="740" style="display: block; margin: 0 auto;">
+
+##### 矢量切换点的实现
+
+期望的A相PWM波形：
+<img src="./image-24.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+
+STM32 PWM实现：
+<img src="./image-25.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+
+- STM32 TIM1/TIM8
+  - 计数模式：中央对齐模式1；cnt计数从0~ARR，再从ARR~0
+  - ARR = 100；有效电平：高
+- PWM模式2
+  - 无论cnt向上还是向下计数，只要 $cnt > CCR_x$，通道输出有效电平
+  - 设置 $CCR_x = T_{P1} = 30, cnt > CCR_x$，通道输出有效电平
+- PWM模式1：MC SDK采用该模式
+  - 无论cnt向上还是向下计数，只要 $cnt < CCR_x$，通道输出有效电平
+  - 设置 $CCR_x = T_a/2 = 70, cnt < CCR_x$，通道输出有效电平
+
+#### SVPWM总览
+
+##### 常规方式
+
+##### MC SDK方式
+
+1、求 $\underline{U_\alpha},\underline{U_\beta}$
+
+$$
+\begin{cases}
+\underline{U_{\alpha}} = \frac{U_{\alpha}}{U_{base}} \\
+\underline{U_{\beta}} = \frac{U_{\beta}}{U_{base}}
+\end{cases}
+$$
+
+2、求 ${U_\alpha}^{\prime} ,{U_\beta}^{\prime}$
+
+$$
+\begin{cases}
+U_{\alpha}^{\prime} = \sqrt{3} \underline{U_{\alpha}} T_{s} \\
+\phantom{U_{\alpha}} U_{\beta}^{\prime} = \underline{{U_{\beta}}} T_{s}
+\end{cases}
+$$
+
+3、求 $X,Y,Z$
+
+$$
+\begin{cases}
+X = U_{\beta}^{'}, \\
+Y = \frac{U_{\alpha}^{'}}{2} + \frac{U_{\beta}^{'}}{2}, \\
+Z = -\frac{U_{\alpha}^{'}}{2} + \frac{U_{\beta}^{'}}{2}
+\end{cases}
+$$
+
+4、通过XYZ做扇区判断
+
+``` C
+if(Y < 0)
+  if(Z < 0):
+    sect5
+  else if
+    if(X < 0):
+      sect4
+    else:
+      sect3
+else
+  if(Z > 0):
+    sect2
+  else
+    if(X < 0):
+      sect6
+    else:
+      sectl
+```
+
+5、计算对应扇区的 $T_a,T_b,T_c$
+<img src="./image-26.png" alt="示例图片" width="750" style="display: block; margin: 0 auto;">
 
 ## V/f控制
 
@@ -478,3 +653,19 @@ $$
 ## 参考资料
 
 [彻底吃透SVPWM如此简单 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/414721065)
+
+$$
+\begin{cases}
+U_a = U_m \sin(\omega t)\\
+U_b = U_m \sin(\omega t + \frac{2\pi}{3})\\
+U_c = U_m \sin(\omega t + \frac{4\pi}{3})
+\end{cases}
+$$
+
+$$
+\begin{cases}
+I_a = I_m \sin(\omega t - \frac{\pi}{2})\\
+I_b = I_m \sin(\omega t + \frac{2\pi}{3} - \frac{\pi}{2})\\
+I_c = I_m \sin(\omega t + \frac{4\pi}{3} - \frac{\pi}{2})
+\end{cases}
+$$

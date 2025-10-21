@@ -77,32 +77,14 @@ description: 这是一个C语言基础页面
 1. [Excalidraw](https://excalidraw.com/)
 2. [ProcessOn](https://www.processon.com/)
 3. [Draw.io](https://www.drawio.com/)
-4. Xmind
+4. [Xmind](https://xmind.cn/)
+5. [shapefly](https://zzzhan.github.io/shapefly/index_zh-CN.html)
 
 ## 在线工具
 
-### 在线编解码工具
-
-[BASE64编解码](https://base64.supfree.net/)  |[MD5编码](https://www.zxgj.cn/g/md5)  |[ASCII编解码](https://link.zhihu.com/?target=https%3A//www.matools.com/code-convert-ascii)  |[Unicode编解码](https://www.zxgj.cn/g/unicode)  |[UTF-8编解码](https://www.zxgj.cn/g/utf8)|[字符串编解码](https://www.zxgj.cn/g/enstring)) |[URL编解码](https://tool.chinaz.com/tools/urlencode.aspx?jdfwkey=lbixz1)
-
-### 在线转换工具
-
-[在线ASCII码对照表](http://www.fly63.com/tool/ascii/)|[通用进制转换工具](https://www.zxgj.cn/g/jinzhi)|[十进制转换](http://www.binaryconvert.com/)|[RGB颜色转换](https://www.zxgj.cn/g/yansezhi])|[时间戳转换](https://www.zxgj.cn/g/unix)|[人民币大小写转换](http://www.fly63.com/tool/renmingbi/)
-
-### 正则表达式工具
-
-[正则表达式调试](https://regexr.com/)|[正则表达式可视化](https://jex.im/regulex/)
-
-[any86/any-rule: 🦕 常用正则大全, 支持web / vscode / idea / Alfred Workflow多平台 (github.com)](https://github.com/any86/any-rule)
-
-### 网络工具
-
-[IP地址归属地查询](https://www.ip138.com/)|[IP地址查询](https://www.ipip.net/ip.html)
-
-### 在线编译运行工具
-
-[C/C++在线编译](https://www.onlinegdb.com/)  
-
-### 可视化/格式化工具
-
-[前端编辑](https://codepen.io/)|[数据可视化](https://flourish.studio/)|[JSON解析](http://www.json.cn/) |[JS代码格式化](https://prettier.io/playground/)
+- [菜鸟在线工具](https://www.jyshare.com/)
+- [IP33工具箱](https://www.ip33.com/)
+- [Coding工具箱](https://coding.tools/cn)
+- [JSON在线](https://www.sojson.com/)
+- [TXT转CSV](https://products.aspose.app/cells/zh/conversion/txt-to-csv#google_vignette)
+- [video-to-gif](https://www.freeconvert.com/zh/convert/video-to-gif)

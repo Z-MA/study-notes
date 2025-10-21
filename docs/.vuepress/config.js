@@ -8,16 +8,21 @@ export default defineUserConfig({
   base: '/study-notes/',
   lang: 'zh-CN',
 
-  title: 'LiZhou 学习笔记',
+  title: 'Z-MA',//'LiZhou 学习笔记',
   description: 'LiZhou Study Notes',
 
   theme: defaultTheme({
     logo: 'https://vuejs.press/images/hero.png',
-
+    
+    externalLinkIcon: false,
+    
     navbar: [
       { text: 'Github', link: 'https://www.github.com/Z-MA' },
       { text: 'Gitee', link: 'https://www.Gitee.com/Z-MA' },
-      { text: 'VuePress', link: 'https://vuejs.press/zh/' },
+      { text: 'DeepSeek', link: 'https://chat.deepseek.com/' },
+      { text: 'BdNetdisk', link: 'https://pan.baidu.com/disk/main' },
+      { text: 'yuque', link: 'https://www.yuque.com/dashboard/books' },
+      { text: 'vuepress', link: 'https://vuepress.vuejs.org/zh/' },
     ],
 
     sidebar: {
@@ -60,12 +65,12 @@ export default defineUserConfig({
             //   collapsible: true,
             //   children: ['001_C','002_Python','003 Rust','004 Matlab','009 DevTool','010 VersionControlSystem','020_ComputerSystem','021 Algorithms','022 DesignMode'],
             // },
-            // {
-            //   text: 'Driver',
-            //   prefix: '04_Driver/',
-            //   collapsible: true,
-            //   children: ['001_C','002_Python','003 Rust','004 Matlab','009 DevTool','010 VersionControlSystem','020_ComputerSystem','021 Algorithms','022 DesignMode'],
-            // },
+            {
+              text: 'Driver',
+              prefix: '04_Driver/',
+              collapsible: true,
+              children: ['Protocol'],//,'002_Python','003 Rust','004 Matlab','009 DevTool','010 VersionControlSystem','020_ComputerSystem','021 Algorithms','022 DesignMode'],
+            },
             // {
             //   text: 'Hardware',
             //   prefix: '05_Hardware/',
