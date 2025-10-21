@@ -14,7 +14,11 @@ description: 这是一个视觉设计基础页面
 [泡泡Dog官网入口](https://ppg.369.cyou)  
 邀请码：4ma9meq8（注册的时候填写）
 
-[hexo官网](https://hexo.io/zh-cn/)
+[喵官网(需翻墙)](https://233.gr)  
+[喵官网地址1](https://user1.喵.host)  
+[喵官网地址2](https://user.喵.biz)  
+
+[hexo官网](https://hexo.io/zh-cn/)  
 [wordpress官网](https://wordpress.org/)  
 
 ## 原型设计工具
