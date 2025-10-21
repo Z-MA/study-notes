@@ -65,12 +65,12 @@ export default defineUserConfig({
             //   collapsible: true,
             //   children: ['001_C','002_Python','003 Rust','004 Matlab','009 DevTool','010 VersionControlSystem','020_ComputerSystem','021 Algorithms','022 DesignMode'],
             // },
-            // {
-            //   text: 'Driver',
-            //   prefix: '04_Driver/',
-            //   collapsible: true,
-            //   children: ['001_C','002_Python','003 Rust','004 Matlab','009 DevTool','010 VersionControlSystem','020_ComputerSystem','021 Algorithms','022 DesignMode'],
-            // },
+            {
+              text: 'Driver',
+              prefix: '04_Driver/',
+              collapsible: true,
+              children: ['Protocol'],//,'002_Python','003 Rust','004 Matlab','009 DevTool','010 VersionControlSystem','020_ComputerSystem','021 Algorithms','022 DesignMode'],
+            },
             // {
             //   text: 'Hardware',
             //   prefix: '05_Hardware/',

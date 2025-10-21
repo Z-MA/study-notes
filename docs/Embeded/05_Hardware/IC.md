@@ -1,10 +1,10 @@
+[IC PDF资料库](https://www.icpdf.com/)
 
 [欧时 RS](https://rsonline.cn/web/generalDisplay.html?id=aboutRS)
 [华秋商城](https://www.hqchip.com/)
 [云汉芯城](https://www.ickey.cn/?utm_source=BaiDu02&utm_medium=CPC&utm_content=qita&utm_campaign=JingPinCi20230517&utm_term=%E4%BA%91%E6%B1%89%E8%8A%AF%E7%89%87%E5%95%86%E5%9F%8E&bd_vid=8646699636701259306)
 [立创商城](https://www.szlcsc.com/)
 [得捷电子](https://www.digikey.cn/)
-
 
 [焊接芯件参数表_广东威浦电器有限公司](http://www.weipu.cn/product/557.html)
 [china-amass.com](https://www.china-amass.com/)

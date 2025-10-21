@@ -1,8 +1,12 @@
+[STM32CubeMX](https://www.st.com.cn/zh/development-tools/stm32cubemx.html#get-software)
+[STMCU中文官网](https://www.stmcu.com.cn/Search/index?csrf_token=a8491f226c67041e87fa3af646b38e2f&search_keywords=AN3156&type=design_resource&page=1)
+[Arm Community](https://community.arm.com/)
+[Arm Developer](https://developer.arm.com/)
+[ST中文论坛](https://shequ.stmicroelectronics.cn/portal.php)
+
+[波特率动教程](https://www.baud-dance.com/)
+
 [N32替换STM32，这些细节别忽略！ (qq.com)](https://mp.weixin.qq.com/s/-IW1D0dzF9y2gutlSOucXA)
-
-
-CubeMX官网下载链接https://www.st.com/content/ccc/resource/technical/software/sw_development_suite/group0/d7/f0/6a/65/f9/28/4d/31/stm32cubemx-win-v6-10-0/files/stm32cubemx-win-v6-10-0.zip/jcr:content/translations/en.stm32cubemx-win-v6-10-0.zip
-
 
 [STM32单片机最小系统详解 (qq.com)](https://mp.weixin.qq.com/s/rruSs2XHrndVgDlAr3IvEA)
 [居然还不会使用STM32开发神器？ (qq.com)](https://mp.weixin.qq.com/s/_d0EJX0yLyV3sRHpCC6HBQ)
