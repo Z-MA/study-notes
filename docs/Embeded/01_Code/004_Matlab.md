@@ -1,15 +1,18 @@
 ---
 lang: zh-CN
-title: Matlab
 description: 这是一个C语言基础页面
 ---
+# Matlab
 
-# 官方资料
+## 官方资料
+
 [matlab官网](https://ww2.mathworks.cn/?s_tid=user_nav_logo)  
 [Matlab官方文档](https://ww2.mathworks.cn/help/releases/R2024a/index.html)
 
-# Matlab
-## MATLAB 快速入门
+## 官方教程
+
+### MATLAB 快速入门
+
 - 界面包括 菜单栏、当前文件夹（可添加文件夹到路径）、命令行窗口、工作区、编辑器。命令行可以浏览历史命令；工作区显示变量，变量可以在工作区中直接编辑，who和whos可查看工作区内容，退出软件工作区变量不会保留，使用save命令保存为mat数据文件，使用load将mat还原到工作区。  
 - 矩阵就是多维数组，对矩阵的操作有创建（直接创建、函数创建）、索引(行列下标、按序遍历，冒号和步长)、修改、运算（单一的算术运算符或函数可以处理矩阵中的所有值）等。运算包括转置、加减乘除、矩阵乘法、矩阵幂、点乘、点除、点幂，还有针对矩阵元素级的运算。矩阵还可以串联。  
 - MATLAB 将数字存储为浮点值，默认情况下为双精度（64 位）。使用 `format` 命令可以更改显示格式。  
@@ -20,7 +23,8 @@ description: 这是一个C语言基础页面
 - 使用 edit 命令新建一个空白脚本文件。%符号添加注释，请在命令行中键入脚本名称运行脚本。实时脚本中的格式设置选项可以增强代码，而不是以纯文本编写代码和注释。实时脚本有助于您查看代码和输出并与之交互，还可以包含格式化文本、方程和图像。
 - 循环使用 for 或 while 关键字，条件语句使用 if 或 switch，都以end结尾。
 
-## 语言基础知识
+### 语言基础知识
+
 语法、数组索引和操作、数据类型、运算符。MATLAB 是“matrix laboratory”的缩写形式。其他编程语言通常一次只能处理一个数字，而 MATLAB® 则针对整个矩阵和数组进行运算处理。语言基础知识包括基本运算，例如创建变量、数组索引、算术运算和数据类型。
 
 - 输入命令：编译和运行 MATLAB 语句
@@ -29,7 +33,8 @@ description: 这是一个C语言基础页面
 - 运算符和基本运算：算术、关系和逻辑运算符、特殊字符、舍入、集合函数
 - 循环及条件语句：使用关键字控制流和分支，如 if、for 和 while
 
-## 数据导入和分析
+### 数据导入和分析
+
 导入和导出数据，包括大文件；预处理数据、可视化和浏览，访问来自文本文件、电子表格、硬件、其他软件或 Web 的数据。探查数据以判别趋势、检验假设和估计不确定性。创建自定义的算法、可视化和模型。
 
 - 数据导入和导出：文本文件、电子表格和其他文件格式；硬件；Web 访问
@@ -39,7 +44,8 @@ description: 这是一个C语言基础页面
 - 可视化探查：平移、缩放和旋转图形；修改和保存观测值
 - 管理试验：设计试验以运行 MATLAB® 代码并可视化、过滤和比较结果
 
-## 数学
+### 数学
+
 线性代数、微积分、傅里叶变换和其他数学。数学函数为分析数据、开发算法和创建模型提供了一系列数值计算方法。核心函数使用经过处理器优化的库，可以快速进行向量和矩阵计算。
 
 - 初等数学：三角学、指数和对数、复数值、舍入、余数、离散数学
@@ -54,7 +60,8 @@ description: 这是一个C语言基础页面
 - 计算几何学：三角剖分、边界区域、沃罗诺伊图、多边形
 - 量子计算：基于门的量子计算和二次无约束二元优化
 
-## 图形
+### 图形
+
 二维和三维绘图、图像、动画。图形函数包括二维和三维绘图函数，用于以可视化形式呈现数据和通信的结果。以交互方式或编程方式自定义绘图。
 
 - 二维图和三维图：绘制连续、离散、曲面以及三维体数据图
@@ -64,7 +71,8 @@ description: 这是一个C语言基础页面
 - 图形对象：通过设置底层对象的属性自定义图形
 - 图形性能：优化代码以改善性能
 
-## 编程
+### 编程
+
 脚本、函数和类。若您需要重复执行一系列命令或希望将其保存供以后引用，请将其存储在程序文件中。MATLAB® 程序的最简单类型是脚本，其中包含一组命令，这些命令与您在命令行中键入的命令完全相同。要获得更高的编程灵活性，可以创建接受输入并返回输出的函数。当您拥有专门的数据结构体或需要许多函数与特殊类型的数据进行交互时，请使用面向对象的编程方法创建类。
 
 - 脚本：基本程序文件
@@ -76,7 +84,8 @@ description: 这是一个C语言基础页面
 - 异常处理：出现错误时捕获数据
 - MATLAB 代码中的安全性：MATLAB 代码中敏感信息和知识产权的安全注意事项
 
-## App 构建
+### App 构建
+
 创建自包含 App、嵌入式实时编辑器任务和自定义 UI 组件。MATLAB® 提供了构建交互式用户界面的函数和工具。您可以添加组件（如按钮和滑块）以实现用户交互，并在这些界面中包括用于数据可视化和探查的绘图。
 要创建基于用户交互执行操作的自包含界面，请开发 App。要创建可嵌入到实时脚本中并在用户探查参数时生成代码的界面，请开发实时编辑器任务。有关详细信息，请参阅构建 App 的方法。
 有大量的 UI 组件可用于在 MATLAB 中创建界面。您还可以通过创建自定义 UI 组件，用您自己的专用 UI 和可视化来扩展可用组件的列表。
@@ -88,7 +97,8 @@ description: 这是一个C语言基础页面
 - 打包和共享 App：直接与 MATLAB 用户共享 App 或打包并将其作为独立 App 共享
 - 迁移使用 GUIDE 创建的 App：将使用 GUIDE 构建的 App 迁移到 App 设计工具，或将使用 GUIDE 创建的 App 导出到 MATLAB 文件
 
-## 软件开发工具
+### 软件开发工具
+
 调试和测试、组织大型工程、源代码管理集成、工具箱打包。随着工程规模和复杂性的增加，MATLAB® 提供了支持协作软件开发实践的功能。例如，您可以将您的 MATLAB 文件与 Git™ 或 Subversion® 源代码管理系统集成，或者测试您的代码的功能和性能。要与他人共享代码，请将工程或其他文件打包为一个工具箱。
 
 - 调试和分析：诊断问题、检查语法及版本兼容性
@@ -102,7 +112,8 @@ description: 这是一个C语言基础页面
 - 工具箱分发：创建和共享工具箱；添加文档
 - 工具鉴定和认证：使用 IEC Certification Kit 对 MATLAB 进行鉴定
 
-## 外部语言接口
+### 外部语言接口
+
 外部语言和库接口，包括 Python、Java、C、C++、.NET 和 Web 服务。MATLAB® 可与其他编程语言进行灵活的双向集成，从而使您能够重用原有代码。要为您的应用程序选择适合的 MATLAB 功能，请参阅将 MATLAB 与外部编程语言和系统集成。
 
 - 将 C++ 与 MATLAB 结合使用：从 MATLAB 中直接调用 C/C++ 库功能，或编写调用 MATLAB 功能的现代 C++ 程序
@@ -114,7 +125,8 @@ description: 这是一个C语言基础页面
 - 将 C 与 MATLAB 结合使用：使用 calllib 从 MATLAB 中直接调用 C 库功能，或使用 mxArray 编写调用 MATLAB 函数的 C 程序，以便在 C 语言中访问或创建 MATLAB 变量
 - 将 Fortran 与 MATLAB 结合使用：编写可用于 MATLAB 的 Fortran 子例程
 
-## 环境和设置
+### 环境和设置
+
 预设和设置、平台差异、添加硬件和可选功能。MATLAB® 桌面环境可帮助您运行命令、管理文件和查看结果。您可以更改桌面布局和设置预设，例如字体、键盘快捷方式和初始工作文件夹。
 
 - 启动和关闭：启动命令行标志、启动和关闭文件
@@ -125,17 +137,19 @@ description: 这是一个C语言基础页面
 - 国际化：区域设置和消息
 - 帮助和支持：产品帮助，技术支持
 
-# Simulink
-## 基础概念
+## Simulink
+
+### 基础概念
+
 - 模块图
 - 模块
-	- 虚拟模块（Virtual Subsystem、Inport、Outport、Bus Creator、Bus Assignment、Bus Selector）
-	- 非虚拟模块（Atomic Subsystem、Model、Enable、Trigger、Function、If、Switch、While、For）
-	- 模块封装
-	- 自定义模块
+  - 虚拟模块（Virtual Subsystem、Inport、Outport、Bus Creator、Bus Assignment、Bus Selector）
+  - 非虚拟模块（Atomic Subsystem、Model、Enable、Trigger、Function、If、Switch、While、For）
+  - 模块封装
+  - 自定义模块
 - 线
-	- 信号线
-	- 事件线
+  - 信号线
+  - 事件线
 - 数据
 - 参数
 - 属性
@@ -147,10 +161,12 @@ description: 这是一个C语言基础页面
 - 人为代数环
 - 过零检测
 
-## Simulink 快速入门
+### Simulink 快速入门
+
 Simulink 基础知识学习
 
-## 应用领域
+### 应用领域
+
 说明特定功能和应用的示例模型
 
 - 一般应用领域：说明一般应用的示例模型
@@ -166,7 +182,8 @@ Simulink 基础知识学习
 - 离散事件仿真：进行离散事件系统建模和仿真
 - 系统工程：使用 System Composer™ 软件设计和分析系统架构
 
-## Simulink 环境基础知识
+### Simulink 环境基础知识
+
 以交互方式或编程方式构建模块图，从模块库中选择模块
 
 - Simulink 概念：Simulink 中有关动态系统建模和仿真的概念
@@ -178,6 +195,7 @@ Simulink 基础知识学习
 - 模块库：代表方程和建模组件的模块
 
 ### Simulink 模块库
+
 Simulink模块库包括标准Simulink模块库和专业模块库两大类。  
 模块库的详细描述请参见[Simulink模块库详解](https://www.yuque.com/lizho/gniseg/gg1gptqllkrlpg2v?singleDoc#g1dv)。
 
@@ -248,7 +266,8 @@ Simulink模块库包括标准Simulink模块库和专业模块库两大类。
 | 63 | Vision HDL Toolbox | 视觉 HDL 工具箱 | 视觉算法的 HDL 实现与硬件加速 |
 | 64 | Wireless HDL Toolbox | 无线 HDL 工具箱 | 无线通信算法的 HDL 参考实现 |
 
-### Simulink 标准模块库
+#### Simulink 标准模块库
+
 标准Simulink模块库在Libraries窗口中名为Simulink，单击该选项，在模块窗口中展开该模块库。标准Simulink模块库共含19个子库。
 
 | # | English (Library) | 中文（库） | Brief Description / 用途简介 |
@@ -275,7 +294,8 @@ Simulink模块库包括标准Simulink模块库和专业模块库两大类。
 | 20 | Additional Math & Discrete | 附加数学与离散函数库 | 额外数学/离散与定点相关模块（如 Fixed-Point State-Space 等） |
 | 21 | Quick Insert | 快速插入函数库 | 常用分类的快捷入口（如离散、逻辑等）以加速放置模块 |
 
-### Commonly Used Blocks | 常用模块库
+#### Commonly Used Blocks | 常用模块库
+
 | # | English Block | 中文名称 | 说明 |
 |---|---|---|---|
 | 1 | Bus Creator | 总线信号发生器 | 将多个输入信号合并成一个总线信号 |
@@ -302,39 +322,43 @@ Simulink模块库包括标准Simulink模块库和专业模块库两大类。
 | 22 | Terminator | 信号终端模块 | 连接未使用的输出端，避免警告 |
 | 23 | Vector Concatenate | 向量串联模块 | 将相同数据类型的向量输入按维度串联 |
 
+- Derivative：计算连续输入信号关于时间的逼近连续导数
+- Descriptor State-Space：Model linear implicit systems
+- Entity Transport Delay：Introduce a delay in propagation of a SimEvents message (自 R2019b 起)
+- First Order Hold：在输入信号上实现线性外插一阶保持 (自 R2019b 起)
+- Integrator：对信号求积分
+- Integrator Limited：对信号求积分
+- PID Controller：连续时间或离散时间 PID 控制器
+- PID Controller (2DOF)：连续时间或离散时间二自由度 PID 控制器
+- Second-Order Integrator：输入信号的二阶积分
+- Second-Order Integrator Limited：输入信号的二阶积分
+- State-Space：实现线性状态空间系统
+- Transfer Fcn：将线性系统建模为传递函数
+- Transport Delay：按给定的时间量延迟输入
+- Variable Time Delay：按可变时间量延迟输入
+- Variable Transport Delay：按可变时间量延迟输入
+- Zero-Pole：使用零极点增益传递函数进行系统建模
 
+### 建模
 
-Derivative	计算连续输入信号关于时间的逼近连续导数
-Descriptor State-Space	Model linear implicit systems
-Entity Transport Delay	Introduce a delay in propagation of a SimEvents message (自 R2019b 起)
-First Order Hold	在输入信号上实现线性外插一阶保持 (自 R2019b 起)
-Integrator	对信号求积分
-Integrator Limited	对信号求积分
-PID Controller	连续时间或离散时间 PID 控制器
-PID Controller (2DOF)	连续时间或离散时间二自由度 PID 控制器
-Second-Order Integrator	输入信号的二阶积分
-Second-Order Integrator Limited	输入信号的二阶积分
-State-Space	实现线性状态空间系统
-Transfer Fcn	将线性系统建模为传递函数
-Transport Delay	按给定的时间量延迟输入
-Variable Time Delay	按可变时间量延迟输入
-Variable Transport Delay	按可变时间量延迟输入
-Zero-Pole	使用零极点增益传递函数进行系统建模
-
-## 建模
 设计动态系统的模型
 
-## 仿真
+### 仿真
+
 运行模型、查看结果并验证系统行为
 
-## 工程管理
+### 工程管理
+
 创建工程、管理共享的模型组件、与源代码管理进行交互
 
-## 模块和模块集创建
+### 模块和模块集创建
+
 创建可重用的模块、模块集和模块封装以扩展 Simulink 的建模功能
 
-## 仿真集成
+### 仿真集成
+
 执行系统集成；组合、编译和仿真大型模型
 
-## Simulink 支持的硬件
+### Simulink 支持的硬件
+
 支持第三方硬件，例如 Arduino® 和 Raspberry Pi®

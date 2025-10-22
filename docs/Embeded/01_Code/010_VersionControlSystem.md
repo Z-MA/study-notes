@@ -55,11 +55,12 @@ description: 这是一个C语言基础页面
 4. **专利保护**：Apache 2.0 有明确专利授权条款
 5. **网络服务限制**：AGPL 对 SaaS 应用有严格要求
 
-> ℹ️ 选择建议：
-> - 希望最大程度传播代码 → MIT/BSD
-> - 需要专利保护 → Apache 2.0  
-> - 坚持开源生态 → GPL  
-> - 涉及网络服务 → AGPL
+ℹ️ 选择建议：
+
+- 希望最大程度传播代码 → MIT/BSD
+- 需要专利保护 → Apache 2.0  
+- 坚持开源生态 → GPL  
+- 涉及网络服务 → AGPL
 
 ## 开源项目
 
@@ -67,29 +68,29 @@ description: 这是一个C语言基础页面
 2. [GNU 操作系统和自由软件运动](https://www.gnu.org/)
 3. [Linux.org](https://www.linux.org/)
 
-# 文档编写
+## 文档编写
 
-## MarkDown
+### MarkDown
 
-### Markdown 规范
+#### Markdown 规范
 
 1. [Markdown-CommonMark 规范（GitHub/GitLab在使用）](https://spec.commonmark.org/)
 2. [GitHub Flavored Markdown 规范（GFM）](https://github.github.com/gfm/)
 
-### Markdown 教程
+#### Markdown 教程
 
 1. [Markdown 指南（学习参考）](https://www.markdownguide.org/)
 2. [Markdown 中文网](https://www.markdown.cn/)
 3. [Markdown 教程(菜鸟教程)](https://www.runoob.com/markdown/md-tutorial.html)
 4. [Markdown 教程](https://markdown.com.cn/)
 
-### Markdown数学公式
+#### Markdown数学公式
 
-| 名称  |  类型  |  作者/团队	 |  主要用途  |  支持范围  |
+| 名称  |  类型  |  作者/团队 |  主要用途  |  支持范围  |
 | ----  |----|----| ----|----|
-| TeX	| 排版系统	| Donald Knuth	| 高质量排版	| 全面，复杂但灵活 |
-| LaTeX	| 宏包系统	| Leslie Lamport	| 结构化文档排版	| 基于 TeX，易用性更好 |
-| KaTeX	| JS渲染库	| Khan Academy	| 网页公式渲染	| LaTeX 数学公式子集 |
+| TeX | 排版系统 | Donald Knuth | 高质量排版 | 全面，复杂但灵活 |
+| LaTeX | 宏包系统 | Leslie Lamport | 结构化文档排版 | 基于 TeX，易用性更好 |
+| KaTeX | JS渲染库 | Khan Academy | 网页公式渲染 | LaTeX 数学公式子集 |
 | MathJax | JS渲染库 | MathJax团队 | 网页公式渲染 | 体积较大，渲染速度比 KaTeX 慢 |
 
 简言之：

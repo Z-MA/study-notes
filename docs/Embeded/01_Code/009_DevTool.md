@@ -1,8 +1,8 @@
 ---
 lang: zh-CN
-title: 开发工具
 description: 这是一个C语言基础页面
 ---
+# 开发工具
 
 ## 平台仿真
 
