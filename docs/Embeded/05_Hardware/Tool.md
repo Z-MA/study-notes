@@ -103,6 +103,16 @@ $$E = S × (T₁ - T₂)$$
 
 ### 示波器
 
+![alt text](./assets_Tool/image.png)
+
+![alt text](./assets_Tool/image-1.png)
+
+![alt text](./assets_Tool/image-2.png)
+
+![alt text](./assets_Tool/image-3.png)
+
+![alt text](./assets_Tool/image-4.png)
+
 #### 主要用途
 
 1. **实时波形显示**
