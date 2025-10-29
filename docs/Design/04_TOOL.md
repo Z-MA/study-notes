@@ -37,8 +37,8 @@ description: 这是一个视觉设计基础页面
 添加全局代理:
 
 ```bash
-git config --global http.proxy http://127.0.0.1:32210
-git config --global https.proxy http://127.0.0.1:32210
+git config --global http.proxy http://127.0.0.1:33210
+git config --global https.proxy http://127.0.0.1:33210
 ```
 
 验证代理设置:

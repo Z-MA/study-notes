@@ -5,6 +5,19 @@
 - [geogebra图形计算器](https://www.geogebra.org/graphing)
 - [desmos图形计算器](https://www.desmos.com/calculator?lang=zh-CN)
 
+## 仿真工具
+
+- matlab
+- Ansys fluent
+- Ansys
+- solidworks
+- comsol
+- ABAQUS
+- multisim
+- gazebo
+- perteus
+- adams
+
 ## 文献资源
 
 - [Project Gutenberg](https://www.gutenberg.org/)

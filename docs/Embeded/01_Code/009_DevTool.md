@@ -38,6 +38,12 @@ description: 这是一个C语言基础页面
 7. [TCPCOM 网络与串口二合一调试助手](https://www.cmsoft.cn/resource/110.html)
 8. [SCOMM串口网络二合一调试助手](https://www.cmsoft.cn/resource/103.html)
 
+### 调试工具
+
+1. [Freemaster](https://www.nxp.com.cn/design/design-center/software/development-software/freemaster-run-time-debugging-tool:FREEMASTER)
+2. J-Scope RTT Viewer
+3. [Ozone](https://www.segger.com/products/development-tools/ozone-j-link-debugger/)
+
 ## 代码
 
 ### 代码编辑
