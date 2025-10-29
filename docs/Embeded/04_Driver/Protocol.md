@@ -320,6 +320,13 @@ Interface（总线接口）：很好理解，不再赘述。
 
 #### CAN协议介绍
 
+ISO 11898-1：数据链路层和物理信令
+ISO 11898-2：高速媒体接入单元
+ISO 11898-3：低速、容错、依赖于介质的接口
+ISO 11898-4：时间触发的通信
+ISO 11898-5：低功耗高速介质接入单元
+ISO 11898-6：具有选择性唤醒功能的高速媒体接入单元
+
 #### CAN物理层
 
 - 信号线类型（）
@@ -363,6 +370,10 @@ Interface（总线接口）：很好理解，不再赘述。
 
 ### CAN-FD
 
+### DBC文件
+
+适用于清晰的描述CAN-ID和数据的映射关系，方便在CAN数据监测上位机解析数据。在自定义CAN协议时很方便来定义数据，也可以和CANopen、J1939等协议协同使用，用于数据监测。
+
 ### CANopen
 
 [CANopen官网](https://www.can-cia.org/)
@@ -377,10 +388,83 @@ Interface（总线接口）：很好理解，不再赘述。
 
 ### CiA301
 
+过程数据对象 PDO（Process data object）和服务数据对象 SDO (Service data object)
+![alt text](image-1.png)
+CANopen中把CAN-ID（11位）又叫COB-ID，前4位是功能码，后7位是节点号，所以CANopen最大支持128个节点。
+PDO 分为 TPDO（发送）和 RPDO(接收)，每种数据对象就是 1 条 CAN 报文封装。
+![alt text](image-2.png)
+SDO 的 CAN 帧 ID 就是 600h +node-ID，这里的 Node-ID 是被问的节点地址，而被问的节点应“答”SDO 的 CAN 帧 ID 就是 580h +node-ID。一般在 CANopen 网络中，只有 NMT 主机能发起 SDO 通讯，进行节点参数配置或者关键性参数的传递。当然从节点也可以对其他从节点发起 SDO 通讯。
+
+| object对象 | 功能码h | 功能码b |
+|:---------:|------|------|
+| NMT-S | 000 | 000 0000 0000 |
+| TPDO1 | 180 | 001 1000 0000 |
+| RPDO1 | 200 | 010 0000 0000 |
+| TPDO2 | 280 | 010 1000 0000 |
+| RPDO2 | 300 | 011 0000 0000 |
+| TPDO3 | 380 | 011 1000 0000 |
+| RPDO3 | 400 | 100 0000 0000 |
+| TPDO4 | 480 | 100 1000 0000 |
+| RPDO4 | 500 | 101 0000 0000 |
+| RSDO  | 580 | 101 1000 0000 |
+| TSDO  | 600 | 110 0000 0000 |
+| NMT-M | 700 | 111 0000 0000 |
+
+对象字典OD（Object dictionary)  
+一个有序的对象组，描述了对应 CANopen 节点的所有参数，包括通讯数据的存放位置也列入其索引，这个表变成可以传递形式就叫做 EDS 文件（电子数据文档Electronic Data Sheet）。
+
+- 索引：16 位的索引值，其范围在 0x0000到 0xFFFF 之间。
+- 子索引：8 位的索引值，其范围是 0x00 到 0xFF 之间。
+
+对象字典概述
+<img src="./image-3.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+通讯对象子协议区（Communication profile area）
+<img src="./image-4.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+<img src="./通用通讯对象.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+制造商特定子协议（Manufacturer-specific Profile）  
+对象字典索引 2000h to 5FFFh为制造商特定子协议，通常是存放所应用子协议的应用数据。
+
+标准化设备子协议(Standardized profile area)  
+标准化设备子协议，为各种行业不同类型的标准设备定义对象字典中的对象。目前已有
+十几种为不同类型的设备定义的子协议，例如 DS401、DS402、DS406 等，其索引值范围
+为 0x6000～0x9FFF。同样，这个区域对于不同的标准化设备子协议来说，相同的对象字典
+项其定义不一定相同。
+
+NMT 节点状态
+NMT 管理涉及到一个 CANopen 节点从上电开始的 6 钟状态，包括：
+
+- 初始化（Initializing）：节点上电后对功能部件包括 CAN 控制器进行初始化；
+- 应用层复位（Application Reset）：节点中的应用程序复位（开始），比如开关量输
+出、模拟量输出的初始值；
+- 通讯复位（Communication reset）：节点中的CANopen通讯复位（开始），从这个时
+刻起，此节点就可以进行CANopen通讯了。
+- 预操作状态（Pre-operational）：节点的CANopen通讯处于操作就绪状态，此时此节
+点不能进行PDO通信，而可以进行SDO进行参数配置和NMT网络管理的操作；
+- 操作状态（operational）：节点收到NMT主机发来的启动命令后，CANopen通讯被
+激活，PDO通信启动后，按照对象字典里面规定的规则进行传输，同样SDO也可以
+对节点进行数据传输和参数修改；
+- 停止状态（Stopped）：节点收到NMT主机发来的停止命令后，节点的PDO通信被
+停止，但SDO和NMT网络管理依然可以对节点进行操作；
+除了初始化状态，NMT主机通过NMT命令可以让网络中任意一个的CANopen节点
+进行其他5种状态的切换。如图 6.2所示。
+<img src="./image-5.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+
+- NMT 节点上线报文：节点上线报文的 ID 为 700h+Node-ID，数据为 1 个字节 0。
+- NMT 节点状态与心跳报文，心跳报文的 ID 为 700h+Node-ID，数据为 1 个字节，代表节点目前的状态，04h为停止状态，05h为操作状态，7Fh为预操作状态。
+- NMT 节点状态切换命令：CANID 均为 000h，具备最高的 CAN 优先级。数据为 2 个字节：第 1 个字节代表命令类型；第二个字节代表被控制的节点 Node-ID，如果要对整个网络所有节点同时进行控制，则这个数值为 0 即可。
+
+PDO通讯参数
+<img src="./image-6.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+
+快速SDO
+普通SDO
+
 ### CiA402
 
-[402介绍](https://www.bilibili.com/video/BV1zu4y1P79T/?)
-[402中文](https://blog.csdn.net/qq_38880380/article/details/128372676)
+[402介绍](https://www.bilibili.com/video/BV1zu4y1P79T/?)  
+[402中文](https://blog.csdn.net/qq_38880380/article/details/128372676)  
+[DS402电机驱动器通信：CANopen协议的基础与实践](https://wenku.csdn.net/column/4h5nky0xwm)  
+[CANopen笔记3 -- DS402运动控制子协议](https://www.cnblogs.com/21207-iHome/p/6047469.html)
 
 #### 学习资料
 
@@ -419,6 +503,12 @@ Interface（总线接口）：很好理解，不再赘述。
 - [CANOpen服务数据对象报文 - it610.com](https://www.it610.com/article/1290517464798535680.htm)
 - [(111条消息) SDO_史蒂芬_丁的博客-CSDN博客](https://blog.csdn.net/qq_40104597/article/details/105773842?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166597385916800184145136%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=166597385916800184145136&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~baidu_landing_v2~default-1-105773842-null-null.142%5Ev57%5Econtrol_1,201%5Ev3%5Eadd_ask&utm_term=SDOlineToObjdict&spm=1018.2226.3001.4187)
 - [CanOpen学习笔记4-- 建立SDO通信 - bo_zhang的个人空间 - OSCHINA - 中文开源技术交流社区](https://my.oschina.net/u/3583648/blog/1488473)
+
+### Cyphal/UAVCAN
+
+[Cyphal官网](https://opencyphal.org/)
+
+### ARINC 825
 
 ### 其他未整理
 
