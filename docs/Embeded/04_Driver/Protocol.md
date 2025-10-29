@@ -11,8 +11,6 @@ sidebarDepth: 5
 
 ## 概述
 
-### OSI七层模型
-
 ### OSI的基本概念及原则
 
 OSI是Open System Interconnect的缩写，意为开放式系统互联。其各个层次的划分遵循下列原则：
@@ -316,30 +314,26 @@ Interface（总线接口）：很好理解，不再赘述。
 
 ## USB
 
-## CAN
+## CAN/CAN-FD
 
-### CAN协议
+### CAN
+
+#### CAN协议介绍
+
+#### CAN物理层
+
+- 信号线类型（）
+- 总线网络类型（闭环总线网络、开环总线网络、终端电阻）
+- 通讯节点结构（控制器+收发器+总线）
+- 差分信号说明（显性和隐形电平的电压定义+线与）
 
 #### CAN链路层
 
-CAN协议的特点：
-
-1. 多主控制，利用ID标识符来分辨
-2. 系统柔软性，没有类似地址的信息
-3. 速度快，距离远
-4. 具有错误检测、错误通知和错误恢复功能
-5. 故障封闭功能
-6. 连接节点多
-
-电平定义：
-
-- 显性电平：逻辑0；CAN_High=3.5V，CAN_Low=1.5V
-- 隐形电平：逻辑1；CAN_High=2.5V，CAN_Low=2.5V
-- 总线上显性电平优先
-
 #### CAN协议层
 
-帧类型
+- 位同步与波特率
+- 硬同步和重新同步
+- 帧类型
 
 1. 数据帧：用于发送单元向接收单元传送数据的帧
 2. 远程帧：用于接收单元向具有相同ID的发送单元请求数据的帧
@@ -347,6 +341,8 @@ CAN协议的特点：
 4. 过载帧：用于接收单元通知其尚未做好接收准备的帧
 5. 间隔帧：用于将数据帧及遥控帧与前面的帧分离开来的帧
 
+帧结构（每种帧的结构与功能）
+![alt text](image.png)
 数据帧和远程帧有标准格式（11位标识符ID）和扩展格式（29位ID）
 
 数据帧由7各段组成
@@ -365,29 +361,9 @@ CAN协议的特点：
 
 7. 帧结束：表示数据帧结束的段
 
-![CAN1](.\assets\CAN1.png)
-
-起始帧SOF是1位显性0
-
-RTR在数据帧中必须为显性0，在远程帧里为隐形1；因此数据帧优先于远程帧。SRR是是隐形位。因此标准格式优先于扩展格式。
-
-IDE在标准格式中为显性0，在扩展格式下位隐形1；标准格式下IDE属于控制场，扩展格式下IDE属于仲裁场。
-
-控制场有6个位，其中4位长度数据；表示0-8个字节；保留位r0和r1必须为显性0。
-
-CRC场有16位，其中15位CRC序列和1位CRC界定符
-
-应答场有2位，发送位发送2位隐形1，接收器正确接收有效报文后，在第一位时发送1位显性0以示应答
-
-帧结尾EOF在数据帧和远程帧中都是由7位隐形1组成
-
-![CAN2](.\assets\CAN2.png)
-
 ### CAN-FD
 
 ### CANopen
-
-CANopen官网
 
 [CANopen官网](https://www.can-cia.org/)
 
@@ -399,11 +375,17 @@ CANopen官网
 - [uC/CANopen](https://www.armbbs.cn/forum.php?mod=viewthread&tid=96706)
 - [Lely CANopen](https://gitlab.com/lely_industries/lely-core)
 
+### CiA301
+
+### CiA402
+
+[402介绍](https://www.bilibili.com/video/BV1zu4y1P79T/?)
+[402中文](https://blog.csdn.net/qq_38880380/article/details/128372676)
+
 #### 学习资料
 
 - [CANopen是什么？ CANopen通讯基础（上）](https://www.bilibili.com/video/BV1NZ4y1z7zu/)
 - [最清晰的CANOPEN 入门介绍](https://www.bilibili.com/video/BV1dX4y157ot/)
-- [CanOpen学习笔记5-- CanFestival使用提示](https://blog.csdn.net/choujize1282/article/details/100809233)
 - [SDO](https://blog.csdn.net/qq_40104597/article/details/105773842)
 - [canOpen学习二之canOpen应用实现请求节点状态、改变节点状态、写字典、读字典](https://blog.csdn.net/qq_15181569/article/details/105812295)
 - [CanOpen学习笔记4-- 建立SDO通信](https://blog.csdn.net/choujize1282/article/details/100809232)
