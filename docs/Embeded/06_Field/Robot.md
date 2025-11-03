@@ -78,7 +78,9 @@ sidebarDepth: 5
 
 - [Pixhawk](https://pixhawk.org/)
 - [PX4](https://docs.px4.io/main/zh/)
+- [QGroundControl](https://qgroundcontrol.com/)
 - [ArduPilot](https://ardupilot.org/)
+- [Mission Planner](https://ardupilot.org/planner/index.html)
 - [CUAV](https://doc.cuav.net/zh-hans/)
 - [Mateksys](https://www.mateksys.com/)
 - [Holybro](https://holybro.com/)
@@ -100,6 +102,9 @@ sidebarDepth: 5
 - [好盈科技](https://www.hobbywing.com/)
 - [凯越科技](https://www.kaiyuemotor.com/)
 - [智鸥驱动](http://ig-driver.cn/)
+
+
+MAVLINK
 
 #### UBEC
 

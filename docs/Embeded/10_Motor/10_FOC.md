@@ -211,6 +211,8 @@ $$
 
 ## FOC
 
+[ST MC SDK5.x 电机库从系统到软件架构的详细说明](https://shequ.stmicroelectronics.cn/thread-623832-1-1.html)
+
 ### 旋转电流合成
 
 <img src="./image-6.png" alt="示例图片" width="400" style="display: block; margin: 0 auto;">
