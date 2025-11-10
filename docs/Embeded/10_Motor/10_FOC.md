@@ -215,7 +215,7 @@ $$
 
 ### 旋转电流合成
 
-<img src="./image-6.png" alt="示例图片" width="400" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-6.png" alt="示例图片" width="400" style="display: block; margin: 0 auto;">
 
 三相对称电流：
 
@@ -245,13 +245,13 @@ $$
 <img src="https://picx.zhimg.com/v2-3205aeb27909d78fbd284d57a36ad219_b.webp" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
 
 三相电压理想波形如下图：
-<img src="./image.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
 
 ### 坐标变换
 
 #### Clark和反Clark变换
 
-<img src="./image-7.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-7.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
 
 **Clark变换**  
 将 $ABC$ 三相静止坐标系 变换到 $\alpha\beta$ 两相静止坐标系。
@@ -272,7 +272,7 @@ $$
 
 #### Park和反Park变换
 
-<img src="./image-8.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-8.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
 
 **Park变换**  
 将 $\alpha\beta$ 两相静止坐标系 变换到 $dq$ 两相旋转坐标系。
@@ -291,7 +291,7 @@ $$
 
 ### FOC原理
 
-<img src="./image-9.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-9.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
 
 **实现**  
 
@@ -335,7 +335,7 @@ SVPWM(Space Vector Pulse Width Modulation)，将逆变系统和异步电机看�
 
 #### 三相逆变电路
 
-<img src="./image-3.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-3.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
 
 当 $S_a S_b S_c = 100$ :
 
@@ -364,16 +364,16 @@ U_1=&\frac{2}{3}(U_{AN}*e^{j0}+U_{BN}*e^{j^{(\frac{2\pi}{3})}}+U_{CN}*e^{j^{(-\f
 $$
 
 电压矢量
-<img src="./image-4.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-4.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
 
 平面扇区划分
-<img src="./image-5.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-5.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
 
 #### 六边形磁场
 
 ##### 电压空间矢量和磁链的关系
 
-<img src="./image-10.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-10.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
 
 $$\psi_{vr}=\psi_m*e^{j\omega t}$$
 
@@ -382,18 +382,18 @@ $$\Delta \psi_{vr} \approx U_{vr}*\Delta t$$
 
 ##### 六边形磁场的由来
 
-<img src="./image-11.png" alt="示例图片" width="740" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-11.png" alt="示例图片" width="740" style="display: block; margin: 0 auto;">
 
 - 将 $U_1 \sim U_6$ 按 $\Delta t$ 间隔时间依次加载到绕组，产生 6 个磁链增量 $(\Delta \psi_1 \sim \Delta \psi_6)$，幅值相等、相位依次相差 $\frac{\pi}{6}$ ，首尾连接形成正六边形合成磁链。
 - 虽然正六边形磁场不是我们期望的圆形磁场，在旋转过程中，磁链矢量的幅值不恒定！
 
 ##### 合成近似圆形磁场
 
-<img src="./image-12.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-12.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
 
 单个电压空间矢量作用时间太长了，导致磁链矢量幅值变化过大，无法近似圆形磁场，只能形成六边形磁场。将每个电压空间矢量作用时间缩短，通过多个电压空间矢量的叠加，更高频施加作用，形成近似圆形磁场。
 
-<img src="./image-13.png" alt="示例图片" width="740" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-13.png" alt="示例图片" width="740" style="display: block; margin: 0 auto;">
 
 - 磁链增量等效
   - $V_{ref} * T_s = U_1 * T_1 + U_2 * T_2; \quad T_s: PWM\text{周期}$
@@ -407,7 +407,7 @@ $$\Delta \psi_{vr} \approx U_{vr}*\Delta t$$
 
 ##### 电压空间矢量作用时间计算
 
-<img src="./image-14.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-14.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
 
 基于合成矢量 $𝑉_{ref}$ 计算作用时间，期望合成的电压空间矢量 $𝑉_{ref}$ 用幅值、相位表示如图所示。
 
@@ -429,7 +429,7 @@ L2 = V_{ref} * T_s * \sin\theta\\
 \end{aligned}
 $$
 
-<img src="./image-15.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-15.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
 
 基于 $\alpha \beta$ 坐标系计算作用时间，期望合成的电压空间矢量 $V_{ref}$ 用 $U_\alpha$、$U_\beta$ 表示:
 
@@ -454,7 +454,7 @@ $$
 
 ##### 内切圆、正六边形边界
 
-<img src="./image-16.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-16.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
 
 - 设$T1+T2<=T_s$：
 
@@ -471,7 +471,7 @@ $$
 
 $\theta$ 取值范围：$[0,\pi/3]$
 
-<img src="./image-17.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-17.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
 
 $\theta=\pi/6 :\quad \cos\left(\frac{\pi}{6}-\theta\right)$位于最大值 1,$\frac{\sqrt{3}*V_{ref}T_s}{U_{dc}}<=T_{s}\to V_{ref}<=\frac{\sqrt{3}}{3}U_{dc}=0.577*U_{dc}$，对应”图-8下”的$V_{ref2}$ 矢量。
 
@@ -487,7 +487,7 @@ $\theta=0:\cos(\frac{\pi}{6}-\theta)$位于最小值$\frac{\sqrt{3}}{2}$，$\fra
 - 若希望旋转的电压空间矢量是圆形的,则: $V_{ref}|=\frac{\sqrt{3}}{3}U_{dc}=0.577*U_{dc}$ 就是圆形的最大半径(即图-8内切圆)
 - 最终合成的矢量幅值都要小于 $\frac{\sqrt{3}}{3}U_{dc}$
 
-<img src="./合成矢量幅值范围图示证明.jpg" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/合成矢量幅值范围图示证明.jpg" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
 
 如上图，当 $U_1 * T_\text{单位时间}$ 时，构成六边形的边界，当 $U_1\&U_6$ 分别作用半个单位单位时间时，调制出的电压矢量是如图 $U_{Vr1}$，同理可得$U_{Vr2}$。
 
@@ -512,7 +512,7 @@ $$
 
 零矢量分散的7段式PWM发波如图：
 
-<img src="./image-18.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-18.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
 
 在SVPWM应用中，采用零矢量分散的7段式PWM发波方式具有多方面优势。比如：降低电流谐波、提高控制精度、减小换向冲击、降低损耗等。
 
@@ -522,7 +522,7 @@ $$T_0=T_7=\frac{T_s-T_1-T_2}{2}$$
 
 各扇区PWM发波顺序如下图：
 
-<img src="./image-19.png" alt="示例图片" width="740" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-19.png" alt="示例图片" width="740" style="display: block; margin: 0 auto;">
 
 #### SVPWM实现
 
@@ -531,15 +531,15 @@ $$T_0=T_7=\frac{T_s-T_1-T_2}{2}$$
 - 通过 $U_\alpha,U_\beta$ 原始输入直接进行判断。
 - 将 $U_\alpha,U_\beta$ 原始输入转换为 $XYZ$ 中间变量后进行判断（节省总体计算量）。
 
-<img src="./image-20.png" alt="示例图片" width="740" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-20.png" alt="示例图片" width="740" style="display: block; margin: 0 auto;">
 
 ##### 空间矢量作用时间(T1、T2)计算
 
-<img src="./image-21.png" alt="示例图片" width="740" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-21.png" alt="示例图片" width="740" style="display: block; margin: 0 auto;">
 
 ##### 矢量切换点确定
 
-<img src="./image-22.png" alt="示例图片" width="540" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-22.png" alt="示例图片" width="540" style="display: block; margin: 0 auto;">
 
 - 矢量切换点：
   - 各相开关管在一个 $𝑇_s$ 周期内从关闭到导通的时刻
@@ -552,15 +552,15 @@ $$T_0=T_7=\frac{T_s-T_1-T_2}{2}$$
   - 各相作用时间适用于：STM32 PWM模式1
 
 $T_1,T_2$ 及 $ABC$ 作用时间
-<img src="./image-23.png" alt="示例图片" width="740" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-23.png" alt="示例图片" width="740" style="display: block; margin: 0 auto;">
 
 ##### 矢量切换点的实现
 
 期望的A相PWM波形：
-<img src="./image-24.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-24.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
 
 STM32 PWM实现：
-<img src="./image-25.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-25.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
 
 - STM32 TIM1/TIM8
   - 计数模式：中央对齐模式1；cnt计数从0~ARR，再从ARR~0
@@ -628,7 +628,7 @@ else
 ```
 
 5、计算对应扇区的 $T_a,T_b,T_c$
-<img src="./image-26.png" alt="示例图片" width="750" style="display: block; margin: 0 auto;">
+<img src="./assets_10_FOC/image-26.png" alt="示例图片" width="750" style="display: block; margin: 0 auto;">
 
 ## V/f控制
 
