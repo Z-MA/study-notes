@@ -1,10 +1,11 @@
 ---
 lang: zh-CN
-title: 电机教程
 description: 这是一个C语言基础页面
 ---
+# 电机教程
 
 ## 电机的分类
+
 - 同步电动机
   - 永磁同步电动机
 - 异步电动机
@@ -14,6 +15,7 @@ description: 这是一个C语言基础页面
 - 伺服电动机
 
 ## 书籍
+
 1. 电机学(Stephen j.Chapman 第五版).pdf
 2. 电机学(哈理工 戈宝军 第三版)·pdf
 3. 电机学(西交大 阎治安 第三版).pdf
@@ -23,23 +25,70 @@ description: 这是一个C语言基础页面
 7. 现代永磁电机理论与设计(唐任远).pdf
 8. 永磁无刷电机及其驱动技术(R,Krishnan).pdf
 
-## 教程
+## 开源电机项目
+
+### SimpleFOC
+
+[官网](https://www.simplefoc.com/)
+
+### ODrive
+
+[官网](https://odriverobotics.com/)
+
+### VESC
+
+[官网](https://vesc-project.com/)
+
+### ST 电机控制库
+
+[官网](https://www.st.com.cn/content/st_com/zh/ecosystems/stm32-motor-control-ecosystem.html)
+
+### TI 电机控制库
+
+[官网](https://www.ti.com.cn/zh-cn/technologies/motor-control.html)
+
+### NXP 电机控制库
+
+[官网](https://www.nxp.com.cn/applications/technologies/motor-control:MOTOR-CONTROL)
+
+### Microchip 电机控制库
+
+[官网](https://microchip.com.cn/newcommunity/index.php?m=Video&a=index&id=53)
+
+### Infineon 电机控制库
+
+[官网](https://www.infineon.cn/applications/solutions/motor-control-and-drives)
+
+### Renesas 电机控制库
+
+[官网](https://www.renesas.cn/zh/applications/industrial/motor-drives-robotics/motor-control-solutions)
+
+### dengFOC
+
+[官网](https://dengfoc.com)
+
+## 资料
+
 ### ST官方
+
 [面向电机控制的STM32生态系统](https://www.st.com.cn/content/st_com/zh/ecosystems/stm32-motor-control-ecosystem.html)
 
-
 ### 硬石资料
-#### 资料下载
-[硬石科技](http://www.ing10bbs.com/page.php?id=2)
 
-#### 教程
-##### F407教程
-[F407教程](https://www.bilibili.com/video/BV1yp411f7gs/?)
+#### 硬石资料下载
 
-##### 电机控制教程
+[硬石资料下载](http://www.ing10bbs.com/page.php?id=2)
+
+#### 硬石STM32F407教程
+
+[硬石F407教程](https://www.bilibili.com/video/BV1yp411f7gs/?)
+
+#### 硬石电机控制教程
+
 [电机驱动与控制](https://www.bilibili.com/video/BV1Fs411p7Zc/?)
 
-###### 1.直流有刷
+1.直流有刷
+
    1. 电机概述&硬石电机实验箱
    2. 有刷电机原理和减速电机
    3. 电机参数和电机控制基础
@@ -48,9 +97,10 @@ description: 这是一个C语言基础页面
    6. 硬石有刷驱动板原理图分析
    7. 有刷电机基本旋转驱动代码分析
    8. 有刷电机的按键和串口控制实现
-   9.  有刷电机编码器测速实现
+   9. 有刷电机编码器测速实现
 
-###### 2.PID算法
+2.PID算法
+
   1. 闭环控制系统
   2. PID控制的比例P和积分I的介绍
   3. PID控制的微分项
@@ -65,11 +115,13 @@ description: 这是一个C语言基础页面
   12. 电流环
   13. 位置速度电流多闭环
 
-###### 3.舵机控制
+3.舵机控制
+
   1. 舵机的内部结构和工作原理
   2. 舵机的控制信号和控制演示
 
-###### 4.步进电机
+4.步进电机
+
   1. 步进电机的几个基本概念
   2. 单相和两相步进电机结构和工作原理
   3. 步进电机分类与结构特点
@@ -83,7 +135,8 @@ description: 这是一个C语言基础页面
   11. 57步进电机旋转控制
   12. 4个步进电机和RS485的控制例程分析
 
-###### 5.步进加减速
+5.步进加减速
+
   1. 步进电机的失步和过冲
   2. 梯形加减速算法原理分析
   3. 梯形加减速算法实现分析1
@@ -95,14 +148,16 @@ description: 这是一个C语言基础页面
   9. 丝杆滑台控制代码实现分析1
   10. 丝杆滑台控制代码实现分析2
 
-###### 6.步进闭环
+6.步进闭环
+
   1. 双出轴步进电机和编码器
   2. 增量式AB相编码器数据读取
   3. 光栅尺和绝对式编码器读取
   4. PID速度环
   5. 位置闭环和双闭环
 
-###### 7.直流无刷
+7.直流无刷
+
   1. 简介及例程演示
   2. 直流无刷电机工作原理
   3. 驱动板硬件设计
@@ -113,7 +168,8 @@ description: 这是一个C语言基础页面
   8. 无刷电机速度闭环例程解释
   9. 总结及控制波形测量
 
-###### 8.FOC
+8.FOC
+
   1. 软件安装及使用
   2. 基础简介
   3. SVPWM原理(一)
@@ -131,6 +187,7 @@ description: 这是一个C语言基础页面
   15. 源码解析_总结
 
 ### 澄远FOC
+
 1. [课程介绍](https://www.bilibili.com/video/BV1n7421o798/?)
 2. [PMSM调速逻辑及控制方式](https://www.bilibili.com/video/BV1Ps421u7ja/?)
 3. [SVPWM原理及实现](https://www.bilibili.com/video/BV1eM4m1U7hi?)
@@ -153,11 +210,11 @@ description: 这是一个C语言基础页面
    2. [零速闭环启动的设计与实现](https://www.bilibili.com/video/BV1D1tQzDERt?)
 
 ### 稚晖
+
 [深入浅出讲解FOC算法与SVPWM技术](https://zhuanlan.zhihu.com/p/147659820)
 
+## 其他未整理
 
-
-## 其他
 ### 其他学习资料
 
 [FOC?看这篇文章就够了 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/364247816)
@@ -166,7 +223,7 @@ description: 这是一个C语言基础页面
 
 ### 视频课程
 
-##### FOC
+#### FOC
 
 [做了个FOC驱动器，成本仅50元，开源了！精度很高！](https://mp.weixin.qq.com/s/N4F2gCVMJB69gCgtm4RpBg)
 [YoungFOC——年轻人的第一块SimpleFOC验证板](https://www.bilibili.com/video/BV1V24y1c7AN/)
@@ -217,7 +274,7 @@ description: 这是一个C语言基础页面
 [开源STM32G431CBU6大疆无人机官方电调PCB，开源PAC5223电调，德州仪器TMS320F28027](https://www.bilibili.com/video/BV1Ex4y1T7eJ/)
 [大疆无人机电调电路分析2,德州仪器TMS320F28027F+DRV8301 DRV8313 PAC5223 ESC1000 ESC2000 ESC3000](https://www.bilibili.com/video/BV1mY4y1y7TD/)
 [电机震动大怎么办？自己做个动平衡仪吧](https://www.bilibili.com/video/BV1DG411o7mH/)
-[智能车TC264主驱一体国一硬件方案开源（TC264裸片方案 功率控制全隔离 2020双车组）](https://www.bilibili.com/video/BV1d84y1s77A/?spm_id_from=333.999.0.0) 
+[智能车TC264主驱一体国一硬件方案开源（TC264裸片方案 功率控制全隔离 2020双车组）](https://www.bilibili.com/video/BV1d84y1s77A/?spm_id_from=333.999.0.0)
 
 ##### 电机本体
 
@@ -230,7 +287,7 @@ description: 这是一个C语言基础页面
 
 ##### 带屏旋钮
 
-[我们开发了一个实用的SmartKnob智能旋钮](https://www.bilibili.com/video/BV1wg411n7Bm/?spm_id_from=333.999.0.0) 
+[我们开发了一个实用的SmartKnob智能旋钮](https://www.bilibili.com/video/BV1wg411n7Bm/?spm_id_from=333.999.0.0)
 [虽然程序写的一坨答辩，但还是开源了   旋转按钮](https://www.bilibili.com/video/BV1po4y1t7Jr/)
 [开源 X-Knob：Smart konb 的 X-TRACK UI (lvgl) 实现智能旋钮，支持Surface Dial](https://www.bilibili.com/video/BV1N3411Z764/?spm_id_from=333.999.0.0)  
 [【开源】力控旋钮 十分钟教你如何成就优秀毕设](https://www.bilibili.com/video/BV1bf4y1f7p3/?spm_id_from=333.999.0.0)  
@@ -277,17 +334,18 @@ description: 这是一个C语言基础页面
 [BLDC有感启动](https://blog.csdn.net/weixin_43626341/article/details/112599175)
 [步进电机权威平台_中国步进电机网](http://www.zgbjdj.com/)
 
-##### FOC
+##### FOC学习
+
 [STM32 PMSM FOC SDK V3 2讲座](https://www.bilibili.com/video/BV1EW411D7ZF?vd_source=8628b70b8921792574747e076af0f11a)
 
-  ###### FOC基本概念
+###### FOC基本概念
   
   [外行人怎么去理解foc电机控制](https://www.bilibili.com/video/BV19E411g7jj)
   [漫谈伺服电机](https://www.bilibili.com/medialist/play/watchlater/BV1r94y1Z7sD)
   [无刷电机学习日志第4期：需要哪些基础知识？](https://www.bilibili.com/video/BV1x8411x7RM/)
   [开环FOC跟我一起撸代码](https://www.bilibili.com/medialist/play/watchlater/BV1FY4y1i7Pm)
   
-  ###### FOC硬件
+###### FOC硬件
   
   [第三期 03直流电机驱动原理及元器件选型](https://www.bilibili.com/video/BV1Nt4y1y7xj)
   [基于ir2103的全N Mos驱动板开放资料啦，满足大功率的](https://www.bilibili.com/video/BV1kh411U7pj)
@@ -295,4 +353,4 @@ description: 这是一个C语言基础页面
   [低压直流无刷电机驱动芯片TMC6300](https://www.bilibili.com/video/BV1pA4y1D7BS)
   [业界体积最小的直流伺服TMCM-1617](https://www.bilibili.com/video/BV1iF411u7ag)
   
-  ###### FOC开源项目
+###### FOC开源项目
