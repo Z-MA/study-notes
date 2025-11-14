@@ -198,8 +198,8 @@ description: 这是一个C语言基础页面
    3. [IF控制](https://www.bilibili.com/video/BV1iUsMezE4o?)
    4. [速度环设计](https://www.bilibili.com/video/BV1wL4JeUEEA?)
 6. Hall速度控制
-   1. [传感器测量速度与电角度](https://www.bilibili.com/video/[BV1U6ieYgEX8?)
-   2. [建模+CubeMX配置+代码集成](https://www.bilibili.com/video/[BV1qzckegEY3?)
+   1. [传感器测量速度与电角度](https://www.bilibili.com/video/BV1U6ieYgEX8?)
+   2. [建模+CubeMX配置+代码集成](https://www.bilibili.com/video/BV1qzckegEY3?)
    3. [Hall自学习](https://www.bilibili.com/video/BV15cTWzxE6W?)
 7. 龙伯格无感控制
    1. [数学模型推导与定点化处理](https://www.bilibili.com/video/BV1FWTkzpEom?)
