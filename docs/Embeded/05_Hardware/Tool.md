@@ -1,9 +1,4 @@
-## 设计软件
-### AD
-### Kicad
-### eplan电气绘图
-solidworks也可以绘制
-
+# 硬件工具
 
 ## 测量工具
 
@@ -12,17 +7,21 @@ solidworks也可以绘制
 [年轻人的，第二个电流表（完整开源）](https://www.bilibili.com/video/BV1LV4y1J7Kd/)
 [开源ESP32彩屏WIFI智能万用表制作过程：成品外观、功能](https://www.bilibili.com/video/BV1Zr4y1s7A1?spm_id_from=333.999.0.0)
 
-
 ### 热电偶
+
 #### 原理
+
 热电偶（Thermocouple）是一种常用的温度传感器，其原理基于热电效应（也叫塞贝克效应，Seebeck Effect）。一句话描述就是热电偶的原理就是利用两种不同金属在两端温差下产生的热电动势，通过测量这个电压来推断被测点的温度。
+
 #### 基本结构
+
 热电偶由两种不同金属或合金材料的导体A和B构成，将两端焊接成回路，形成两个接点：
 
 测量端（也叫“热端”或“工作端”）：暴露在被测温度环境下
 参考端（也叫“冷端”）：处于已知温度（通常是0°C或室温）
 
 #### 原理解析
+
 当两种不同金属的两个接点处于不同温度时，会在回路中产生电压（热电动势）。
 这个电压的大小主要取决于两端的温度差，而与材料的组合有关。
 核心物理现象：
@@ -30,31 +29,38 @@ solidworks也可以绘制
 不同金属的自由电子在温度梯度下扩散能力不同，导致电子流动，产生电动势。
 
 #### 数学表达
+
 热电偶输出的热电动势$(E)$与两端温度差$(T_1-T_2)$成一定函数关系：
 
 $$E = S × (T₁ - T₂)$$
 
-其中：  
-- $E$ = 热电动势（单位：毫伏mV）  
+其中：
+
+- $E$ = 热电动势（单位：毫伏mV）
 - $S$ = 热电偶对的“塞贝克系数”（不同金属组合有不同数值，单位μV/°C）  
 - $T_1$ = 测量端温度  
 - $T_2$ = 参考端温度  
 实际上，许多热电偶的$E$与温差是非线性关系，需查表或用多项式近似。
 
 #### 温度测量方法
+
 - 测量热电偶输出电压（mV），结合已知的冷端温度，通过查标准分度表或公式，反推测量端温度。
 - 现代仪表通常内置冷端补偿（CJC，Cold Junction Compensation），自动修正参考端温度。
 
 #### 热电偶补偿导线
+
 **1. 热电偶补偿导线是什么？**
+
 - 补偿导线（Compensating Wire）是指连接热电偶冷端（参考端）和测量仪表之间的延长线。
 - 它通常不必用热电偶原材料本身制造，而是用与热电偶材料热电性质相近、**价格便宜**的合金。
 
 **2. 为什么要“匹配”热电偶材料？**
+
 - 热电偶原理是两种不同金属或合金的接点在不同温度下产生热电动势（电压）。
 - 如果你用和热电偶材料“热电特性不匹配”的导线延长，会引入新的温差接点，产生多余的热电势，导致测温误差！
 
 **3. 详细原理举例说明：**  
+
 - **理想连接（匹配）**：若补偿导线和热电偶材料的热电性能匹配，即使连接点（如端子盒）处温度变化，也不会引入额外的热电势。仪表端测得的电压只反映“测量端-冷端”的温差，测温准确。
 
 - **不匹配连接**：如果用普通铜线或其他金属作为延长线，铜线与热电偶材料在端子盒处形成“新热电偶”，只要端子盒温度≠仪表端温度，就会有“额外的热电动势”叠加或抵消，造成测温误差，无法准确反映真实温度。
@@ -69,6 +75,7 @@ $$E = S × (T₁ - T₂)$$
 - 连接头/接线盒温度变化时，只有补偿导线与热电偶匹配，仪表端冷端补偿才有效。
 
 #### 常用热电偶类型
+
 | 热电偶类型 | 材料组合       | 测温范围        | 特点             |
 | -------- | ------------- | -------------- | ---------------- |
 | K型      | 镍铬-镍硅     | -200~1372°C    | 最常用，通用性强   |
@@ -78,12 +85,14 @@ $$E = S × (T₁ - T₂)$$
 | S/R型    | 铂铑-铂       | 0~1600°C       | 高温应用，贵金属材料 |
 
 #### 热电偶热端连接方法
+
 - **焊接**：常用焊锡或专用热电偶焊料，确保良好接触。
 - **压接**：使用专用热电偶接头，确保稳定连接。
 - **螺纹连接**：适用于工业环境，便于更换和维护。
 - **插入式**：用于管道或容器内测量，热端直接接触介质。
 
 #### 热电偶固定方法
+
 - **焊接**：将热电偶热端焊接到测量对象上，确保良好热接触。
 - **夹持**：使用夹具将热电偶固定在测量对象上，适用于可拆卸的场合。
 - **螺纹连接**：在测量对象上预留螺纹孔，将热电偶螺纹端固定。
@@ -113,96 +122,79 @@ $$E = S × (T₁ - T₂)$$
 
 ![alt text](./assets_Tool/image-4.png)
 
-#### 主要用途
+#### 示波器主要用途
 
 1. **实时波形显示**
-   
+
    - 直观显示电压随时间变化的曲线（时域分析），用于调试电路、验证信号完整性。
 
 2. **测量信号参数**
-   
+
    - 测量幅度、频率、周期、上升/下降时间、占空比等。
 
 3. **故障诊断**
-   
+
    - 检测信号异常（如噪声、失真、毛刺）、通信协议解码（I2C、SPI、UART等）。
 
 4. **相位分析**
-   
+
    - 多通道示波器可比较不同信号的相位差，适用于电源、电机控制等场景。
 
 5. **频域分析**
-   
+
    - 结合FFT功能，分析信号的频谱成分（如谐波、干扰）。
 
 #### 核心参数
 
 1. **带宽（Bandwidth）**
-   
+
    - **定义**：示波器能准确测量的最高频率（通常指-3dB衰减点）。指示波器前端模拟电路（放大器/衰减器）的频响特性，通常以-3dB衰减点对应的频率为标称值（例如100MHz带宽表示输入100MHz正弦波时，幅度显示为实际值的70.7%）。决定示波器能测量的最高频率分量。
-   
+
    - **选择依据**：带宽 ≥ 3倍信号最高频率（例如，测量100MHz信号需300MHz带宽）。
 
 2. **采样率（Sample Rate）**
-   
+
    - **定义**：每秒采集的样本点数（如1GS/s表示每秒10亿次采样）。指ADC（模数转换器）每秒对信号采样的次数，单位是**Sa/s**（如1GS/s表示每秒10亿次采样）。决定信号时间轴的细节还原能力。
-   
    - **关键点**：采样率需 ≥ 2倍信号最高频率（即采样率 ≥ 2×带宽，奈奎斯特定理），实际建议 ≥ 4倍以避免混叠。100MHz带宽示波器，推荐采样率 ≥ 400MS/s（实际中高端示波器可能提供1GS/s以上）。
 
 3. **存储深度（Memory Depth）**
-   
    - **定义**：单次采集可存储的样本点数，影响波形细节保留能力。（如1Mpts表示100万个点）
-   
    - **计算关系**：存储深度 = 采样率 × 捕获时间。高存储深度适合长时基下的高频信号分析。
 
 4. **垂直分辨率（ADC位数）**
-   
    - **定义**：模数转换器的位数（如8bit、12bit），决定电压测量的精细程度。
-   
    - **影响**：高分辨率（12bit以上）适合小信号或高动态范围测量。
 
 5. **上升时间（Rise Time）**
-   
    - **定义**：示波器对快速边沿信号的响应能力，与带宽相关（公式：上升时间 ≈ 0.35/带宽）。
-   
    - **示例**：100MHz带宽示波器的上升时间约为3.5ns。
 
 6. **输入通道数**
-   
    - 常见2/4通道，多通道适合同步测量多个信号（如差分信号、三相电源）。
 
 7. **触发功能（Trigger）**
-   
    - 支持边沿、脉宽、视频、协议触发等，确保稳定捕获特定事件（如异常脉冲）。
 
 8. **波形捕获率（Waveform/s）**
-   
    - 每秒可捕获的波形次数，高捕获率提高偶发事件（如毛刺）的发现概率。
 
 #### 其他重要特性
 
 - **探头兼容性**：高压/差分探头扩展测量范围。
-
 - **软件功能**：自动测量、数学运算、协议解码、眼图分析等。
-
 - **接口与扩展**：USB、LAN、支持远程控制或数据导出。
 
 #### 选型
 
 1. **带宽优先**
-   
    - 先根据信号最高频率选择带宽（如测量100MHz信号选300MHz以上带宽），再匹配采样率。
-   
    - **高频信号**：更依赖高带宽（例如1GHz以上示波器测高速串行信号）。
 
 2. **采样率验证**
-   
    - 确保采样率足够还原信号细节（例如测10ns的脉冲，需采样间隔远小于10ns）。
-   
    - **公式**：时间分辨率 ≈ 1/采样率（如1GS/s对应1ns分辨率）。
 
 3. **存储深度的影响**
-   
    - 高采样率 + 长时基需要大存储深度（例如1GS/s采样率下捕获1ms波形，需1M点存储深度）。
 
 #### 应用场景示例
@@ -217,127 +209,86 @@ $$E = S × (T₁ - T₂)$$
 
 ### 功率分析仪
 
-#### 主要用途
+#### 功率分析仪用途
 
-**1. 电能质量分析**
+1. 电能质量分析
 
 - 测量电压、电流的**谐波失真（THD）**，评估电网或设备的电能质量。
-
 - 检测**电压波动、闪变、不平衡度**等，确保符合国际标准（如IEC 61000-4-30）。
 
-**2. 功率与效率测量**
+1. 功率与效率测量
 
 - 精确测量**有功功率（W）、无功功率（VAR）、视在功率（VA）、功率因数（PF）**。
 
 - 计算**效率（η）**，如逆变器、电机、电源转换器的输入/输出效率。
 
-**3. 新能源系统测试**
+1. 新能源系统测试
+   - 光伏逆变器（PV Inverter）的**MPPT效率、转换损耗**分析。
+   - 风力发电机的**功率曲线**测试。
+   - 电池充放电过程的**能量损耗**评估。
 
-- 光伏逆变器（PV Inverter）的**MPPT效率、转换损耗**分析。
+2. 电机与驱动系统测试
+   - 测量电机的**输入/输出功率、扭矩-转速特性**。
+   - 评估变频器（VFD）的**开关损耗、谐波影响**。
 
-- 风力发电机的**功率曲线**测试。
+3. 家电与工业设备能效测试
+   - 符合**能源之星（Energy Star）、ErP指令**等能效标准。
+   - 分析待机功耗、动态负载下的能耗。
 
-- 电池充放电过程的**能量损耗**评估。
+#### 功率分析仪核心参数
 
-**4. 电机与驱动系统测试**
+1. 带宽（Bandwidth）
+   - **定义**：仪器能准确测量的最高信号频率，通常以**-3dB衰减点**为基准。
+   - **选择依据**：
+     - 普通工频（50/60Hz）测量：1kHz带宽足够。
+     - 电力电子（如PWM、变频器）：需**500kHz~5MHz**带宽以捕获高频开关成分。
+     - 高频应用（如GaN/SiC器件）：可能需要**10MHz+**带宽。
+2. 采样率（Sample Rate）
+   - **定义**：ADC每秒采样的点数，影响波形细节的还原能力。
+   - **典型值**：
+     - 工频测量：100kS/s~1MS/s。
+     - 高频开关分析：≥5MS/s（如横河WT5000支持10MS/s）。
 
-- 测量电机的**输入/输出功率、扭矩-转速特性**。
+3. 精度（Accuracy）
+   - **定义**：测量值与真实值的偏差，通常以**百分比（%）**表示。
+   - **关键指标**：
+     - **基本电压/电流精度**：±0.1%~±0.02%（高端型号）。
+     - **功率精度**：±0.05%~±0.2%（受相位误差影响）。
+   - **校准标准**：需符合**IEC 61869、IEEE 1459**等规范。
 
-- 评估变频器（VFD）的**开关损耗、谐波影响**。
+4. 通道数（Channels）
+   - **常见配置**：
+     - **2~4通道**：适用于单相或三相平衡系统。
+     - **6~8通道**：用于多相电机、双逆变器系统等复杂测试。
+   - **同步采样**：所有通道需严格同步（时延<1μs），避免相位误差。
 
-**5. 家电与工业设备能效测试**
+5. 电流测量方式
+   - **直接输入**：小电流（<5A）可直接接入。
+   - **电流传感器**：
+     - **电流钳（AC/DC）**：适用于非侵入式测量（如LEM、Hioki传感器）。
+     - **罗氏线圈（Rogowski Coil）**：高频大电流测量（如开关电源浪涌电流）。
+     - **分流器（Shunt）**：高精度但需断开电路。
 
-- 符合**能源之星（Energy Star）、ErP指令**等能效标准。
+6. 谐波分析能力
+   - **谐波阶次**：通常支持**50~100次谐波**（符合IEC 61000-4-7）。
+   - **FFT分辨率**：影响谐波分析的精细度（如4096点FFT）。
 
-- 分析待机功耗、动态负载下的能耗。
+7. 功率计算功能
+   - **测量模式**：
+     - 瞬时功率、平均功率、积分能量（Wh、kWh）。
 
-#### 核心参数
+   - **特殊计算**：
+     - 三相不平衡度、峰值因数（Crest Factor）、纹波功率。
 
-**1. 带宽（Bandwidth）**
+8. 数据存储与通信接口
+   - **存储深度**：影响长时间录波能力（如1GB存储可记录数小时数据）。
+   - **接口**：
+     - **USB/ LAN/LXI**：远程控制与数据传输。
+     - **GPIB/ CAN**：工业自动化集成。
 
-- **定义**：仪器能准确测量的最高信号频率，通常以**-3dB衰减点**为基准。
+#### 功率分析仪其他重要特性
 
-- **选择依据**：
-  
-  - 普通工频（50/60Hz）测量：1kHz带宽足够。
-  
-  - 电力电子（如PWM、变频器）：需**500kHz~5MHz**带宽以捕获高频开关成分。
-  
-  - 高频应用（如GaN/SiC器件）：可能需要**10MHz+**带宽。
-
-**2. 采样率（Sample Rate）**
-
-- **定义**：ADC每秒采样的点数，影响波形细节的还原能力。
-
-- **典型值**：
-  
-  - 工频测量：100kS/s~1MS/s。
-  
-  - 高频开关分析：≥5MS/s（如横河WT5000支持10MS/s）。
-
-**3. 精度（Accuracy）**
-
-- **定义**：测量值与真实值的偏差，通常以**百分比（%）**表示。
-
-- **关键指标**：
-  
-  - **基本电压/电流精度**：±0.1%~±0.02%（高端型号）。
-  
-  - **功率精度**：±0.05%~±0.2%（受相位误差影响）。
-
-- **校准标准**：需符合**IEC 61869、IEEE 1459**等规范。
-
-**4. 通道数（Channels）**
-
-- **常见配置**：
-  
-  - **2~4通道**：适用于单相或三相平衡系统。
-  
-  - **6~8通道**：用于多相电机、双逆变器系统等复杂测试。
-
-- **同步采样**：所有通道需严格同步（时延<1μs），避免相位误差。
-
-**5. 电流测量方式**
-
-- **直接输入**：小电流（<5A）可直接接入。
-
-- **电流传感器**：
-  
-  - **电流钳（AC/DC）**：适用于非侵入式测量（如LEM、Hioki传感器）。
-  
-  - **罗氏线圈（Rogowski Coil）**：高频大电流测量（如开关电源浪涌电流）。
-  
-  - **分流器（Shunt）**：高精度但需断开电路。
-
-**6. 谐波分析能力**
-
-- **谐波阶次**：通常支持**50~100次谐波**（符合IEC 61000-4-7）。
-
-- **FFT分辨率**：影响谐波分析的精细度（如4096点FFT）。
-
-**7. 功率计算功能**
-
-- **测量模式**：
-  
-  - 瞬时功率、平均功率、积分能量（Wh、kWh）。
-
-- **特殊计算**：
-  
-  - 三相不平衡度、峰值因数（Crest Factor）、纹波功率。
-
-**8. 数据存储与通信接口**
-
-- **存储深度**：影响长时间录波能力（如1GB存储可记录数小时数据）。
-
-- **接口**：
-  
-  - **USB/ LAN/LXI**：远程控制与数据传输。
-  
-  - **GPIB/ CAN**：工业自动化集成。
-
-#### 其他重要特性
-
-#### 选型
+#### 功率分析仪选型
 
 1. **带宽与采样率匹配**：高频应用（如SiC/GaN）需高带宽（≥5MHz）+高采样率（≥10MS/s）。
 
@@ -444,15 +395,9 @@ $$E = S × (T₁ - T₂)$$
 [STM32小项目-剪线机 附赠程序](https://www.bilibili.com/medialist/play/watchlater/BV1eZ4y117rn)=
 [（开源）SWD无线下载器固件烧录和使用教程](https://www.bilibili.com/video/BV1pg411R7KU/)
 
-### 待分类
+## 实验室搭建
 
-[小白想接触电子焊接，什么牌子电子维修工具比较好?](https://www.zhihu.com/question/268167197/answer/1966981184)
-示波器入门第一课，基础测试仪器概述！
-https://www.bilibili.com/video/BV1W84y1J7tE/
-
-最近有不少朋友问道，搭建一个电子实验室是不是要很多钱？其实如果只是业余爱好的话，搭建一个轻量级的实验室，费用不是很贵，咱们普通人也是可以尝试的。
-
-[![](https://mmbiz.qpic.cn/mmbiz_png/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUzEI2MbveEan7icw7ib3RZCrMWcr7l25bG7IicSySJfHxDSNbw2QmUjMibQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_png/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUzEI2MbveEan7icw7ib3RZCrMWcr7l25bG7IicSySJfHxDSNbw2QmUjMibQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![实验室搭建](https://mmbiz.qpic.cn/mmbiz_png/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUzEI2MbveEan7icw7ib3RZCrMWcr7l25bG7IicSySJfHxDSNbw2QmUjMibQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
 
 下面进行分类主要有：
 
@@ -499,38 +444,40 @@ https://www.bilibili.com/video/BV1W84y1J7tE/
 
 所以最近逛论坛的时候，很羡慕那些在家有一个自己实验室的工程师。这样就可以把自己的想法实现出来。下面分享一下。
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUUd0Tic7W6TJRbf9uiaHyUtNlADKbGZSibwhSZrQpAuMldnl9ghjPmaWqQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUUd0Tic7W6TJRbf9uiaHyUtNlADKbGZSibwhSZrQpAuMldnl9ghjPmaWqQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+### 实验室样例
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUVeJFNM1ePrCqibNE6Hh5OFtiaibhc2QTMXYNibmNvoQDxvLr7nvXJPz8Gw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUVeJFNM1ePrCqibNE6Hh5OFtiaibhc2QTMXYNibmNvoQDxvLr7nvXJPz8Gw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![实验室1](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUUd0Tic7W6TJRbf9uiaHyUtNlADKbGZSibwhSZrQpAuMldnl9ghjPmaWqQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUVtGFlxSrwajf1tvlsAN6zlExPvoMxHptWhCjeako1nxmTqaCJK1icJQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUVtGFlxSrwajf1tvlsAN6zlExPvoMxHptWhCjeako1nxmTqaCJK1icJQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![实验室2](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUVeJFNM1ePrCqibNE6Hh5OFtiaibhc2QTMXYNibmNvoQDxvLr7nvXJPz8Gw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
 
-[![](https://mmbiz.qpic.cn/mmbiz/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUKicibTWfBjMeLlzdKWH880v2ULC9gojISaz6HbsNJP87XiagsoGCu1CoQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUKicibTWfBjMeLlzdKWH880v2ULC9gojISaz6HbsNJP87XiagsoGCu1CoQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1)
+![实验室3](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUVtGFlxSrwajf1tvlsAN6zlExPvoMxHptWhCjeako1nxmTqaCJK1icJQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUnnOP7tsjgoX3xtyqMTbwPa8iaUQxkkwhNeOibRVg2nhZ6W8ddticLYPoQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUnnOP7tsjgoX3xtyqMTbwPa8iaUQxkkwhNeOibRVg2nhZ6W8ddticLYPoQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![实验室4](https://mmbiz.qpic.cn/mmbiz/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUKicibTWfBjMeLlzdKWH880v2ULC9gojISaz6HbsNJP87XiagsoGCu1CoQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1)
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUlzx3wHsv1oLUGsLWOrfibT1dqicnexpZVpoCfpcjRqG88buMMuanJSCA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUlzx3wHsv1oLUGsLWOrfibT1dqicnexpZVpoCfpcjRqG88buMMuanJSCA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![实验室5](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUnnOP7tsjgoX3xtyqMTbwPa8iaUQxkkwhNeOibRVg2nhZ6W8ddticLYPoQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUewWGs3ZkXPjoDadAmRZpzV8bww2tPBGwqIEkom31TIIFictibbqP5GcQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUewWGs3ZkXPjoDadAmRZpzV8bww2tPBGwqIEkom31TIIFictibbqP5GcQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![实验室6](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUlzx3wHsv1oLUGsLWOrfibT1dqicnexpZVpoCfpcjRqG88buMMuanJSCA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUx8iak1ZJjibibqlKiaGYicE0zV6SlrLGgXqFQwyjC4OEdj709cR4IEuJsgQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUx8iak1ZJjibibqlKiaGYicE0zV6SlrLGgXqFQwyjC4OEdj709cR4IEuJsgQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![实验室7](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUewWGs3ZkXPjoDadAmRZpzV8bww2tPBGwqIEkom31TIIFictibbqP5GcQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUIn4hZvZ6DBz0ohCpKEYFAP5yZxBvfH4kgC5ITtRJmKrvwQqYOVVSsg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUIn4hZvZ6DBz0ohCpKEYFAP5yZxBvfH4kgC5ITtRJmKrvwQqYOVVSsg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![实验室8](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUx8iak1ZJjibibqlKiaGYicE0zV6SlrLGgXqFQwyjC4OEdj709cR4IEuJsgQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibU6YkJQboJNH10dDCY9TX7UcIFLSYQBYXEknzotT9t7icytKiawFosrW4g/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibU6YkJQboJNH10dDCY9TX7UcIFLSYQBYXEknzotT9t7icytKiawFosrW4g/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![实验室9](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUIn4hZvZ6DBz0ohCpKEYFAP5yZxBvfH4kgC5ITtRJmKrvwQqYOVVSsg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUmRlrwmhDUnOAb8Yq6kXvVM2IQgpplXAw8ZzkibaMyzYy6mQZhLibhdNw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUmRlrwmhDUnOAb8Yq6kXvVM2IQgpplXAw8ZzkibaMyzYy6mQZhLibhdNw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![实验室10](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibU6YkJQboJNH10dDCY9TX7UcIFLSYQBYXEknzotT9t7icytKiawFosrW4g/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUiaDpveIDgV9p2R7UW7huTEZAo92nzQYbtOvnMpTib7fmaWBODiaYla6XQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUiaDpveIDgV9p2R7UW7huTEZAo92nzQYbtOvnMpTib7fmaWBODiaYla6XQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![实验室11](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUmRlrwmhDUnOAb8Yq6kXvVM2IQgpplXAw8ZzkibaMyzYy6mQZhLibhdNw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUTFhuK8icwRmWTxBn1EgvGicicZTmfeXHbAxyRsTNt5kohzuL8fibajC1Kg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUTFhuK8icwRmWTxBn1EgvGicicZTmfeXHbAxyRsTNt5kohzuL8fibajC1Kg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![实验室12](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUiaDpveIDgV9p2R7UW7huTEZAo92nzQYbtOvnMpTib7fmaWBODiaYla6XQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUAYxzuf77yOZhEKOLhCcFBQexgVCaG2dibuvTYVibLicFSAqLVibxyg4Yng/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUAYxzuf77yOZhEKOLhCcFBQexgVCaG2dibuvTYVibLicFSAqLVibxyg4Yng/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![实验室13](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUTFhuK8icwRmWTxBn1EgvGicicZTmfeXHbAxyRsTNt5kohzuL8fibajC1Kg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibU1h0VZtBNicuNO2QicUeNwvXXAITY1RjIrOq1uxSSNa5dojHOfb0ABJRA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibU1h0VZtBNicuNO2QicUeNwvXXAITY1RjIrOq1uxSSNa5dojHOfb0ABJRA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![实验室14](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUAYxzuf77yOZhEKOLhCcFBQexgVCaG2dibuvTYVibLicFSAqLVibxyg4Yng/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUZlLaZOkpUyR7N9dicRDvLOOXCicttujRvLb3icpSpiaXrUb2I1ziaZ7EnBw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUZlLaZOkpUyR7N9dicRDvLOOXCicttujRvLb3icpSpiaXrUb2I1ziaZ7EnBw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![实验室15](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibU1h0VZtBNicuNO2QicUeNwvXXAITY1RjIrOq1uxSSNa5dojHOfb0ABJRA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUNRtD68jbBQu8wp33Z5zbNo1pVHbic7kmKMStolVk3XN7PF0cgKy43iaQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUNRtD68jbBQu8wp33Z5zbNo1pVHbic7kmKMStolVk3XN7PF0cgKy43iaQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![实验室16](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUZlLaZOkpUyR7N9dicRDvLOOXCicttujRvLb3icpSpiaXrUb2I1ziaZ7EnBw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
 
-[![](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibU2j1fBNQXjQjpAxBX4z1t384mwuAL4ebHrYnWmTAxooFK3CicNRIexGg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibU2j1fBNQXjQjpAxBX4z1t384mwuAL4ebHrYnWmTAxooFK3CicNRIexGg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+![实验室17](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibUNRtD68jbBQu8wp33Z5zbNo1pVHbic7kmKMStolVk3XN7PF0cgKy43iaQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+
+![实验室18](https://mmbiz.qpic.cn/mmbiz_jpg/zcVcDoKYUnY7ModibCk7f2YbDCYpVdkibU2j1fBNQXjQjpAxBX4z1t384mwuAL4ebHrYnWmTAxooFK3CicNRIexGg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
