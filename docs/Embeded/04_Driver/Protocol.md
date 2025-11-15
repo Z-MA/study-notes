@@ -349,7 +349,7 @@ ISO 11898-6：具有选择性唤醒功能的高速媒体接入单元
 5. 间隔帧：用于将数据帧及遥控帧与前面的帧分离开来的帧
 
 帧结构（每种帧的结构与功能）
-![alt text](.\assets_Protocol\image.png)
+![alt text](./assets_Protocol/image.png)
 数据帧和远程帧有标准格式（11位标识符ID）和扩展格式（29位ID）
 
 数据帧由7各段组成
@@ -389,10 +389,10 @@ ISO 11898-6：具有选择性唤醒功能的高速媒体接入单元
 ### CiA301
 
 过程数据对象 PDO（Process data object）和服务数据对象 SDO (Service data object)
-![alt text](.\assets_Protocol\image-1.png)
+![alt text](./assets_Protocol/image-1.png)
 CANopen中把CAN-ID（11位）又叫COB-ID，前4位是功能码，后7位是节点号，所以CANopen最大支持128个节点。
 PDO 分为 TPDO（发送）和 RPDO(接收)，每种数据对象就是 1 条 CAN 报文封装。
-![alt text](.\assets_Protocol\image-2.png)
+![alt text](./assets_Protocol/image-2.png)
 SDO 的 CAN 帧 ID 就是 600h +node-ID，这里的 Node-ID 是被问的节点地址，而被问的节点应“答”SDO 的 CAN 帧 ID 就是 580h +node-ID。一般在 CANopen 网络中，只有 NMT 主机能发起 SDO 通讯，进行节点参数配置或者关键性参数的传递。当然从节点也可以对其他从节点发起 SDO 通讯。
 
 | object对象 | 功能码h | 功能码b |
@@ -417,10 +417,10 @@ SDO 的 CAN 帧 ID 就是 600h +node-ID，这里的 Node-ID 是被问的节点�
 - 子索引：8 位的索引值，其范围是 0x00 到 0xFF 之间。
 
 对象字典概述
-<img src=".\assets_Protocol\image-3.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+<img src="./assets_Protocol/image-3.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
 通讯对象子协议区（Communication profile area）
-<img src=".\assets_Protocol\image-4.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
-<img src=".\assets_Protocol\通用通讯对象.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+<img src="./assets_Protocol/image-4.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+<img src="./assets_Protocol/通用通讯对象.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
 制造商特定子协议（Manufacturer-specific Profile）  
 对象字典索引 2000h to 5FFFh为制造商特定子协议，通常是存放所应用子协议的应用数据。
 
@@ -448,14 +448,14 @@ NMT 管理涉及到一个 CANopen 节点从上电开始的 6 钟状态，包括�
 除了初始化状态，NMT主机通过NMT命令可以让网络中任意一个的CANopen节点
 进行其他5种状态的切换。如图 6.2所示。
 
-<img src=".\assets_Protocol\image-5.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
+<img src="./assets_Protocol/image-5.png" alt="示例图片" width="350" style="display: block; margin: 0 auto;">
 
 - NMT 节点上线报文：节点上线报文的 ID 为 700h+Node-ID，数据为 1 个字节 0。
 - NMT 节点状态与心跳报文，心跳报文的 ID 为 700h+Node-ID，数据为 1 个字节，代表节点目前的状态，04h为停止状态，05h为操作状态，7Fh为预操作状态。
 - NMT 节点状态切换命令：CANID 均为 000h，具备最高的 CAN 优先级。数据为 2 个字节：第 1 个字节代表命令类型；第二个字节代表被控制的节点 Node-ID，如果要对整个网络所有节点同时进行控制，则这个数值为 0 即可。
 
 PDO通讯参数
-<img src=".\assets_Protocol\image-6.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
+<img src="./assets_Protocol/image-6.png" alt="示例图片" width="550" style="display: block; margin: 0 auto;">
 
 快速SDO
 普通SDO

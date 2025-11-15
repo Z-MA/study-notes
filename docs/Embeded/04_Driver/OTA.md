@@ -1,6 +1,6 @@
 ---
 lang: zh-CN
-description: 这是一个C语言基础页面
+description: 介绍OTA技术
 ---
 
 # OTA技术
