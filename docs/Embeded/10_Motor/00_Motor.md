@@ -73,6 +73,8 @@ description: 这是一个C语言基础页面
 
 [面向电机控制的STM32生态系统](https://www.st.com.cn/content/st_com/zh/ecosystems/stm32-motor-control-ecosystem.html)
 
+[X-CUBE-MCSDK6.3系列课程](https://www.bilibili.com/video/BV14A2oYcERd)
+
 ### 硬石资料
 
 #### 硬石资料下载
