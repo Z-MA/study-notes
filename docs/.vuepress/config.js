@@ -87,7 +87,7 @@ export default defineUserConfig({
               text: 'Motor',
               prefix: '10_Motor/',
               collapsible: true,
-              children: ['00_Motor','01_Base','03_永磁10讲','10_FOC','20_MC_FOC','30_HW'],
+              children: ['00_Motor','01_Base','03_永磁10讲','10_FOC','20_ST_MC','30_HW'],
             },
           ],
         },
