@@ -63,7 +63,7 @@ export default defineUserConfig({
               text: 'EPU',
               prefix: '03_EPU/',
               collapsible: true,
-              children: ['02_STM32'],
+              children: ['00_EPU','02_STM32'],
             },
             {
               text: 'Driver',
