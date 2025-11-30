@@ -197,6 +197,37 @@ $$
 
 旋转变压器是一种电磁感应式传感器，主要用于检测旋转位置和角度。它由一个定子和一个转子组成，定子上有多个线圈，转子上有一个铁芯。当转子旋转时，铁芯会切割定子上的磁力线，从而在定子线圈中产生感应电动势。通过测量感应电动势的变化，可以检测到转子的旋转位置和角度，从而实现位置检测。
 
+## 电流采样
+
+### 采样方式
+
+无论哪种方式，都需在 PWM 周期的合适时刻（如中心对齐模式下的谷底或峰值）进行采样，以避开开关噪声和死区影响。硬件上常配合运放滤波、软件上采用数字滤波或过采样技术提升信噪比。
+
+- 三相电流采样（Three-phase Current Sampling）
+- 两相电流采样（Two-phase Current Sampling）
+- 单相电流采样（Single-phase / DC-link Current Reconstruction）
+- 无电流传感器（Sensorless FOC with Observer/Estimator）
+
+### 采样位置
+
+- 低侧采样（Low-side Sensing）
+- 高侧采样（High-side Sensing）
+- 母线采样（DC-link / Single Shunt Sensing）
+- 在线采样（In-line / Phase Current Sensing）
+
+## 安全策略
+
+## 制动策略
+
+- 自由停车
+- 机械刹车
+- 能耗制动：电阻消耗
+- 反接制动
+- 回馈制动
+- 直流注入制动
+
+## 通讯
+
 ## BLDC
 
 六步换向线圈导通状态
