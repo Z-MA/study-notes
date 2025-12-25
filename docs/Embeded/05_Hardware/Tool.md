@@ -1,3 +1,9 @@
+---
+lang: zh-CN
+description: 硬件工具
+sidebarDepth: 5
+---
+<!-- markdownlint-disable MD033 -->
 # 硬件工具
 
 ## 测量工具
