@@ -38,6 +38,17 @@
 - [行业标准全文公开](https://std.miit.gov.cn/#/fullTextList)
 - [国家标准馆 国家数字标准馆](https://www.ndls.org.cn/index)
 
+## 公开课
+
+- [爱课程](https://www.icourses.cn/home/)：教育部指导，高等教育出版社主办，教学资源系统整合，服务高校教学改革。
+- [学堂在线](https://www.xuetangx.com/)：清华大学发起，教育部支持，国内外优质课程聚合。
+- [中国大学MOOC](https://www.icourse163.org/)：网易联合高等教育出版社（即“爱课程”合作），面向大众。
+- [国家中小学智慧教育平台](https://basic.smartedu.cn)：教育部主办，覆盖小中高全学科，电子版教材，AI互动课。
+- [终身教育平台](https://le.ouchn.cn/home)：国家开放大学出品，涵盖生活技能、职业资格、文化素养等
+- [国家数字图书馆](https://www.nlc.cn/)：提供电子书、期刊、古籍、学术论文等资源
+- [网易公开课](https://open.163.com/)
+- [Coursera](https://www.coursera.org/)
+
 ## 工科课程
 
 ### 工科五大类专业介绍
