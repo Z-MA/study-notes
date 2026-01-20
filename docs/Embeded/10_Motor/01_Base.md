@@ -1,8 +1,8 @@
 ---
 lang: zh-CN
-title: 电磁基础
 description: 这是一个C语言基础页面
 ---
+<!-- markdownlint-disable MD033 -->
 
 # 磁路
 

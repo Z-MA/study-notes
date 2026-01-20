@@ -83,6 +83,8 @@ KiCad 是一个开源软件套件，用于设计原理图 和 PCB。最大支持
 
 [官网](https://www.kicad.org/)
 
+### Protel 99SE
+
 ### Altium Designer
 
 #### AD介绍
@@ -135,6 +137,17 @@ KiCad 是一个开源软件套件，用于设计原理图 和 PCB。最大支持
 ### [Proteus](https://www.labcenter.com/proteus9/)
 
 专业电路仿真平台
+
+### [Cadence]()
+
+### [pads]()
+
+
+### [Footprint Expert Pro]()
+
+### [IPC7351  LP Wizard]()
+
+该软件集封装生成与管理一体化的软件，管理你众多的封装，不需要再花大量时间去找封装甚至花钱买封装了；同时该软件图示化界面很强，便于检查封装尺寸；生成封装方便，生成Altium、Cadence、pads等主流软件的封装短短几秒钟就搞定！
 
 ## 待整理
 

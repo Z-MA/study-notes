@@ -2,7 +2,13 @@
 lang: zh-CN
 description: 这是一个C语言基础页面
 ---
+<!-- markdownlint-disable MD033 -->
+
 # 电机教程
+
+## 前沿机构及学者
+
+- 钟再敏（同济大学）：[个人主页]()
 
 ## 电机的分类
 
