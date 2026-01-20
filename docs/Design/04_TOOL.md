@@ -37,8 +37,8 @@ description: 这是一个视觉设计基础页面
 添加全局代理:
 
 ```bash
-git config --global http.proxy http://127.0.0.1:33210
-git config --global https.proxy http://127.0.0.1:33210
+git config --global http.proxy http://127.0.0.1:7897
+git config --global https.proxy http://127.0.0.1:7897
 ```
 
 验证代理设置:
@@ -49,6 +49,7 @@ git config --global --get https.proxy
 ```
 
 取消代理:
+
 ```bash
 git config --global --unset http.proxy
 git config --global --unset https.proxy
@@ -61,6 +62,7 @@ windows操作系统中，有时我们关闭程序后，一些相关的进程仍�
 此时，如果知道这个文件/文件夹正在被哪个进程使用，就可以用任务管理器结束这个进程，然后就可以对文件进行修改了。(请谨慎决定是否结束关键的、可能会影响系统正常工作的进程。)  
 
 **查看方法**  
+
 1. 打开 资源管理器（Ctrl+Shift+Esc）
 2. 选择 性能 选项卡
 3. 点击右下角的 资源监视器
@@ -71,6 +73,7 @@ windows操作系统中，有时我们关闭程序后，一些相关的进程仍�
 8. 如果有重名的多个进程，以第二列 PID 为准
 
 ## 在线小工具
+
 ## **在线素材工具：**
 
 如果你写文章，或者做视频，那就一定少不了要找素材，包括各种图片、背景、emoji表情、表情包、壁纸、视频、gif图等等。  

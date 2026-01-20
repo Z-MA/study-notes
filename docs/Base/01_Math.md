@@ -1,6 +1,7 @@
 ---
 lang: zh-CN
 description: 这是一个数学基础页面
+sidebarDepth: 5
 ---
 <!-- markdownlint-disable MD033 -->
 <!-- markdownlint-disable MD060 -->
